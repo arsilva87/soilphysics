@@ -23,7 +23,7 @@ script here
 
 ```
 
-![image](<https://github.com/arsilva87/soilphysics/blob/master/man/figures/SMP.jpeg>)
+![](</master/man/figures/SMP.jpeg>)
 
 ## Soil water tools
 
@@ -57,7 +57,7 @@ Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil
 
 De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P.; Leao, T.P.; Mosaddeghi, M.R. (2016) soilphysics: an R package for calculating soil water availability to plants by different soil physical indices. *Computers and Eletronics in Agriculture*, 120: 63-71. DOI: <https://doi.org/10.1016/j.compag.2015.11.003>
 
-Da Silva, A.R.; De Lima, R.P. (2017) Determination of maximum curvature point with the R package soilphysics. International Journal of Current Research, 9: 45241-45245.  
+Da Silva, A.R.; De Lima, R.P. (2017) Determination of maximum curvature point with the R package soilphysics. *International Journal of Current Research*, 9: 45241-45245.  
 
 # Contributions and bug reports
 
