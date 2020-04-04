@@ -23,7 +23,7 @@ script here
 
 ```
 
-![](</master/man/figures/SMP.jpeg>)
+![](<man/figures/SMP.jpeg>)
 
 ## Soil water tools
 
