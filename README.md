@@ -7,6 +7,8 @@ In this package you will find functions for modelling the load bearing capacity 
 You can install and load the released version of soilphysics from GitHub with:
 
 ```r
+install.packages(devtools)
+
 devtools::install_github("arsilva87/soilphysics")
 
 library(soilphysics)
