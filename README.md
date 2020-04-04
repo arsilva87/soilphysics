@@ -21,7 +21,7 @@ script here
 
 ```
 
-![image](https://github.com/arsilva87/soilphysics/blob/master/man/figures/SMP.jpeg)
+![image](<https://github.com/arsilva87/soilphysics/blob/master/man/figures/SMP.jpeg>)
 
 ## Soil water tools
 
@@ -42,13 +42,13 @@ Sum            0.1689139 147.8336       0 - 15000
 
 ## Miscellanea
 
-A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/PredCompAPP/>
-
-A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/PredCompAPP/>
+Add text for other functions...
 
 # Spin-off
 
-Add text and link for shiny apps
+A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/PredCompAPP/>
+
+A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/PredCompAPP/>
 
 # Citation and references
 Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
