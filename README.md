@@ -43,6 +43,7 @@ Sum            0.1689139 147.8336       0 - 15000
 ## Miscellanea
 
 A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/PredCompAPP/>
+
 A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/PredCompAPP/>
 
 # Spin-off
