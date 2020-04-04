@@ -1,0 +1,97 @@
+------------------------------------------------
+                version 4.0
+
+* Documentation fixes
+* Code fixes in soilStrength
+* New functions: particle.sedimentation(), aggreg.stability(), r(), 
+  psd(), k.h(), llwr_llmpr(), hydraulicCutOff2()
+* New data: SoilAggregate
+
+------------------------------------------------
+                version 3.1
+
+* Documentation fixes
+* New functions: stressTraffic(), for predicting the 
+  applied stress in the soil profile; soilStrength(),
+  for predicting load bearing capacity; llwrPTF() and soilDeformation()
+* Output "LLWR" of llwr() fixed
+* New reference for citation()
+
+------------------------------------------------
+                version 3.0
+
+* Documentation fixes
+* New references for citation()
+* Data skp1994 were updated (now in full)
+
+------------------------------------------------
+                version 2.4
+
+* Documentation fixes
+* New arguments for llwr() and new graphical output
+* Missing legends added to iwc() graphs
+
+------------------------------------------------
+                version 2.3
+
+* Documentation fixes
+* New detailed output for iwc() and new
+	graphical arguments
+* Three new methods for calculating 'mcp' with maxcurv()
+
+------------------------------------------------
+                version 2.2
+
+* Documentation fixes
+* New argument (hos = 0) on iwc() for dealing with
+	salinity effects
+* Boundaries for the argument mcp of sigmaP()
+
+------------------------------------------------
+                version 2.1
+
+* Documentation fixes
+* corretions on the graphic output of iwc()
+* 'mcp' bug fixed on sigmaP()
+* new output for sigmaP(), now with compression and 
+	decompression indices
+* print method for sigmaP()
+* new functions: simSigmaP() and plotCIsigmaP()
+* bug fixed on maxcurv()
+* new graphical output for maxcurv()
+
+------------------------------------------------
+                version 2.0
+
+* Documentation fixes
+* new argument (water.model) in the function llwr()
+* new graphic output and print.method for llwr()
+* R-squared for the models fitted in llwr()
+* R-squared for the models fitted in fitsoilwater(), 
+	fitsoilwater2(), fitsoilwater3(), fitsoilwater5()
+* new functions: soilwater2(), fitsoilwater2(), 
+	soilwater3(), fitsoilwater3(), soilwater4(), 
+	fitsoilwater4(), soilwater5(), fitsoilwater5(), 
+	soilwater6(), fitsoilwater6(), hydraulicCutOff(),
+	hemc(), iwc()
+
+------------------------------------------------
+                version 1.2
+
+* Documentation fixes
+* function llwr()
+* data set skp1994
+* automatic casagrande method in the function sigmaP()
+* a flow chart in the documentation of sigmaP()
+
+------------------------------------------------
+                version 1.1
+
+* Documentation fixes
+* S3 print method for the classes: criticalmoisture, 
+	maxcurv and S.index
+
+------------------------------------------------
+                version 1.0
+
+* First version released on CRAN
