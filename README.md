@@ -11,6 +11,8 @@ script here
 
 ```
 
+![image](https://github.com/arsilva87/soilphysics/blob/master/man/figures/SMP.jpeg)
+
 ## Soil water tools
 
 Add text here...
