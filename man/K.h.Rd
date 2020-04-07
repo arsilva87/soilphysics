@@ -1,5 +1,5 @@
-\name{K.h}
-\alias{K.h}
+\name{Ks}
+\alias{Ks}
 
 \title{ Unsaturated Hydraulic Conductivity }
 
