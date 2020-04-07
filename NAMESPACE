@@ -36,7 +36,7 @@ export(particle.sedimentation)
 export(aggreg.stability)
 export(r)
 export(psd)
-export(K.h)
+export(Kr)
 export(llwr_llmpr)
 export(hydraulicCutOff2)
 
