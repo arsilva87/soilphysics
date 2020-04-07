@@ -3,11 +3,11 @@
 
 \title{ Unsaturated Hydraulic Conductivity }
 
-\description{ A closed-form analytical expressions for calculating the unsaturated hydraulic conductivity as a function of 
+\description{ A closed-form analytical expressions for calculating the relative unsaturated hydraulic conductivity as a function of 
 soil water tension (h) based on van Genuchten's water retention curve. }
 
 \usage{
-K.h(Ks, alpha, n, h)
+Ks(Ks, alpha, n, h)
 }
 
 \arguments{
@@ -31,14 +31,14 @@ unsaturated soils 1. \emph{Soil Science Society of America Journal} 44(5):892-89
 
 \examples{
 # EXAMPLE 1
-K.h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100)
+Kr(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100)
 
 # EXAMPLE 2
-x <- seq(log10(1), log10(15000),len=100)
+x <- seq(log10(1), log10(1000),len=100)
 h <- 10^x
-y <- K.h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
+y <- Kr(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
 plot(x=h,y=y, log="yx", xlab="h (hPa)", yaxt='n',
-    ylab="", ylim=c(0.001,100))
+    ylab="", ylim=c(0.001,100), xlim=c(1,10000))
 mtext(expression(K[s] ~ (cm~d^-1)), 2, line=2)
 ax <- c(0.001, 0.01, 0.1, 1, 10, 100)
 axis(2,at=ax, labels=ax)
