@@ -4,7 +4,7 @@
 * Documentation fixes
 * Code fixes in soilStrength
 * New functions: particle.sedimentation(), aggreg.stability(), r(), 
-  psd(), k.h(), llwr_llmpr(), hydraulicCutOff2()
+  psd(), Ks(), llwr_llmpr(), hydraulicCutOff2()
 * New data: SoilAggregate
 
 ------------------------------------------------
