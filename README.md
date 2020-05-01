@@ -15,10 +15,20 @@ library(soilphysics)
 
 ## Soil compaction tools
 
-Add text here...
+It calculates bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
 
 ```r
-script here
+soilDeformation(stress = 300,
+                p.density = 2.67,
+	              iBD = 1.55, 
+                N = 1.9392, 
+                CI = 0.06037, 
+                k = 0.00608, 
+                k2 = 0.01916,
+                m = 1.3,graph=TRUE,ylim=c(1.4,1.8))
+                
+   iBD    fBD     vi     vf   I%
+1 1.55 1.6385 1.7226 1.6295 5.71
 
 ```
 
@@ -26,11 +36,11 @@ script here
 
 ## Soil water tools
 
-Add text here...
+Quantifying the soil water availability for plants through the IWC approach:
 
 ```r
 iwc(theta_R = 0.166, theta_S = 0.569, alpha = 0.029, n = 1.308, 
-  a = 0.203, b = 0.256, hos = 200, graph = TRUE)
+    a = 0.203, b = 0.256, hos = 200, graph = TRUE)
                      IWC       EI         h.Range
 EKa(h, hos)    0.0144000   0.9600  66.43 - 139.49
 EK(h, hos)     0.0405000   5.3700    139.49 - 330
