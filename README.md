@@ -15,7 +15,7 @@ library(soilphysics)
 
 ## Soil compaction tools
 
-It calculates bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
+Unsing the funtion soilDeformation, it is possible calculates the bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
 
 ```r
 soilDeformation(stress = 300,
