@@ -1,6 +1,5 @@
 # About
-
-In this package you will find functions for modelling the load bearing capacity and the soil penetration resistance, and for predicting the stress applied by agricultural machines in the soil profile. The package allows one to model the soil water retention through six different models. There are some useful and easy-to-use functions to perform parameter estimation of these models. Methods to obtain the preconsolidation stress are available, such as the standard of Casagrande (1936) and so on. It is possible to quantify soil water availability for plants through the Least Limiting Water Range approach as well as the Integral Water Capacity. Moreover, it is possible to determine the water suction at the point of hydraulic cut-off. Also, users can deal with the high-energy-moisture-characteristics (HEMC) methodology proposed by Pierson & Mulla (1989), which is used to analyze the aggregate stability. There is a function to determine the soil critical moisture and the maximum bulk density for one or more samples, based on the Proctor (1933) compaction test. Other utilities like a function to calculate the soil liquid limit, the void ratio and to determine the maximum curvature point are available. 
+In this package you will find a series of functions for soil physics data analysis. These functions includes five models of water retention curve, seven methods of soil precompression stress, least limiting water range (LLWR), Integral Water Capacity (IWC), soil penetration resistance curve by Busscher's model, calculation of Soil Aggregate-Size Distribution, critical soil moisture and maximum bulk density using data from Proctor test, calculation of equivalent pore radius as a function of soil water tension, simulation of sedimentation time of soil particles through Stokes' law, simulation of soil pore size distribution, calculation of the hydraulic cut-off introduced by  Dexter et al. (2008) and simulation of soil compaction induced by agricultural field traffic. Other utilities like a function to calculate the void ratio and to determine the maximum curvature point are available. 
 
 # Instalation
 
@@ -50,7 +49,7 @@ Add text for other functions...
 
 A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/PredCompAPP/>
 
-A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/PredCompAPP/>
+A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/trafficAPP/>
 
 # Citation and references
 Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
