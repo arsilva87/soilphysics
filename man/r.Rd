@@ -1,7 +1,7 @@
 \name{r}
 \alias{r}
 
-\title{ Capillarity equation }
+\title{ Equation of capillary }
 
 \description{ The equivalent pore radius as a function of soil water tension. }
 
