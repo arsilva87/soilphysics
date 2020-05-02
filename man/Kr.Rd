@@ -39,7 +39,7 @@ h <- 10^x
 y <- Kr(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
 plot(x=h,y=y, log="yx", xlab="h (hPa)", yaxt='n',
     ylab="", ylim=c(0.001,100), xlim=c(1,10000))
-mtext(expression(K[s] ~ (cm~d^-1)), 2, line=2)
+mtext(expression(K[r] ~ (cm~d^-1)), 2, line=2)
 ax <- c(0.001, 0.01, 0.1, 1, 10, 100)
 axis(2,at=ax, labels=ax)
 
