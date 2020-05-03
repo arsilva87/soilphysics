@@ -20,7 +20,7 @@ Unsing the funtion soilDeformation, it is possible calculates the bulk density v
 ```r
 soilDeformation(stress = 300,
                 p.density = 2.67,
-	              iBD = 1.55, 
+	        iBD = 1.55, 
                 N = 1.9392, 
                 CI = 0.06037, 
                 k = 0.00608, 
