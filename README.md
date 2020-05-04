@@ -34,6 +34,8 @@ soilDeformation(stress = 300,
 
 ![](<man/figures/SMP.jpeg>)
 
+![](<C:\Users\Renato\Desktop\Imagem1.jpg>)
+
 ## Soil water tools
 
 Quantifying the soil water availability for plants through the IWC approach:
