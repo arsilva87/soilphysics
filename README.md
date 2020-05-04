@@ -41,7 +41,6 @@ soilDeformation(stress = 300,
 ## Soil water tools
 
 Quantifying the soil water availability for plants through the IWC approach:
-![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/sigmaPfluxo.jpg)
 
 ```r
 
@@ -60,11 +59,25 @@ Sum            0.1689139 147.8336       0 - 15000
 
 ```
 
-![](<man/figures/LLWR.jpeg>)
+Quantifying the soil water availability for plants through the LLWR approach:
+
+```r
+# Usage
+data(skp1994)
+ex1 <- with(skp1994,
+	 llwr(theta = W, h = h, Bd = BD, Pr = PR,
+		particle.density = 2.65, air = 0.1,
+		critical.PR = 2, h.FC = 100, h.WP = 15000))
+		
+# Result
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR.jpg)
+
+```r
 
 ## Precompression stress
 
 Estimating the precompression stress by several methods:
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/sigmaPfluxo.jpg)
 
 ```r
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
