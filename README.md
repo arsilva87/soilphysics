@@ -179,6 +179,22 @@ n        1.52926    0.09579  15.965 9.00e-05 ***
 ```
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/wrc.jpg)
 
+
+## S Index
+```r
+# Usage
+Sindex(theta_R=0, theta_S=0.395, alpha=0.0217, 
+       n=1.103)
+       
+# Results
+          The S Index 
+
+h_i : 395.4757 
+theta_i : 0.3139 
+|S| : 0.0296 
+Soil physical quality : Poor 
+```
+
 ## Miscellanea
 
 Add text for other functions...
