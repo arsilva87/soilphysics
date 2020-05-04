@@ -100,8 +100,32 @@ w <- c(0.5650, 0.4013, 0.2502, 0.2324, 0.2307, 0.1926, 0.1812, 0.1730)
 
 # Usage
 fitsoilwater(theta=w, x=h, ylim=c(0.1,0.6))
-```
 
+# Results
+Parameters:
+        Estimate Std. Error t value Pr(>|t|)    
+theta_R  0.16761    0.01272  13.179 0.000192 ***
+theta_S  0.56531    0.01092  51.786 8.32e-07 ***
+alpha    0.04748    0.01177   4.035 0.015671 *  
+n        1.52926    0.09579  15.965 9.00e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.01092 on 4 degrees of freedom
+
+Number of iterations to convergence: 8 
+Achieved convergence tolerance: 5.554e-06
+
+$pseudo.R.squared
+[1] 0.9963425
+
+$adj.R.squared
+[1] 0.9935995
+
+attr(,"class")
+[1] "Rsq"
+```
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/WRC.jpg)
 
 ## Miscellanea
 
