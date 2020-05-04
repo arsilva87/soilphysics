@@ -110,7 +110,7 @@ alpha    0.04748    0.01177   4.035 0.015671 *
 n        1.52926    0.09579  15.965 9.00e-05 ***
 ---
 ```
-![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/WRC.png)
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/wrc.jpg)
 
 ## Miscellanea
 
