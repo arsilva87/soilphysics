@@ -68,11 +68,10 @@ ex1 <- with(skp1994,
 	 llwr(theta = W, h = h, Bd = BD, Pr = PR,
 		particle.density = 2.65, air = 0.1,
 		critical.PR = 2, h.FC = 100, h.WP = 15000))
-		
+```		
 # Result
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR.jpg)
 
-```r
 
 ## Precompression stress
 
