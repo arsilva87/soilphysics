@@ -10,7 +10,7 @@ install.packages("devtools")
 
 devtools::install_github("arsilva87/soilphysics")
 
-library(soilphysics)
+library(soilphysics) 
 ```
 
 ## Soil compaction tools
