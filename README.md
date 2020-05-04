@@ -54,6 +54,8 @@ Sum            0.1689139 147.8336       0 - 15000
 
 ```
 
+![](<man/figures/LLWR.jpeg>)
+
 ## Precompression stress
 
 Estimating the precompression stress by several methods:
