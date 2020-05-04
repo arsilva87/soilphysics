@@ -82,7 +82,30 @@ soilDeformation(stress = 300,
 ![](<man/figures/SMP.jpeg>)
 
 
-## Soil water tools
+## Critical soil moisture and maximum bulk density (Proctor test)
+
+```r
+mois <- c(0.083, 0.092, 0.108, 0.126, 0.135)
+bulk <- c(1.86, 1.92, 1.95, 1.90, 1.87)
+
+# Usage
+criticalmoisture(theta = mois, Bd = bulk)
+
+# Results
+          Critical Moisture and Maximum Bulk Density 
+
+                  Sample 1
+Intercept        0.4825950
+mois            26.9265767
+mois^2        -123.7120431
+R.squared        0.9515476
+n                5.0000000
+critical.mois    0.1088276
+max.bulk         1.9477727
+```
+
+
+## Soil water availability tools
 
 Quantifying the soil water availability for plants through the IWC approach:
 
