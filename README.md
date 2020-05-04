@@ -104,6 +104,7 @@ critical.mois    0.1088276
 max.bulk         1.9477727
 ```
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/proctor.jpeg)
+![](<man/figures/proctor.jpeg>)
 
 ## Soil water availability tools
 
@@ -137,7 +138,7 @@ ex1 <- with(skp1994,
 		critical.PR = 2, h.FC = 100, h.WP = 15000))
 ```		
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR.jpg)
-
+![](<man/figures/LLWR.jpg>)
 
 Quantifying the LLWR using van Genuchten's parameters:
 ```r
@@ -170,12 +171,14 @@ $LLRW_LLMPR
 LLWR    0.2285   0.1939   0.0346
 LLMPR 100.0000 356.6500 256.6500
 ```
+![](<man/figures/LLWR2.jpeg>)
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR2.jpeg)
 
 ## Precompression stress
 
 Estimating the precompression stress by several methods:
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/sigmaPfluxo.jpg)
+![](<man/figures/sigmaPfluxo.jpg>)
 ```r
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
 VR <- c(0.846, 0.829, 0.820, 0.802, 0.767, 0.717, 0.660, 0.595, 0.532)
@@ -211,7 +214,7 @@ n        1.52926    0.09579  15.965 9.00e-05 ***
 ---
 ```
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/wrc.jpg)
-
+![](<man/figures/wrc.jpg>)
 
 ## S Index
 ```r
