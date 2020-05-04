@@ -54,8 +54,9 @@ stress <- stressTraffic(inflation.pressure=200,
 5       0.70      51  18
 6       1.00      28  10
 
-![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/contactarea.jpeg)
+
 ```
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/contactarea.jpeg)
 
 
 Unsing the funtion soilDeformation, it is possible calculates the bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
