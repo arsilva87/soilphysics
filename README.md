@@ -41,7 +41,7 @@ soilDeformation(stress = 300,
 ## Soil water tools
 
 Quantifying the soil water availability for plants through the IWC approach:
-![](<man/figures/sigmaPfluxo.jpeg>)
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/sigmaPfluxo.jpg)
 
 ```r
 
