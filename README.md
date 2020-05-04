@@ -139,6 +139,39 @@ ex1 <- with(skp1994,
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR.jpg)
 
 
+Quantifying the LLWR using van Genuchten's parameters:
+```r
+# Usage
+  par(mfrow=c(1,2))
+  llwr_llmpr(thetaR=0.1180, thetaS=0.36, alpha=0.133, n=1.30, 
+        d=0.005, e=-2.93, f=3.54, PD=2.65,
+        critical.PR=4, h.FC=100, h.PWP=15000, air.porosity=0.1,
+        labels=c("AFP", "FC","PWP", "PR"),
+        graph1=TRUE,graph2=FALSE, ylab=expression(LLMPR~(hPa)), ylim=c(15000,1))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
+
+  llwr_llmpr(thetaR=0.1180, thetaS=0.36, alpha=0.133, n=1.30, 
+        d=0.005, e=-2.93, f=3.54, PD=2.65,
+        critical.PR=4, h.FC=100, h.PWP=15000, air.porosity=0.1,
+        labels=c("AFP", "FC","PWP", "PR"),
+        graph1=FALSE,graph2=TRUE, ylab=expression(LLMPR~(hPa)), ylim=c(0.1,0.5))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
+
+# Results
+$CRITICAL_LIMITS
+     theta potential
+AIR 0.2600     41.02
+FC  0.2285    100.00
+PWP 0.1428  15000.00
+PR  0.1939    356.65
+
+$LLRW_LLMPR
+         Upper    Lower    Range
+LLWR    0.2285   0.1939   0.0346
+LLMPR 100.0000 356.6500 256.6500
+```
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/LLWR2.jpg)
+
 ## Precompression stress
 
 Estimating the precompression stress by several methods:
