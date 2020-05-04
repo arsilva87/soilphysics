@@ -57,7 +57,7 @@ Sum            0.1689139 147.8336       0 - 15000
 
 Estimating the precompression stress by several methods:
 
-![](<man/figures/SMP.jpeg>)
+![](<man/figures/sigmaPfluxo.jpeg>)
 
 ```r
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
