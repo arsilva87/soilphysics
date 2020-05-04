@@ -15,7 +15,7 @@ library(soilphysics)
 
 ## Soil compaction tools
 
-Using the function stressTraffic, it it possible calculate the contact area, stress distribuition and stress propagation based on the SoilFlex model.
+Using the function stressTraffic, it it possible calculate the contact area, stress distribuition and stress propagation based on the SoilFlex model. 
 
 ```r
 # Usage
