@@ -133,7 +133,7 @@ Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
 Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://soilphysics.shinyapps.io/h_cutoff/>
 
 
-
+ 
 # Citation and references
 Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
 
