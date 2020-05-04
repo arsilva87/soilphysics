@@ -109,21 +109,6 @@ theta_S  0.56531    0.01092  51.786 8.32e-07 ***
 alpha    0.04748    0.01177   4.035 0.015671 *  
 n        1.52926    0.09579  15.965 9.00e-05 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 0.01092 on 4 degrees of freedom
-
-Number of iterations to convergence: 8 
-Achieved convergence tolerance: 5.554e-06
-
-$pseudo.R.squared
-[1] 0.9963425
-
-$adj.R.squared
-[1] 0.9935995
-
-attr(,"class")
-[1] "Rsq"
 ```
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/WRC.jpg)
 
