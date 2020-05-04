@@ -38,6 +38,7 @@ soilDeformation(stress = 300,
 ## Soil water tools
 
 Quantifying the soil water availability for plants through the IWC approach:
+![](<man/figures/sigmaPfluxo.jpeg>)
 
 ```r
 iwc(theta_R = 0.166, theta_S = 0.569, alpha = 0.029, n = 1.308, 
@@ -58,8 +59,6 @@ Sum            0.1689139 147.8336       0 - 15000
 Estimating the precompression stress by several methods:
 
 ```r
-![](<man/figures/sigmaPfluxo.jpeg>)
-
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
 VR <- c(0.846, 0.829, 0.820, 0.802, 0.767, 0.717, 0.660, 0.595, 0.532)
 sigmaP(VR, pres, method = "casagrande", n4VCL = 2)
