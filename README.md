@@ -15,6 +15,47 @@ library(soilphysics)
 
 ## Soil compaction tools
 
+Using the function stressTraffic, it it possible calculate the contact area, stress distribuition and stress propagation based on the SoilFlex model.
+
+```r
+# Usage
+stress <- stressTraffic(inflation.pressure=200, 
+	   recommended.pressure=200, 
+	   tyre.diameter=1.8, 
+	   tyre.width=0.4, 
+	   wheel.load=4000, 
+	   conc.factor=c(4,5,5,5,5,5),
+           layers=c(0.05,0.1,0.3,0.5,0.7,1), 
+	   plot.contact.area = TRUE)
+
+# Results
+ ---------- Boundaries of Contact Area
+
+    Parameters  Value Units
+1   Max Stress 289.00 kPa  
+2 Contact Area   0.29 m^2  
+3  Area Length   0.83  m   
+4   Area Width   0.40  m   
+
+ ---------- Wheel Loads
+
+          Parameters Loads (kg)
+1 Applied Wheel Load       4000
+2 Modeled Wheel Load       4030
+3          Diference        -30
+
+ ---------- Stress Propagation
+
+  Layers (m) Zstress   p
+1       0.05     275 169
+2       0.10     262 132
+3       0.30     154  62
+4       0.50      85  31
+5       0.70      51  18
+6       1.00      28  10
+
+```
+
 Unsing the funtion soilDeformation, it is possible calculates the bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
 
 ```r
