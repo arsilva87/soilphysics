@@ -103,7 +103,7 @@ n                5.0000000
 critical.mois    0.1088276
 max.bulk         1.9477727
 ```
-
+![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/proctor.jpeg)
 
 ## Soil water availability tools
 
