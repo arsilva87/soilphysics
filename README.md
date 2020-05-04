@@ -195,6 +195,36 @@ theta_i : 0.3139
 Soil physical quality : Poor 
 ```
 
+## Soil Aggregate-Size Distribution
+```r
+data(SoilAggregate)
+head(SoilAggregate)
+  ID    D3 D1.5 D0.75 D0.375 D0.178 D0.053
+1 A1 25.80 7.55  5.50   5.10   3.00   3.05
+2 A2 19.85 5.30  7.45   7.30   4.40   5.70
+3 A3  7.10 9.80 11.60   8.10   2.35  11.05
+4 B1  6.10 4.85 11.20  13.10   7.15   7.60
+5 B2 12.00 6.30 16.10   7.35   3.70   4.55
+6 B3 14.10 6.15  8.80  11.05   4.60   5.30
+
+classes <- c(3, 1.5, 0.75, 0.375, 0.178, 0.053)
+
+# Usage
+out <- aggreg.stability(sample.id = SoilAggregate[ ,1], 
+                        dm.classes = classes, 
+                        aggre.mass = SoilAggregate[ ,-1])
+
+		
+# Results
+head(out)
+  sample.id      MWD       GMD total.mass X3 X1.5 X0.75 X0.375 X0.178 X0.053
+1        A1 1.909163 1.2382214         50 52   15    11     10      6      6
+2        A2 1.538206 0.8239103         50 40   11    15     15      9     11
+3        A3 0.974829 0.4865272         50 14   20    23     16      5     22
+4        B1 0.811260 0.4311214         50 12   10    22     26     14     15
+5        B2 1.223620 0.7282644         50 24   13    32     15      7      9
+6        B3 1.267369 0.6853162         50 28   12    18     22      9     11
+
 ## Miscellanea
 
 Add text for other functions...
