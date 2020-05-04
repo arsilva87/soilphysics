@@ -76,7 +76,6 @@ ex1 <- with(skp1994,
 
 Estimating the precompression stress by several methods:
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/sigmaPfluxo.jpg)
-
 ```r
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
 VR <- c(0.846, 0.829, 0.820, 0.802, 0.767, 0.717, 0.660, 0.595, 0.532)
@@ -89,7 +88,6 @@ Preconsolidation stress: 104.2536
 Method: casagrande, with mcp equal to 1.7885
 Compression index: 0.2093
 Swelling index: 0.0179 
-
 ```
 
 ## Miscellanea
