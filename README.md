@@ -18,6 +18,8 @@ library(soilphysics)
 Unsing the funtion soilDeformation, it is possible calculates the bulk density variation as a function of the applied mean normal stress using critical state theory, by O'Sullivan and Robertson (1996). 
 
 ```r
+
+# Usage
 soilDeformation(stress = 300,
                 p.density = 2.67,
 	        iBD = 1.55, 
@@ -26,7 +28,8 @@ soilDeformation(stress = 300,
                 k = 0.00608, 
                 k2 = 0.01916,
                 m = 1.3,graph=TRUE,ylim=c(1.4,2.0))
-                
+		
+# Results
    iBD    fBD     vi     vf   I%
 1 1.55 1.6385 1.7226 1.6295 5.71
 
@@ -41,9 +44,12 @@ Quantifying the soil water availability for plants through the IWC approach:
 ![](<man/figures/sigmaPfluxo.jpeg>)
 
 ```r
+
+# Usage
 iwc(theta_R = 0.166, theta_S = 0.569, alpha = 0.029, n = 1.308, 
     a = 0.203, b = 0.256, hos = 200, graph = TRUE)
-    
+ 
+# Results
                      IWC       EI         h.Range
 EKa(h, hos)    0.0144000   0.9600  66.43 - 139.49
 EK(h, hos)     0.0405000   5.3700    139.49 - 330
@@ -63,9 +69,11 @@ Estimating the precompression stress by several methods:
 ```r
 pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
 VR <- c(0.846, 0.829, 0.820, 0.802, 0.767, 0.717, 0.660, 0.595, 0.532)
+
+# Usage
 sigmaP(VR, pres, method = "casagrande", n4VCL = 2)
 
-
+# Results
 Preconsolidation stress: 104.2536
 Method: casagrande, with mcp equal to 1.7885
 Compression index: 0.2093
@@ -83,12 +91,26 @@ A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/Pre
 
 A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/trafficAPP/>
 
+Sedimentation time of soil particle (Stokes' law): <https://renatoagro.shinyapps.io/stokesapp/>
+
+Exploring water retention curve using van Genuchten's model: <https://soilphysics.shinyapps.io/wrcAPP/>
+
+Soil Aggregate-Size Distribution: <https://renatoagro.shinyapps.io/Agre/>
+
+Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
+
+Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://soilphysics.shinyapps.io/h_cutoff/>
+
+
+
 # Citation and references
 Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
 
 De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P.; Leao, T.P.; Mosaddeghi, M.R. (2016) soilphysics: an R package for calculating soil water availability to plants by different soil physical indices. *Computers and Eletronics in Agriculture*, 120: 63-71. DOI: <https://doi.org/10.1016/j.compag.2015.11.003>
 
 Da Silva, A.R.; De Lima, R.P. (2017) Determination of maximum curvature point with the R package soilphysics. *International Journal of Current Research*, 9: 45241-45245.  
+
+
 
 # Contributions and bug reports
 
