@@ -54,7 +54,7 @@ stress <- stressTraffic(inflation.pressure=200,
 5       0.70      51  18
 6       1.00      28  10
 
-
+ 
 ```
 ![](https://github.com/arsilva87/soilphysics/blob/master/man/figures/contactarea.jpeg)
 ![](<man/figures/contactarea.jpeg>)
