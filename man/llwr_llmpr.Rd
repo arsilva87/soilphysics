@@ -85,8 +85,8 @@ Renato Paiva de Lima <renato_agro_@hotmail.com>
         d=0.005, e=-2.93, f=3.54, PD=2.65,
         critical.PR=4, h.FC=100, h.PWP=15000, air.porosity=0.1,
         labels=c("AFP", "FC","PWP", "PR"),
-        graph1=TRUE,graph2=FALSE, ylab=expression(LLMPR~(cm)), ylim=c(15000,1))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        graph1=TRUE,graph2=FALSE, ylab=expression(psi~(hPa)), ylim=c(15000,1))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
   llwr_llmpr(thetaR=0.1180, thetaS=0.36, alpha=0.133, n=1.30, 
         d=0.005, e=-2.93, f=3.54, PD=2.65,
@@ -94,8 +94,8 @@ Renato Paiva de Lima <renato_agro_@hotmail.com>
         graph1=FALSE,graph2=TRUE,
         labels=c("Air-filled porosity", "Field capacity", 
                 "Permanent wilting point", "Penetration resistance"),
-        ylim=c(0.1,0.30), ylab=expression(LLWR~(m^3~m^-3)))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        ylim=c(0.1,0.30), ylab=expression(theta~(m^3~m^-3)))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
 
 # Without bulk density effects in Busscher's model (i.e. f=NULL)
@@ -104,15 +104,15 @@ Renato Paiva de Lima <renato_agro_@hotmail.com>
         d=0.0165, e=-2.93, PD=2.65,
         critical.PR=3, h.FC=100, h.PWP=15000, air.porosity=0.1,
         graph1=TRUE,graph2=FALSE,ylim=c(15000,1),
-        ylab=expression(LLMPR~(cm)))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        ylab=expression(psi~(hPa)))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
   llwr_llmpr(thetaR=0.1180, thetaS=0.36, alpha=0.133, n=1.30, 
         d=0.0165, e=-2.93, PD=2.65,
         critical.PR=3, h.FC=100, h.PWP=15000,air.porosity=0.1,
         graph1=FALSE,graph2=TRUE,
-        ylim=c(0.1,0.30), ylab=expression(LLWR~(m^3~m^-3)))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        ylim=c(0.1,0.30), ylab=expression(theta~(m^3~m^-3)))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
 
 # Parameters from Leon et al. (2018), calculated physical restrictions threshold
@@ -133,15 +133,15 @@ Renato Paiva de Lima <renato_agro_@hotmail.com>
   llwr_llmpr(thetaR=thetaR, thetaS=thetaS, alpha=alpha, n=n, 
         d=0.005, e=-2.93, f=3.54, PD=2.65,ylim=c(15000,1),
         critical.PR=PR.critical, h.FC=FC, h.PWP=PWP, air.porosity=AIR.critical,
-        graph1=TRUE,graph2=FALSE, ylab=expression(LLMPR~(cm)))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        graph1=TRUE,graph2=FALSE, ylab=expression(psi~(hPa)))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
   llwr_llmpr(thetaR=thetaR, thetaS=thetaS, alpha=alpha, n=n, 
         d=0.005, e=-2.93, f=3.54, PD=2.65,
         critical.PR=PR.critical, h.FC=FC, h.PWP=PWP, air.porosity=AIR.critical,
         graph1=FALSE,graph2=TRUE,
-        ylim=c(0.1,0.30), ylab=expression(LLWR~(m^3~m^-3)))
-  mtext(expression("Bulk density"~(m^3~m^-3)),1,line=2.2, cex=0.8)
+        ylim=c(0.1,0.30), ylab=expression(theta~(m^3~m^-3)))
+  mtext(expression("Bulk density"~(Mg~m^-3)),1,line=2.2, cex=0.8)
 
 # End (not run)
 }
