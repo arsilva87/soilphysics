@@ -277,7 +277,7 @@ Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
 
 Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://soilphysics.shinyapps.io/h_cutoff/>
 
-LLWR and LLMPR: <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
+LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 
 
  
