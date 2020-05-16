@@ -85,3 +85,5 @@ ui <- fluidPage(
       tags$h4("by Renato P. de Lima")
     )))
 )
+
+shinyApp(ui, server)
