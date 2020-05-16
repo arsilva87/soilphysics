@@ -45,17 +45,17 @@ ui = navbarPage(
                            min = 0.01, max = 0.10,
                            step = 0.0001, value=0.02,tick=FALSE),
                
-               #sliderInput("h1", "h1 [DE]",
-               #            min = 1000, max = 10000,
-               #            step = 1, value=4470,tick=FALSE),
+               sliderInput("h1", "h1 [DE]",
+                           min = 1000, max = 10000,
+                           step = 1, value=4470,tick=FALSE),
                
                sliderInput("A2", "A2 [DE]",
                            min = 0.01, max = 0.50,
                            step = 0.0001, value=0.18,tick=FALSE),
                
-               #sliderInput("h2", "h2 [DE]",
-               #            min = 10, max = 2000,
-               #            step = 1, value=1400,tick=FALSE),
+               sliderInput("h2", "h2 [DE]",
+                           min = 10, max = 2000,
+                           step = 1, value=1400,tick=FALSE)
                
              )),
              
