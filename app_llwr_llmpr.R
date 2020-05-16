@@ -1,7 +1,5 @@
 
-ui = tagList(
-  
-  navbarPage(
+ui = navbarPage(
 
     "LLWR calculation",
     
@@ -224,8 +222,6 @@ ui = tagList(
     
     
     
-    
-  )
 )
 
 
