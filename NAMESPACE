@@ -37,6 +37,7 @@ export(aggreg.stability)
 export(r)
 export(psd)
 export(Kr_h)
+export(Kr_theta)
 export(llwr_llmpr)
 export(hydraulicCutOff2)
 
