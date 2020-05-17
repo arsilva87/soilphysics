@@ -1,4 +1,4 @@
-Kr <- 
+Kr_h <- 
 function(Ks,alpha, n, h) 
 {
    out <- ((1 - ((alpha * h)^(n - 1))*
