@@ -1,5 +1,5 @@
-\name{Kr}
-\alias{Kr}
+\name{Kr_h}
+\alias{Kr_h}
 
 \title{ Unsaturated Hydraulic Conductivity }
 
@@ -7,7 +7,7 @@
 soil water tension (h) based on van Genuchten's water retention curve. }
 
 \usage{
-Kr(Ks, alpha, n, h)
+Kr_h(Ks, alpha, n, h)
 }
 
 \arguments{
@@ -31,12 +31,12 @@ unsaturated soils 1. \emph{Soil Science Society of America Journal} 44(5):892-89
 
 \examples{
 # EXAMPLE 1
-Kr(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100)
+Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100)
 
 # EXAMPLE 2
 x <- seq(log10(1), log10(1000),len=100)
 h <- 10^x
-y <- Kr(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
+y <- Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
 plot(x=h,y=y, log="yx", xlab="h (hPa)", yaxt='n',
     ylab="", ylim=c(0.001,100), xlim=c(1,10000))
 mtext(expression(K[r] ~ (cm~d^-1)), 2, line=2)
