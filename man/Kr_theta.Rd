@@ -22,8 +22,10 @@ Kr_theta(theta, thetaS, thetaS, alpha, n, Ks, f)
 \references{
 Guarracino, L. (2007). Estimation of saturated hydraulic conductivity Ks from the van Genuchten 
 shape parameter alpha. \emph{Water Resources Research}, 43(11).
+
 Van Genuchten, M. T. (1980). A closed-form equation for predicting the hydraulic conductivity of 
 unsaturated soils. \emph{Soil Science Society of America Journal} 44(5):892-898.
+
 Mualem, Y. (1976). A new model for predicting the hydraulic conductivity of unsaturated porous 
 media. \emph{Water Resour. Res.} 43(11):  513-522,
 }
@@ -47,11 +49,6 @@ w <- theta[-50]
 plot(x=w,y=Kr,xlab=expression(theta~(m^3~m^-3)),
      ylim=c(0.001,100), log="y",yaxt='n',
      ylab="", xlim=c(0.15,0.50))
-mtext(expression(K[r] ~ (cm~d^-1)), 2, line=2)
-ax <- c(0.001, 0.01, 0.1, 1, 10, 100)
-axis(2,at=ax, labels=ax), alpha = 0.048, n = 1.5,h=h)
-plot(x=h,y=y, log="yx", xlab="h (hPa)", yaxt='n',
-    ylab="", ylim=c(0.001,100), xlim=c(1,10000))
 mtext(expression(K[r] ~ (cm~d^-1)), 2, line=2)
 ax <- c(0.001, 0.01, 0.1, 1, 10, 100)
 axis(2,at=ax, labels=ax)
