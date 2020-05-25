@@ -168,9 +168,11 @@ $LLRW_LLMPR
          Upper    Lower    Range
 LLWR    0.2285   0.1939   0.0346
 LLMPR 100.0000 356.6500 256.6500
+
+# See also (LLWR and LLMPR):  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 ```
 ![](<man/figures/LLWR2.jpeg>)
-# See also (LLWR and LLMPR):  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
+
 
 ## Precompression stress
 
