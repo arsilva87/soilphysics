@@ -170,6 +170,7 @@ LLWR    0.2285   0.1939   0.0346
 LLMPR 100.0000 356.6500 256.6500
 ```
 ![](<man/figures/LLWR2.jpeg>)
+# See also (LLWR and LLMPR):  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 
 ## Precompression stress
 
@@ -210,8 +211,6 @@ n        1.52926    0.09579  15.965 9.00e-05 ***
 ---
 ```
 ![](<man/figures/wrc.jpg>)
-
-See also: LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 
 ## S Index
 ```r
