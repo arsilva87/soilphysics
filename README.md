@@ -211,6 +211,8 @@ n        1.52926    0.09579  15.965 9.00e-05 ***
 ```
 ![](<man/figures/wrc.jpg>)
 
+See also: LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
+
 ## S Index
 ```r
 # Usage
