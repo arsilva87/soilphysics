@@ -155,7 +155,7 @@ function (inflation.pressure, recommended.pressure, tyre.diameter,
       p <- round((stress.Z+stress.X+stress.Y)/3, 0)
 
       stress <- data.frame(Layers, stress.Z,p)
-      colnames(stress) <- c("Layers (m)","sigma_vetical", "sigma_mean")
+      colnames(stress) <- c("Layers (m)","sigma_vertical", "sigma_mean")
 
       out <- list(Area = Area, Loads = Loads, 
                   Stress = stress, stress.matrix = mstress,
