@@ -31,10 +31,10 @@ stressTraffic(inflation.pressure, recommended.pressure, tyre.diameter,
 A list of
   \item{Area}{ Contact area parameters.}
   \item{Loads}{ Estimated wheel loads.}
-  \item{Stress}{ Stress propagation into soil.}
+  \item{Stress}{ Stress propagation into soil; sigma_vertical: vertical stress; sigma_mean: mean normal stress}
   \item{stress.matrix}{ The matrix of applied stress at a specific depth and radial distance from the tyre centre.}
   \item{fZStress}{ The function of stress propagation in z direction (vertical stress).}
-  \item{fmeanStress}{ The function of normal mean stress propagation.}
+  \item{fmeanStress}{ The function of mean normal stress propagation.}
   \item{fStress}{ The function of stress propagation.}
   \item{fXStress}{ The function of stress propagation in x (footprint length or driving) direction.}
   \item{fYStress}{ The function of stress propagation in y (tire width) direction.}
