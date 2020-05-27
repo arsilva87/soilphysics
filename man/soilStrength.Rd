@@ -85,7 +85,7 @@ plot(x = 1, y = 1,
 axis(3)
 mtext("Vertical Stress",side=3,line=2.5)
 
-stressz <- stress$Stress$Z
+stressz <- stress$Stress$sigma_vertical
 layers <- stress$Stress$Layers
 points(x=stressz, y=layers, type="l")
 
