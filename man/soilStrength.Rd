@@ -4,7 +4,7 @@
 \title{ Estimation of the Load Bearing Capacity by precompression stress }
 
 \description{
-Calculates the soil strength using precompression stress for different clay contents and matric suction.
+Calculates the soil strength using precompression stress for different clay contents and matric suctions.
 }
 
 \usage{ 
@@ -14,7 +14,7 @@ soilStrength(clay.content, matric.suction = NULL, water.content = NULL)
 \arguments{
   \item{clay.content}{ a numeric vector containing the values of clay for each soil layer, \%. 
 	Note that it can also be a unique value. }
-  \item{matric.suction}{ a numeric vector containing the values of matric suction for each clay content, hPa. }
+  \item{matric.suction}{ a numeric vector containing the values of matric suction for each clay content, kPa. }
   \item{water.content}{ a numeric vector containing the values of water content for each clay content, \eqn{m^3 m^{-3}}. 
 	Note that water.content must be passed if \code{matric.suction} is not. See details. }
 }
@@ -71,7 +71,7 @@ stress <- stressTraffic(inflation.pressure=200,
 	        tyre.width=0.4, 
 	        wheel.load=4000, 
 	        conc.factor=c(4,5,5,5,5,5),
-              layers=c(0.05,0.1,0.3,0.5,0.7,1), 
+                layers=c(0.05,0.1,0.3,0.5,0.7,1), 
 	        plot.contact.area = FALSE)
 
 strength <- soilStrength(clay.content=c(25,28,30,30,30,30),
