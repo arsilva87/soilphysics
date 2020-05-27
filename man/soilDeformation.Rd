@@ -79,13 +79,13 @@ stress <- stressTraffic(inflation.pressure=200,
                 layers=c(0.05,0.1,0.3,0.5,0.7,1), 
 	        plot.contact.area = FALSE)
 
-stress.p <- stress$Stress$p
+stress.mean <- stress$Stress$sigma_mean
 layers <- stress$Stress$Layers
 n <- length(layers)
 
-def <- soilDeformation(stress = stress.p,
+def <- soilDeformation(stress = stress.mean,
                 p.density = rep(2.67, n),
-	          iBD = rep(1.55,n), 
+	        iBD = rep(1.55,n), 
                 N = rep(1.9392,n), 
                 CI = rep(0.06037,n), 
                 k = rep(0.00608,n), 
