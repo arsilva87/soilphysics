@@ -79,7 +79,7 @@ stress
 
 # Stress Propagation 
 # Vertical Stress
-stress.v <- stress$Stress$Zstress
+stress.v <- stress$Stress$sigma_vertical
 layers <- stress$Stress$Layers
 plot(x = 1, y = 1, xlim=c(0,300),ylim=c(1,0),xaxt = "n",
      ylab = "Soil Depth",xlab ="", type="l", main="")
@@ -88,7 +88,7 @@ mtext("Stress (kPa)",side=3,line=2.5)
 lines(x=stress.v, y=layers)
 
 # Mean normal stress
-stress.p <- stress$Stress$p
+stress.p <- stress$Stress$sigma_mean
 lines(x=stress.p, y=layers, lty=2)
 legend("bottomright", c("Vertical stress", "Normal mean stress"), lty = 1:2)
 
