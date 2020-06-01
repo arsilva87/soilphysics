@@ -12,13 +12,13 @@ compressive_properties3(bulk.density, matric.suction, soil=c("SandyLoam","SandyC
 }
 
 \arguments{
-  \item{bulkd.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}} 
-  \item{matric.suction}{ a numeric vector containing the values of matric suction, \hPa} 
+  \item{bulkd.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}} 
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa} 
   \item{soil}{ the soil texture group 'SandyLoam' or 'SandyClayLoam'. See exemples}
 }
 
 \value{
-  \item{N}{the specific volume at p = 1 kPa, N}
+  \item{N}{the specific volume at \eqn{p = 1 kPa}, N}
   \item{CI}{the compression index, lambda}
   \item{k}{the recompression index, kappa}
 }
@@ -28,7 +28,7 @@ Pedo-transfer function deveploed under no-till condition. See de Lima et al. (20
 }
 
 \references{
-de Lima, R. P., da Silva, A. P., Giarola, N. F., da Silva, A. R., Rolim, M. M., & Keller, T., 2018.
+de Lima, R. P., da Silva, A. P., Giarola, N. F., da Silva, A. R., Rolim, M. M., Keller, T., 2018.
 Impact of initial bulk density and matric suction on compressive properties of two Oxisols under no-till. 
 \emph{Soil and Tillage Research}, 175:168-177.
 
