@@ -2,10 +2,10 @@
 \alias{soilStrength2}
 
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
-soil properties (Schjønning & Lamandé, 2018)}
+soil properties}
 
 \description{
-Calculates the soil strength using precompression stress for different clay contents and matric suctions using the pedo-transfer function from Schjønning & Lamandé (2018)
+Calculates the precompression stress using the pedo-transfer function from Schjønning & Lamandé (2018)
 }
 
 \usage{ 
@@ -20,7 +20,6 @@ soilStrength2(bulk.density,  matric.suction, clay.content)
 }
 
 \value{
-A two-columns data frame: 
   \item{PC}{the precompression stress}
 }
 
