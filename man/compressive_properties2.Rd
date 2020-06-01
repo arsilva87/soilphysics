@@ -12,21 +12,21 @@ compressive_properties2(particle.density, bulk.density)
 }
 
 \arguments{
-  \item{particle.density}{ a numeric vector containing the values of particle density, \eqn{Mg m^{-3}} 
-  \item{bulk.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}
+  \item{particle.density}{ a numeric vector containing the values of particle density, \eqn{Mg m^{-3}}}
+  \item{bulk.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}}
 }
 
 \value{
-  \item{N}{the specific volume at p = 1 kPa, N}
+  \item{N}{the specific volume at \eqn{p = 1 kPa}, N}
   \item{CI}{the compression index, lambda}
 }
 
 \details{
-In Keller & Arvidsson (2007), the recompression index, kappa, was found as 0.042 for all soil.
+In Keller and Arvidsson (2007), the recompression index, kappa, was found as 0.042 for all soil.
 }
 
 \references{
-Keller, T., & Arvidsson, J., 2007. 
+Keller, T., Arvidsson, J., 2007. 
 Compressive properties of some Swedish and Danish structured agricultural soils measured in uniaxial compression tests. 
 \emph{European Journal of Soil Science }, 58:1373-1381.
 
