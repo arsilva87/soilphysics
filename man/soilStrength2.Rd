@@ -4,7 +4,7 @@
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
-Calculates the precompression stress using the pedo-transfer function from Schjonning & Lamande (2018)
+Calculates the precompression stress using the pedo-transfer function from Schjonning and Lamande (2018)
 }
 
 \usage{ 
@@ -12,9 +12,9 @@ soilStrength2(bulk.density,  matric.suction, clay.content)
 }
 
 \arguments{
-  \item{clay.content}{ a numeric vector containing the values of clay content, \%.}
-  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa.}
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}
+  \item{clay.content}{ a numeric vector containing the values of clay content, \eqn{%}}
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa}
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
 }
 
 \value{
