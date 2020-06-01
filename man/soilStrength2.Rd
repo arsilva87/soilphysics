@@ -1,5 +1,5 @@
-\name{soilStrength}
-\alias{soilStrength}
+\name{soilStrength2}
+\alias{soilStrength2}
 
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
 soil properties (Schjønning & Lamandé, 2018)}
