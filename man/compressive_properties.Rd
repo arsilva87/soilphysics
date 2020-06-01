@@ -17,7 +17,7 @@ compressive_properties(water.content, soil=c("Loess", "Calcareous"))
 }
 
 \value{
-  \item{N}{the specific volume at p = 1 kPa, N}
+  \item{N}{the specific volume at \eqn{p = 1 kPa}, N}
   \item{CI}{the compression index, lambda}
 }
 
