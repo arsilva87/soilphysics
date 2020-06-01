@@ -1,8 +1,7 @@
 \name{soilStrength2}
 \alias{soilStrength2}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
-soil properties}
+\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
 Calculates the precompression stress using the pedo-transfer function from Schjønning & Lamandé (2018)
@@ -13,10 +12,9 @@ soilStrength2(bulk.density,  matric.suction, clay.content)
 }
 
 \arguments{
-  \item{clay.content}{ a numeric vector containing the values of clay, \%. 
-	Note that it can also be a unique value. }
-  \item{matric.suction}{ a numeric vector containing the values of matric suction for each clay content, hPa. }
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density for each clay content, \eqn{Mg m^{-3}}. 
+  \item{clay.content}{ a numeric vector containing the values of clay content, \%.}
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa.}
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
 }
 
 \value{
