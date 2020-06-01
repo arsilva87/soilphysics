@@ -29,7 +29,7 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
 }
 
 \details{
-The function returns 0 for soil properties values beyond the range for which the function was built. The default for this function is the values given in the application example by Horn & Fleige (2003).
+The function returns 0 for soil properties values beyond the range for which the function was built. The default for this function is the values given in the application example by Horn and Fleige (2003).
 In the 'texture' argument, the user must pass the textural classification 'Sand','SandLoam', 'Silt', 'Clay<35' or 'Clay>35'. See exemples.
 }
 
@@ -57,7 +57,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 \examples{
 # EXEMPLE 1
 
-soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8) # Exemple from Horn & Fleige (2003), Table 7
+soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8) # Exemple from Horn and Fleige (2003), Table 7
 
 
 # EXEMPLE 2 - computing the effect of avaiable water capacity - (AWC)
