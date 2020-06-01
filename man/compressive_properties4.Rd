@@ -12,12 +12,12 @@ compressive_properties4(matric.suction, soil=c("PloughLayer","PloughPan"))
 }
 
 \arguments{
-  \item{matric.suction}{ a numeric vector containing the values of matric suction, \hPa.} 
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa.} 
   \item{soil}{the soil compaction state 'PloughLayer' or 'PloughPan'. See exemples.}
 }
 
 \value{
-  \item{N}{the specific volume at p = 1 kPa, N}
+  \item{N}{the specific volume at \eqn{p = 1 kPa}, N}
   \item{CI}{the compression index, lambda}
   \item{k}{the recompression index, kappa}
 }
@@ -27,7 +27,7 @@ Pedo-transfer function developed for a sandy loam soil texture. See de Lima et a
 }
 
 \references{
-de Lima, R. P., Rolim, M. M., da C. Dantas, D., da Silva, A. R., & Mendonça, E. A., 2020.
+de Lima, R. P., Rolim, M. M., da C. Dantas, D., da Silva, A. R., Mendonça, E. A., 2020.
 Compressive properties and least limiting water range of plough layer and plough pan in sugarcane fields. 
 \emph{Soil Use and Management}, x:xx-xx.
 
