@@ -1,8 +1,7 @@
 \name{soilStrength4}
 \alias{soilStrength4}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
-soil properties}
+\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
 Calculates the soil strength using precompression stress using the pedo-transfer function from Lebert & Horn (1991)
@@ -13,16 +12,16 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
 }
 
 \arguments{
-  \item{BD}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
-  \item{AC}{ a numeric vector containing the values of volumetric air capacity at the specified pF, \%}. 
-  \item{AWC}{ a numeric vector containing the values of volumetric available water at the specified pF, \%}. 
-  \item{PWP}{ a numeric vector containing the values of volumetric non available water capacity (pF > 4.2), \%}.
-  \item{Ks}{ a numeric vector containing the values of saturated hydraulic conductivity, \eqn{10^3 cm s^{-1}}. 
-  \item{OM}{ a numeric vector containing the values of organic matter, \%}.
-  \item{C}{ a numeric vector containing the values of cohesion at the specified pF, \kPa}.
-  \item{phi}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}.
-  \item{texture}{the soil texture classification. See details}. 
-  \item{pF}{the 1.8 or 2.5 value pF}. 
+  \item{BD}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}} 
+  \item{AC}{ a numeric vector containing the values of volumetric air capacity at the specified pF, \%} 
+  \item{AWC}{ a numeric vector containing the values of volumetric available water at the specified pF, \%} 
+  \item{PWP}{ a numeric vector containing the values of volumetric non available water capacity (pF > 4.2), \%}
+  \item{Ks}{ a numeric vector containing the values of saturated hydraulic conductivity, \eqn{10^3 cm s^{-1}} 
+  \item{OM}{ a numeric vector containing the values of organic matter, \%}
+  \item{C}{ a numeric vector containing the values of cohesion at the specified pF, \kPa}
+  \item{phi}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}
+  \item{texture}{the soil texture classification. See details} 
+  \item{pF}{the 1.8 or 2.5 value pF} 
 }
 
 \value{
