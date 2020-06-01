@@ -12,9 +12,10 @@ soilStrength5(bulk.density,  water.content, clay.content)
 }
 
 \arguments{
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}} 
-  \item{water.content}{ a numeric vector containing the values of water content, \(g/g)}
-  \item{clay.content}{ a numeric vector containing the values of clay content, \%}
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}} 
+  \item{water.content}{ a numeric vector containing the values of water content, (g/g)}
+  \item{clay.content}{ a numeric vector containing the values of clay content, \eqn{%}} 
+
 }
 
 \value{
