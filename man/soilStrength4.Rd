@@ -20,7 +20,7 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
   \item{Ks}{ a numeric vector containing the values of saturated hydraulic conductivity, \eqn{10^3 cm s^{-1}}. 
   \item{OM}{ a numeric vector containing the values of organic matter, \%}.
   \item{C}{ a numeric vector containing the values of cohesion at the specified pF, \kPa}.
-  \item{C}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}.
+  \item{phi}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}.
   \item{texture}{the soil texture classification and the pF value. See details}. 
 }
 
@@ -29,7 +29,8 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
 }
 
 \details{
-The function returns 0 for soil properties values beyond the range for which the function was built.
+The function returns 0 for soil properties values beyond the range for which the function was built. 
+In the 'texture' argument, the user must pass the textural classification 'Sand','SandLoam', 'Silt', 'Clay<35' or 'Clay>35' and the pF values 1.8 or 2.5.
 }
 
 \references{
