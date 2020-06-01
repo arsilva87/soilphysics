@@ -1,4 +1,4 @@
-\name{soilStrength23}
+\name{soilStrength3}
 \alias{soilStrength3}
 
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
