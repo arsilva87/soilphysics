@@ -4,7 +4,7 @@
 \title{ Estimation of the Load Bearing Capacity by precompression stress }
 
 \description{
-Calculates the soil strength using precompression stress for different clay contents and matric suctions.
+Calculates the precompression stress using the pedo-transfer function from Severiano et al. (2013)
 }
 
 \usage{ 
