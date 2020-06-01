@@ -29,8 +29,6 @@ The function returns 0 for soil properties values beyond the range for which the
 Saffih-Hdadi, K., Defossez, P., Richard, G., Cui, Y. J., Tang, A. M., Chaplain, V., 2009. 
 A method for predicting soil susceptibility to the compaction of surface layers as a function of water content and bulk density. 
 \emph{Soil and Tillage Research}, 105:93-106.
-
-
 }
 
 \author{ 
@@ -43,7 +41,8 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+
+  # EXEMPLE 1
 soilStrength3(bulk.density=1.1, water.content=40, texture="VeryFine")
 soilStrength3(bulk.density=1.2, water.content=20, texture="Fine")
 soilStrength3(bulk.density=1.3, water.content=15, texture="MediumFine")
