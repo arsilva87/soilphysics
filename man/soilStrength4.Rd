@@ -16,8 +16,12 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
   \item{BD}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
   \item{AC}{ a numeric vector containing the values of volumetric air capacity at the specified pF, \%}. 
   \item{AWC}{ a numeric vector containing the values of volumetric available water at the specified pF, \%}. 
-  \item{PWP}{ a numeric vector containing the values of volumetric non available water capacity (pF > 4.2), \%}. 
-  \item{texture}{the soil texture classification}. 
+  \item{PWP}{ a numeric vector containing the values of volumetric non available water capacity (pF > 4.2), \%}.
+  \item{Ks}{ a numeric vector containing the values of saturated hydraulic conductivity, \eqn{10^3 cm s^{-1}}. 
+  \item{OM}{ a numeric vector containing the values of organic matter, \%}.
+  \item{C}{ a numeric vector containing the values of cohesion at the specified pF, \kPa}.
+  \item{C}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}.
+  \item{texture}{the soil texture classification and the pF value. See details}. 
 }
 
 \value{
