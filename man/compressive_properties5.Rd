@@ -12,7 +12,7 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of water content, \(g/g,%).} 
+  \item{water.content}{ a numeric vector containing the values of water content, \g/g,%.} 
   \item{soil}{the the soil texture group 'SandyLoam' or 'ClayLoam'. See exemples.}
 }
 
