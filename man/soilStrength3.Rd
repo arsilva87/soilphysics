@@ -13,9 +13,10 @@ soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFi
 }
 
 \arguments{
-  \item{clay.content}{ a numeric vector containing the values of clay content, \eqn{%}}
-  \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa}
   \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}}
+  \item{matric.suction}{ the soil texture group. See exemples}
+
 }
 
 \value{
@@ -27,9 +28,9 @@ The function returns 0 for soil properties values beyond the range for which the
 }
 
 \references{
-Schjonning, P.; Lamande, M., 2018. 
-Models for prediction of soil precompression stress from readily available soil properties. 
-\emph{Geoderma}, 320:115-125.
+Saffih-Hdadi, K.; Defossez, P.; Richard, G.; Cui, Y. J.; Tang, A. M.; Chaplain, V, 2009.
+A method for predicting soil susceptibility to the compaction of surface layers as a function of water content and bulk density 
+\emph{Geoderma}, 115:96-103.
 
 
 }
@@ -45,16 +46,18 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 
 \examples{
 # EXEMPLE 1
-
-soilStrength2(bulk.density=1.46, matric.suction=100, clay.content=0.3)
+soilStrength3(bulk.density=1.1, water.content=40, texture="VeryFine")
+soilStrength3(bulk.density=1.2, water.content=20, texture="Fine")
+soilStrength3(bulk.density=1.3, water.content=15, texture="MediumFine")
+soilStrength3(bulk.density=1.4, water.content=15, texture="Medium")
+soilStrength3(bulk.density=1.5, water.content=10, texture="Coarse")
 
 
 # EXEMPLE 2
-
-matric.suction <- seq(from=60,to=1000,len=50) # range of matric suction from 60 to 1200 hPa
-out <- soilStrength2(bulk.density=1.46, matric.suction=matric.suction, clay.content=0.3)
-plot(x=matric.suction,y=out, 
-     ylab="Precompression stress (kPa)", xlab="Matric suction (hPa)")
+water.content <- seq(5,30,len=20) # range of water content from 5 to 30 %
+out <- soilStrength3(bulk.density=1.4, water.content=water.content, texture="MediumFine")
+plot(x=water.content,y=out, 
+     ylab="Precompression stress (kPa)", xlab="Water content (%)")
 
 # End (not run)
 }
