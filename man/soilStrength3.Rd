@@ -13,8 +13,8 @@ soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFi
 
 \arguments{
   \item{water.content}{ a numeric vector containing the values of gravimetric water content, \%}
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
-  \item{texture}{the soil texture classification. See exemples}. 
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}
+  \item{texture}{the soil texture classification. See exemples} 
 }
 
 \value{
