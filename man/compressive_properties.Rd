@@ -13,7 +13,7 @@ compressive_properties(water.content, soil=c("Loess", "Calcareous"))
 
 \arguments{
   \item{water.content}{ a numeric vector containing the values of gravimetric water content, %)}
-  \item{soil}{the soil group 'Loess' or 'Calcareous'. See exemples}
+  \item{soil}{the soil group Loess or Calcareous. See exemples}
 }
 
 \value{
