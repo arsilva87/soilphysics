@@ -12,8 +12,8 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of water content, \(g/g,%). 
-  \item{soil}{the the soil texture group 'SandyLoam' or 'ClayLoam'. See exemples.
+  \item{water.content}{ a numeric vector containing the values of water content, \(g/g,%).} 
+  \item{soil}{the the soil texture group 'SandyLoam' or 'ClayLoam'. See exemples.}
 }
 
 \value{
@@ -23,7 +23,7 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \details{
-See de O’Sullivan et al. (1999).
+See O’Sullivan et al. (1999).
 }
 
 \references{
@@ -63,10 +63,6 @@ out <- compressive_properties5(water.content=water.content, soil="ClayLoam")
 plot(x=water.content ,y=out$N, ylab="N", xlab="Bulk density") # plot for N
 plot(x=water.content ,y=out$lambda, ylab="lambda", xlab="Bulk density") # plot for compression index, lambda
 plot(x=water.content ,y=out$kappa, ylab="kappa", xlab="Bulk density") # plot for recompression index, kappa
-
-
-
-
 
 # End (not run)
 }
