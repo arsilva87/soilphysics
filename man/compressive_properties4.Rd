@@ -12,8 +12,8 @@ compressive_properties4(matric.suction, soil=c("PloughLayer","PloughPan"))
 }
 
 \arguments{
-  \item{matric.suction}{ a numeric vector containing the values of matric suction, \hPa. 
-  \item{soil}{the soil compaction state 'PloughLayer' or 'PloughPan'. See exemples.
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, \hPa.} 
+  \item{soil}{the soil compaction state 'PloughLayer' or 'PloughPan'. See exemples.}
 }
 
 \value{
