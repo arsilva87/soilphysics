@@ -1,8 +1,7 @@
 \name{soilStrength3}
 \alias{soilStrength3}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
-soil properties}
+\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
 Calculates the soil strength using precompression stress using the pedo-transfer function from Saffih-Hdadi et al. (2009)
@@ -13,10 +12,9 @@ soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFi
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of water content, (g/g,\%). 
-	Note that it can also be a unique value. }
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density for each clay content, \eqn{Mg m^{-3}}. 
-  \item{texture}{the soil texture classification}. 
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \%}
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
+  \item{texture}{the soil texture classification. See exemples}. 
 }
 
 \value{
