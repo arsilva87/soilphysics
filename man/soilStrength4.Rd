@@ -22,7 +22,7 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Cl
   \item{C}{ a numeric vector containing the values of cohesion at the specified pF, \kPa}.
   \item{phi}{ a numeric vector containing the values of angle of internal friction at the specified pF, \degree}.
   \item{texture}{the soil texture classification. See details}. 
-  \item{texture}{the 1.8 or 2.5 value pF}. 
+  \item{pF}{the 1.8 or 2.5 value pF}. 
 }
 
 \value{
