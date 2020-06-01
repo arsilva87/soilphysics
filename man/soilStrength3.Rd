@@ -53,7 +53,7 @@ soilStrength3(bulk.density=1.5, water.content=10, texture="Coarse")
 # EXEMPLE 2
 w <- seq(5,30,len=20) # range of water content from 5 to 30 %
 out <- soilStrength3(bulk.density=1.4, water.content=w, texture="MediumFine")
-plot(x=water.content,y=out, ylab="Precompression stress (kPa)", xlab="Water content (%)")
+plot(x=w,y=out, ylab="Precompression stress (kPa)", xlab="Water content (%)")
 
 # End (not run)
 }
