@@ -12,8 +12,8 @@ soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFi
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \%}
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}}
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
   \item{texture}{the soil texture classification. See exemples} 
 }
 
@@ -26,7 +26,7 @@ The function returns 0 for soil properties values beyond the range for which the
 }
 
 \references{
-Saffih-Hdadi, K., Défossez, P., Richard, G., Cui, Y. J., Tang, A. M., & Chaplain, V., 2009. 
+Saffih-Hdadi, K., Defossez, P., Richard, G., Cui, Y. J., Tang, A. M., Chaplain, V., 2009. 
 A method for predicting soil susceptibility to the compaction of surface layers as a function of water content and bulk density. 
 \emph{Soil and Tillage Research}, 105:93-106.
 
