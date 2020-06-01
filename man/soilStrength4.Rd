@@ -9,13 +9,11 @@ Calculates the soil strength using precompression stress using the pedo-transfer
 }
 
 \usage{ 
-soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFine","Medium","Coarse"))
+soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8)
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of water content, (g/g,\%). 
-	Note that it can also be a unique value. }
-  \item{bulk.density}{ a numeric vector containing the values of soil bulk density for each clay content, \eqn{Mg m^{-3}}. 
+  \item{BD}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}. 
   \item{texture}{the soil texture classification}. 
 }
 
