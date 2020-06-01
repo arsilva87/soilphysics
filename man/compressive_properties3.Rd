@@ -8,13 +8,13 @@ Calculates the compressive parameteres N and lambda using the pedo-transfer func
 }
 
 \usage{ 
-compressive_properties3(bulk.density, matric.suction, soil="SandyLoam")
+compressive_properties3(bulk.density, matric.suction, soil=c("SandyLoam","SandyClayLoam"))
 }
 
 \arguments{
-  \item{particle.density}{ a numeric vector containing the values of bulk density, \(g/g,%). 
-  \item{matric.suction}{ a numeric vector containing the values of bulk density, \hPa. 
-  \item{soil}{ the soil texture group 'SandyLoam' or 'SandyClayLoam'. See exemples.
+  \item{bulkd.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}. 
+  \item{matric.suction}{ a numeric vector containing the values of matric suction, \hPa} 
+  \item{soil}{ the soil texture group 'SandyLoam' or 'SandyClayLoam'. See exemples}
 }
 
 \value{
