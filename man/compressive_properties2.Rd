@@ -12,8 +12,8 @@ compressive_properties2(particle.density, bulk.density)
 }
 
 \arguments{
-  \item{particle.density}{ a numeric vector containing the values of particle density, \(g/g,%). 
-  \item{particle.density}{ a numeric vector containing the values of bulk density, \(g/g,%). 
+  \item{particle.density}{ a numeric vector containing the values of particle density, \eqn{Mg m^{-3}}. 
+  \item{bulk.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}. 
 }
 
 \value{
