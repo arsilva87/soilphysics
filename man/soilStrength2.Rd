@@ -1,0 +1,62 @@
+\name{soilStrength}
+\alias{soilStrength}
+
+\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available
+soil properties (Schjønning & Lamandé, 2018)}
+
+\description{
+Calculates the soil strength using precompression stress for different clay contents and matric suctions using the pedo-transfer function from Schjønning & Lamandé (2018)
+}
+
+\usage{ 
+soilStrength2(bulk.density,  matric.suction, clay.content)
+}
+
+\arguments{
+  \item{clay.content}{ a numeric vector containing the values of clay, \%. 
+	Note that it can also be a unique value. }
+  \item{matric.suction}{ a numeric vector containing the values of matric suction for each clay content, hPa. }
+  \item{bulk.density}{ a numeric vector containing the values of soil bulk density for each clay content, \eqn{Mg m^{-3}}. 
+}
+
+\value{
+A two-columns data frame: 
+  \item{PC}{the precompression stress}
+}
+
+\details{
+The function returns 0 for soil properties values beyond the range for which the function was built.
+}
+
+\references{
+Schjønning, P.; Lamandé, M., 2018. 
+Models for prediction of soil precompression stress from readily available soil properties. 
+\emph{Geoderma}, 320:115-125.
+
+
+}
+
+\author{ 
+Renato Paiva de Lima <renato_agro_@hotmail.com>
+Anderson Rodrigo da Silva <anderson.agro@hotmail.com> 
+}
+
+\seealso{
+\code{\link{stressTraffic}}
+}
+
+\examples{
+# EXEMPLE 1
+
+soilStrength2(bulk.density=1.46, matric.suction=100, clay.content=0.3)
+
+
+# EXEMPLE 2
+
+matric.suction <- seq(from=60,to=1000,len=50) # range of matric suction from 60 to 1200 hPa
+out <- soilStrength2(bulk.density=1.46, matric.suction=matric.suction, clay.content=0.3)
+plot(x=matric.suction,y=out, 
+     ylab="Precompression stress (kPa)", xlab="Matric suction (hPa)")
+
+# End (not run)
+}
