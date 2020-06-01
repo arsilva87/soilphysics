@@ -12,12 +12,12 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of water content, \g/g,%.} 
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}} 
   \item{soil}{the the soil texture group 'SandyLoam' or 'ClayLoam'. See exemples.}
 }
 
 \value{
-  \item{N}{the specific volume at p = 1 kPa, N}
+  \item{N}{the specific volume at \eqn{p = 1 kPa}, N}
   \item{CI}{the compression index, lambda}
   \item{k}{the recompression index, kappa}
 }
@@ -27,7 +27,7 @@ See O’Sullivan et al. (1999).
 }
 
 \references{
-O'sullivan, M. F., Henshall, J. K., & Dickson, J. W., 1999.
+O'sullivan, M. F., Henshall, J. K., Dickson, J. W., 1999.
 A simplified method for estimating soil compaction. 
 \emph{Soil and Tillage Research}, 49:325-335.
 
