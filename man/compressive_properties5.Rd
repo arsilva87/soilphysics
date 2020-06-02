@@ -1,10 +1,10 @@
 \name{compressive_properties5}
 \alias{compressive_properties5}
 
-\title{ Estimation of compressive properties (from soil compression curve) from readily available soil properties}
+\title{Estimation of compressive properties by O’Sullivan et al. (1999)}
 
 \description{
-Calculates the compressive parameteres N, lambda and kappa using the pedo-transfer function from O’Sullivan et al. (1999)
+It calculates the compressive parameteres N, lambda and kappa using the pedo-transfer function from O’Sullivan et al. (1999)
 }
 
 \usage{ 
@@ -41,13 +41,13 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 water.content <- 15
 compressive_properties5(water.content=water.content, soil="SandyLoam") 
 compressive_properties5(water.content=water.content, soil="ClayLoam") 
 
 
-# EXEMPLE 2 - SandyLoam
+# EXAMPLE 2 - SandyLoam
 
 water.content <- seq(from=5,to=20,len=20)
 out <- compressive_properties5(water.content=water.content, soil="SandyLoam") 
@@ -56,7 +56,7 @@ plot(x=water.content ,y=out$lambda, ylab="lambda", xlab="Bulk density") # plot f
 plot(x=water.content ,y=out$kappa, ylab="kappa", xlab="Bulk density") # plot for recompression index, kappa
 
 
-# EXEMPLE 3 - ClayLoam 
+# EXAMPLE 3 - ClayLoam 
 
 water.content <- seq(from=10,to=25,len=20)
 out <- compressive_properties5(water.content=water.content, soil="ClayLoam") 
