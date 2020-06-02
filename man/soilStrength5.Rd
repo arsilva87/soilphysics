@@ -1,10 +1,10 @@
 \name{soilStrength5}
 \alias{soilStrength5}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
+\title{ Estimation of precompression stress by Imhoff et al. (2004)}
 
 \description{
-Calculates the soil strength using precompression stress using the pedo-transfer function from Imhoff et al. (2004)
+It calculates the soil strength using precompression stress using the pedo-transfer function from Imhoff et al. (2004)
 }
 
 \usage{ 
@@ -44,7 +44,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 
 soilStrength5(clay.content=60, water.content=0.30, bulk.density=1.25)
 soilStrength5(clay.content=35, water.content=0.23, bulk.density=1.40)
@@ -52,7 +52,7 @@ soilStrength5(clay.content=20, water.content=0.10, bulk.density=1.60)
 
 
 
-# EXEMPLE 2
+# EXAMPLE 2
 water.content <- seq(0.1,0.30,len=20) # range of water content from 0.1 to 0.30 (g g^-1)
 out <- soilStrength5(clay.content=20, water.content=water.content , bulk.density=1.60)
 plot(x=water.content,y=out, 
