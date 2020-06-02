@@ -4,7 +4,7 @@
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
-Calculates the precompression stress using the pedo-transfer function from Saffih-Hdadi et al. (2009)
+It calculates the precompression stress using the pedo-transfer function from Saffih-Hdadi et al. (2009)
 }
 
 \usage{ 
@@ -14,7 +14,7 @@ soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFi
 
 \arguments{
   \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
-  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}}
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{\%}}
   \item{matric.suction}{ the soil texture group. See exemples}
 
 }
@@ -45,7 +45,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 soilStrength3(bulk.density=1.1, water.content=40, texture="VeryFine")
 soilStrength3(bulk.density=1.2, water.content=20, texture="Fine")
 soilStrength3(bulk.density=1.3, water.content=15, texture="MediumFine")
@@ -53,7 +53,7 @@ soilStrength3(bulk.density=1.4, water.content=15, texture="Medium")
 soilStrength3(bulk.density=1.5, water.content=10, texture="Coarse")
 
 
-# EXEMPLE 2
+# EXAMPLE 2
 water.content <- seq(5,30,len=20) # range of water content from 5 to 30 %
 out <- soilStrength3(bulk.density=1.4, water.content=water.content, texture="MediumFine")
 plot(x=water.content,y=out, 
