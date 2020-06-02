@@ -1,7 +1,7 @@
 \name{soilStrength3}
 \alias{soilStrength3}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
+\title{ Estimation of precompression stress by Saffih-Hdadi et al. (2009)}
 
 \description{
 It calculates the precompression stress using the pedo-transfer function from Saffih-Hdadi et al. (2009)
