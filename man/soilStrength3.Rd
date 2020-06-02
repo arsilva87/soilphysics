@@ -48,15 +48,11 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
   
 # EXAMPLE 1
 
-soilStrength2(bulk.density=1.46, matric.suction=100, clay.content=0.3)
-
-
-# EXAMPLE 2
-
-matric.suction <- seq(from=60,to=1000,len=50) # range of matric suction from 60 to 1200 hPa
-out <- soilStrength2(bulk.density=1.46, matric.suction=matric.suction, clay.content=0.3)
-plot(x=matric.suction,y=out, 
-     ylab="Precompression stress (kPa)", xlab="Matric suction (hPa)")
+soilStrength3(bulk.density=1.1, water.content=40, texture="VeryFine")
+soilStrength3(bulk.density=1.2, water.content=20, texture="Fine")
+soilStrength3(bulk.density=1.3, water.content=15, texture="MediumFine")
+soilStrength3(bulk.density=1.4, water.content=15, texture="Medium")
+soilStrength3(bulk.density=1.5, water.content=10, texture="Coarse")
 
 # End (not run)
 }
