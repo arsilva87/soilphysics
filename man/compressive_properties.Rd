@@ -1,10 +1,10 @@
 \name{compressive_properties}
 \alias{compressive_properties}
 
-\title{ Estimation of compressive properties (from soil compression curve) from readily available soil properties}
+\title{Compressive parameters by Defossez et al. (2003) }
 
 \description{
-Calculates the compressive parameteres N and lambda using the pedo-transfer function from Defossez et al. (2003)
+It calculates the compressive parameteres N and lambda using the pedo-transfer function from Defossez et al. (2003)
 }
 
 \usage{ 
@@ -43,13 +43,13 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1 - For Loess and Calcareous soil
+# EXAMPLE 1 - For Loess and Calcareous soil
 
 water.content <- 25
 compressive_properties(water.content=water.content, soil="Loess") 
 compressive_properties(water.content=water.content, soil="Calcareous") 
 
-# EXEMPLE 2 - For Loess soil
+# EXAMPLE 2 - For Loess soil
 
 water.content <- seq(from=5,to=30,len=20)
 out <- compressive_properties(water.content=water.content, soil="Loess") 
@@ -57,7 +57,7 @@ plot(x=water.content ,y=out$N, ylab="N", xlab="Bulk density") # plot for N
 plot(x=water.content ,y=out$CI, ylab="Lambda", xlab="Bulk density") # plot for compression index
 
 
-# EXEMPLE 3 - For Calcareous soil
+# EXAMPLE 3 - For Calcareous soil
 
 water.content <- seq(from=5,to=30,len=20)
 out <- compressive_properties(water.content=water.content, soil="Calcareous") 
