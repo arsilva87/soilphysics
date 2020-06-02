@@ -1,10 +1,10 @@
 \name{compressive_properties2}
 \alias{compressive_properties2}
 
-\title{ Estimation of compressive properties (from soil compression curve) from readily available soil properties}
+\title{ Estimation of compressive properties by Keller & Arvidsson (2007)}
 
 \description{
-Calculates the compressive parameteres N and lambda using the pedo-transfer function from Keller & Arvidsson (2007)
+It calculates the compressive parameters N and lambda using the pedo-transfer function from Keller & Arvidsson (2007)
 }
 
 \usage{ 
@@ -40,11 +40,11 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 
  compressive_properties2(particle.density=2.65, bulk.density=1.5)
 
-# EXEMPLE 2
+# EXAMPLE 2
 
 BD <- seq(from=1.2,to=1.8, by=0.01) # range of bulk density from 1.2 to 1.8
 out <- compressive_properties2(particle.density=2.65, bulk.density=BD)
