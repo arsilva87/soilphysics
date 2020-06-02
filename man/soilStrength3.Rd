@@ -43,3 +43,20 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 \seealso{
 \code{\link{stressTraffic}}
 }
+
+\examples{
+  
+# EXAMPLE 1
+
+soilStrength2(bulk.density=1.46, matric.suction=100, clay.content=0.3)
+
+
+# EXAMPLE 2
+
+matric.suction <- seq(from=60,to=1000,len=50) # range of matric suction from 60 to 1200 hPa
+out <- soilStrength2(bulk.density=1.46, matric.suction=matric.suction, clay.content=0.3)
+plot(x=matric.suction,y=out, 
+     ylab="Precompression stress (kPa)", xlab="Matric suction (hPa)")
+
+# End (not run)
+}
