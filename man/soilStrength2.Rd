@@ -1,10 +1,10 @@
 \name{soilStrength2}
 \alias{soilStrength2}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
+\title{ Estimation of precompression stress by Schjonning and Lamande (2018)}
 
 \description{
-Calculates the precompression stress using the pedo-transfer function from Schjonning and Lamande (2018)
+It calculates the precompression stress using the pedo-transfer function from Schjonning and Lamande (2018)
 }
 
 \usage{ 
@@ -43,12 +43,12 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 
 soilStrength2(bulk.density=1.46, matric.suction=100, clay.content=0.3)
 
 
-# EXEMPLE 2
+# EXAMPLE 2
 
 matric.suction <- seq(from=60,to=1000,len=50) # range of matric suction from 60 to 1200 hPa
 out <- soilStrength2(bulk.density=1.46, matric.suction=matric.suction, clay.content=0.3)
