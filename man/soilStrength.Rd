@@ -1,10 +1,10 @@
 \name{soilStrength}
 \alias{soilStrength}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress }
+\title{Estimation of precompression stress by Severiano et al. (2013)}
 
 \description{
-Calculates the precompression stress using the pedo-transfer function from Severiano et al. (2013)
+It calculates the precompression stress using the pedo-transfer function from Severiano et al. (2013)
 }
 
 \usage{ 
