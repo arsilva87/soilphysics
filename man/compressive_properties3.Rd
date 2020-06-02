@@ -1,10 +1,10 @@
 \name{compressive_properties3}
 \alias{compressive_properties3}
 
-\title{ Estimation of compressive properties (from soil compression curve) from readily available soil properties}
+\title{Estimation of compressive properties by de Lima et al. (2018)}
 
 \description{
-Calculates the compressive parameteres N and lambda using the pedo-transfer function from de Lima et al. (2018)
+It calculates the compressive parameters N, lambda and kappa using the pedo-transfer function from de Lima et al. (2018)
 }
 
 \usage{ 
@@ -48,7 +48,7 @@ compressive_properties3(bulk.density=1.5, matric.suction=100, soil="SandyLoam")
 compressive_properties3(bulk.density=1.5, matric.suction=100, soil="SandyClayLoam")
 
 
-# EXEMPLE 2 for SandyLoam soil
+# EXAMPLE 2 for SandyLoam soil
 
 matric.suction <- seq(from=30,to=1000,len=100)
 out <- compressive_properties3(bulk.density=1.5, matric.suction=matric.suction, soil="SandyLoam")
@@ -57,7 +57,7 @@ plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", 
 plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
 
 
-# EXEMPLE 3 for SandyClayLoam soil
+# EXAMPLE 3 for SandyClayLoam soil
 
 matric.suction <- seq(from=30,to=1000,len=100)
 out <- compressive_properties3(bulk.density=1.5, matric.suction=matric.suction, soil="SandyClayLoam")
