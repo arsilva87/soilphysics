@@ -53,5 +53,15 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 \seealso{
 \code{\link{stressTraffic}}
 }
+  
+  
+\examples{
+# EXAMPLE 1
+
+soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,
+              C=30,phi=36,texture="Clay>35", pF=1.8) # Exemple from Horn & Fleige (2003), Table 7
+
+# End (not run)
+}
 
 
