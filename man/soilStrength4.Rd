@@ -1,10 +1,10 @@
 \name{soilStrength4}
 \alias{soilStrength4}
 
-\title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
+\title{Estimation of precompression stress by Lebert and Horn (1991)}
 
 \description{
-It calculates the soil strength using precompression stress using the pedo-transfer function from Lebert and Horn (1991)
+It calculates the soil strength through precompression stress using the pedo-transfer function from Lebert and Horn (1991)
 }
 
 \usage{ 
