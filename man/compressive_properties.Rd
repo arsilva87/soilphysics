@@ -1,7 +1,7 @@
 \name{compressive_properties}
 \alias{compressive_properties}
 
-\title{Compressive parameters by Defossez et al. (2003) }
+\title{Estimation of compressive properties by Defossez et al. (2003) }
 
 \description{
 It calculates the compressive parameters N and lambda using the pedo-transfer function from Defossez et al. (2003)
