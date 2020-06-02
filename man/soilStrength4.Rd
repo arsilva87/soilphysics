@@ -4,7 +4,7 @@
 \title{ Estimation of the Load Bearing Capacity by precompression stress from readily available soil properties}
 
 \description{
-Calculates the soil strength using precompression stress using the pedo-transfer function from Lebert and Horn (1991)
+It calculates the soil strength using precompression stress using the pedo-transfer function from Lebert and Horn (1991)
 }
 
 \usage{ 
@@ -54,18 +54,4 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 \code{\link{stressTraffic}}
 }
 
-\examples{
-# EXEMPLE 1
 
-soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8) # Exemple from Horn and Fleige (2003), Table 7
-
-
-# EXEMPLE 2 - computing the effect of avaiable water capacity - (AWC)
-AWC <- seq(from=5,to=25, len=20) # range of avaiable water capacity from 5 to 20 %
-out <- soilStrength4(BD=1.55,AC=10,AWC=AWC,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8)
-plot(x=AWC,y=out, 
-     ylab="Precompression stress (kPa)", xlab="Avaiable water capacity (%)")
-
-
-# End (not run)
-}
