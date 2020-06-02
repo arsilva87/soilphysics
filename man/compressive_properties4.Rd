@@ -1,10 +1,10 @@
 \name{compressive_properties4}
 \alias{compressive_properties4}
 
-\title{ Estimation of compressive properties (from soil compression curve) from readily available soil properties}
+\title{ Estimation of compressive properties by de Lima et al. (2020)}
 
 \description{
-Calculates the compressive parameteres N, lambda and kappa using the pedo-transfer function from de Lima et al. (2020)
+It calculates the compressive parameters N, lambda and kappa using the pedo-transfer function from de Lima et al. (2020)
 }
 
 \usage{ 
@@ -41,14 +41,14 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 
 compressive_properties4(matric.suction=100, soil="PloughLayer")
 compressive_properties4(matric.suction=100, soil="PloughPan")
 
 
 
-# EXEMPLE 2 for "PloughLayer"
+# EXAMPLE 2 for "PloughLayer"
 
 matric.suction <- seq(from=10,to=10000,len=100)
 out <- compressive_properties4(matric.suction=matric.suction, soil="PloughLayer")
@@ -57,7 +57,7 @@ plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", 
 plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
 
 
-# EXEMPLE 3 for "PloughPan"
+# EXAMPLE 3 for "PloughPan"
 
 matric.suction <- seq(from=10,to=10000,len=100)
 out <- compressive_properties4(matric.suction=matric.suction, soil="PloughPan")
