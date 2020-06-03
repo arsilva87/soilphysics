@@ -71,7 +71,7 @@ ui <- fluidPage(
                   min = 5, max = 25,
                   value = 20, step = 5),
       
-      sliderInput("Pd", HTML(paste0("Particles density (kg m",tags$sup("-3"),")")),
+      sliderInput("Pd", HTML(paste0("Particle density (kg m",tags$sup("-3"),")")),
                   min = 2400, max = 3000,
                   value = 2650, step = 50),
       
