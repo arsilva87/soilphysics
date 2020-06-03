@@ -6,7 +6,7 @@
 \description{A shiny APP for LLWR and LLMPR calculation}
 
 \usage{
-LLWR_LLMPR_App()
+particle.sedimentation_App()
 }
 
 \arguments{
