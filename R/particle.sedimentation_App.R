@@ -58,19 +58,24 @@ ui <- fluidPage(
   titlePanel("Sedimentation time of soil particle (Stokes' law)"),
   sidebarLayout(
     sidebarPanel(
-      sliderInput("d", "Soil particle diameter (micrometer)",
+      sliderInput("d", HTML(paste0(" Soil particle diameter (&mu;m)")),
                   min = 2, max = 100,
-                  step = 1, value=100, dragRange=TRUE),  
-      sliderInput("v", 'Fluid viscosity (N s/m^2)x(10^-3)',
+                  step = 1, value=100, dragRange=TRUE),
+  
+      sliderInput("v", HTML(paste0("Fluid viscosity 10",tags$sup("-3"), "(kg m",tags$sup("-1")," s",tags$sup("-1"),")")),
                   min = 0.5, max = 1.5,
                   value = 1, step = 0.1),
+      
+
       sliderInput("h", 'Fall height of soil particle (cm)',
                   min = 5, max = 25,
-                  value = 20, step = 5),    
-      sliderInput("Pd", 'Particle density (kg/m^3)',
+                  value = 20, step = 5),
+      
+      sliderInput("Pd", HTML(paste0("Particles density (kg m",tags$sup("-3"),")")),
                   min = 2400, max = 3000,
                   value = 2650, step = 50),
-      sliderInput("Wd", 'Fluid density (kg/m^3)',
+      
+      sliderInput("Wd", HTML(paste0("Fluid density (kg m",tags$sup("-3"),")")),
                   min = 950, max = 1050,
                   value = 1000, step = 10)
       
