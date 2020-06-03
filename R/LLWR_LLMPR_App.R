@@ -1376,6 +1376,6 @@ ui <- fluidPage(
 )
 
 
-LLWR_LLMPR_App2 <- function() {
+LLWR_LLMPR_App <- function() {
   shinyApp(ui, server)
   }
