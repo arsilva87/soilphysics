@@ -50,6 +50,7 @@ export(compressive_properties3)
 export(compressive_properties4)
 export(compressive_properties5)
 export(LLWR_LLMPR_App)
+export(LLWR_LLMPR_App2)
 
 # Imports
 import(utils, rpanel, tkrplot, shiny, MASS, boot, stats, graphics, grDevices, datasets)
