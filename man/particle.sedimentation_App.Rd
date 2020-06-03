@@ -1,5 +1,5 @@
-\name{LLWR_LLMPR_App}
-\alias{LLWR_LLMPR_App}
+\name{particle.sedimentation_App}
+\alias{particle.sedimentation_App}
 
 \title{A shiny APP for LLWR and LLMPR calculation}
 
