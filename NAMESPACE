@@ -50,7 +50,7 @@ export(compressive_properties3)
 export(compressive_properties4)
 export(compressive_properties5)
 export(particle.sedimentation_App)
-# export(LLWR_LLMPR_App)
+export(LLWR_LLMPR_App)
 
 # Imports
 import(utils, rpanel, tkrplot, shiny, MASS, boot, stats, graphics, grDevices, datasets)
