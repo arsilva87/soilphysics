@@ -1377,3 +1377,6 @@ output$values4 <- renderTable({
 })
 
 }
+
+
+shinyApp(ui, server)
