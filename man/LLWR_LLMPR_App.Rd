@@ -1,12 +1,12 @@
-\name{LLWR_LLMPR_App}
-\alias{LLWR_LLMPR_App}
+\name{LLWR_LLMPR-App}
+\alias{LLWR_LLMPR-App}
 
 \title{A shiny APP for LLWR and LLMPR calculation}
 
 \description{A shiny APP for LLWR and LLMPR calculation}
 
 \usage{
-LLWR_LLMPR_App()
+LLWR_LLMPR-App()
 }
 
 \arguments{
