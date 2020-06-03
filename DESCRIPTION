@@ -5,7 +5,7 @@ Version: 4.0
 Date: 2020-05-17
 Author: Anderson Rodrigo da Silva, Renato Paiva de Lima
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
-Depends: rpanel, MASS, tkrplot
+Depends: rpanel, MASS, tkrplot, shiny
 Imports: utils, stats, graphics, boot, grDevices, datasets
 Description: Basic and model-based soil physical analyses.
 License: GPL (>= 2)
