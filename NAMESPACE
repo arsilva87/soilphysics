@@ -52,7 +52,7 @@ export(compressive_properties5)
 export(LLWR_LLMPR_App)
 
 # Imports
-import(utils, rpanel, tkrplot, MASS, boot, stats, graphics, grDevices, datasets)
+import(utils, rpanel, tkrplot, shiny, MASS, boot, stats, graphics, grDevices, datasets)
 importFrom(tcltk, tkProgressBar, setTkProgressBar)
 
 # S3method
