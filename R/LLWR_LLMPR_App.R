@@ -1,5 +1,3 @@
-library(shiny)
-
 # UI
 
 ui <- fluidPage(
@@ -1380,5 +1378,6 @@ output$values4 <- renderTable({
 
 }
 
-
-shinyApp(ui, server)
+LLWR_LLMPR_App <- function() {
+  shinyApp(ui, server)
+  }
