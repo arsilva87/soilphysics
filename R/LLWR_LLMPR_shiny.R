@@ -1,6 +1,6 @@
 # UI
 
-ui = tagList(
+ui <- fluidPage(
   
   
   tags$style(type = 'text/css', 
