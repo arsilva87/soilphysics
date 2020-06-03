@@ -86,6 +86,6 @@ ui <- fluidPage(
     )))
 )
 
-LLWR_LLMPR_App <- function() {
+particle.sedimentation_App <- function() {
   shinyApp(ui, server)
   }
