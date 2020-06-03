@@ -1,4 +1,3 @@
-require(shiny)
 server <- function(input, output) {
   
   
