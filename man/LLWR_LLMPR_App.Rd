@@ -6,10 +6,10 @@
 \description{A shiny APP for LLWR and LLMPR calculation}
 
 \usage{
-LLWR_LLMPR_shiny()
+LLWR_LLMPR_App()
 }
 \arguments{
-  \item{Inputs}{Available on the interactive web page}
+  \item{}{Available on the interactive web page}
 
 }
 \value{LLWR and LLMPR}
@@ -17,36 +17,5 @@ LLWR_LLMPR_shiny()
 
 \seealso{
 \code{\link{stressTraffic}}
-}
-
-\examples{
-# EXAMPLE 1
-
-compressive_properties4(matric.suction=100, soil="PloughLayer")
-compressive_properties4(matric.suction=100, soil="PloughPan")
-
-
-
-# EXAMPLE 2 for "PloughLayer"
-
-matric.suction <- seq(from=10,to=10000,len=100)
-out <- compressive_properties4(matric.suction=matric.suction, soil="PloughLayer")
-plot(x=matric.suction,y=out$N, ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
-plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
-plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
-
-
-# EXAMPLE 3 for "PloughPan"
-
-matric.suction <- seq(from=10,to=10000,len=100)
-out <- compressive_properties4(matric.suction=matric.suction, soil="PloughPan")
-plot(x=matric.suction,y=out$N, ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
-plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
-plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
-
-
-
-
-# End (not run)
 }
 
