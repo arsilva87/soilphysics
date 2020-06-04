@@ -1,5 +1,5 @@
 
-ui <- fluidPage(
+ui_r <- fluidPage(
   
   
   # App title ----
@@ -42,7 +42,7 @@ ui <- fluidPage(
 
 
 
-server <- function(input, output) {
+server_r <- function(input, output) {
   
   # my function 
   r <- function(h) {
@@ -93,6 +93,6 @@ server <- function(input, output) {
 
 
 r_App <- function() {
-  shinyApp(ui, server)
+  shinyApp(ui_r, server_r)
   }
 
