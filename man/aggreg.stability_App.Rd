@@ -3,7 +3,7 @@
 
 \title{A interactive web page for Soil Aggregate-Size Distribution}
 
-\description{A interactive web page for Soil Aggregate-Size Distribution
+\description{A interactive web page for Soil Aggregate-Size Distribution}
 
 \usage{
 aggreg.stability_App()
