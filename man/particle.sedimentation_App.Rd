@@ -1,9 +1,9 @@
 \name{particle.sedimentation_App}
 \alias{particle.sedimentation_App}
 
-\title{A shiny APP for LLWR and LLMPR calculation}
+\title{A interactive web page for time of particle sedimentation}
 
-\description{A shiny APP for LLWR and LLMPR calculation}
+\description{A interactive web page for time of particle sedimentation}
 
 \usage{
 particle.sedimentation_App()
