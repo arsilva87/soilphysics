@@ -53,6 +53,7 @@ export(particle.sedimentation_App)
 export(r_App)
 export(aggreg.stability_App)
 export(LLWR_LLMPR_App)
+export(PredComp)
 
 # Imports
 import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets)
