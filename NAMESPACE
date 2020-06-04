@@ -50,7 +50,6 @@ export(compressive_properties3)
 export(compressive_properties4)
 export(compressive_properties5)
 export(particle.sedimentation_App)
-export(PredComp)
 export(r_App)
 export(aggreg.stability_App)
 
