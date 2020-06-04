@@ -6,9 +6,6 @@ ui <- fluidPage(
   # App title ----
   titlePanel("Soil Aggregate-Size Distribution"),
   
-         
-  sidebarLayout(
-    
 
     sidebarPanel(
       
@@ -46,7 +43,7 @@ ui <- fluidPage(
     column(8,mainPanel(
       
       plotOutput('plot1'),tableOutput("values"))
-  )
+  
   ),
   
   verticalLayout(
@@ -55,6 +52,7 @@ ui <- fluidPage(
       
       
     )))
+  
   
 )
 
