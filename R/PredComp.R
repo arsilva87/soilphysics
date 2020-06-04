@@ -1501,24 +1501,13 @@ server <- function(input, output) {
 
 ui = fluidPage(
   
-  tags$style(type = 'text/css', 
-             '.navbar { background-color: LightSkyBlue;}',
-             '.navbar-default .navbar-brand{color: black;}',
-             '.tab-panel{ background-color: black; color: black}',
-             '.nav navbar-nav li.active:hover a, .nav navbar-nav li.active a {
-                        background-color: black ;
-                        border-color: black;
-                        }'
+  tags$style(tags$style('.navbar { background-color: LightSkyBlue;}',
+             '.navbar-default .navbar-brand{color: black;}'),
              
   ),
   
   navbarPage( "PredComp 1.0", 
               
-  
-
-
-    
-  
 # NAV 1
     
     tabPanel("Stress calculation",
