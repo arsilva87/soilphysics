@@ -14,7 +14,7 @@ ui_r <- fluidPage(
   ), 
   verticalLayout(
     column(12,wellPanel(
-      h4("by Renato P. de Lima")
+      tags$h4("by Renato P. de Lima")
     )))  
 )
 
