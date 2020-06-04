@@ -47,7 +47,7 @@ server <- function(input, output) {
     if (plot.contact.area) {
       contour(x, y, z = mstress, method = "edge", xlab = "Tyre footprint length (m)", 
               ylab = "Tyre width (m)", ...)
-      box()
+      graphics::box()    
     }
     Pi <- mstress * (0.01 * 0.01)
     F.max <- sum(as.vector(Pi), na.rm = T)
