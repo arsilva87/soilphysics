@@ -51,7 +51,7 @@ export(compressive_properties4)
 export(compressive_properties5)
 export(particle.sedimentation_App)
 export(PredComp)
-export(r_APP)
+export(r_App)
 
 # Imports
 import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets)
