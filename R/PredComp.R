@@ -2919,15 +2919,10 @@ tabPanel("About", "",
                column(12,wellPanel(
                  tags$p("Suggestions and bug reports: renato_agro_@hotmail.com", style = "font-size: 90%;"),
              
-             
-             
-             
-           ))),
-         
-)
     
- 
-  )
+           )))
+         
+     ))
 )
 
 
