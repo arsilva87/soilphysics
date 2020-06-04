@@ -1305,11 +1305,7 @@ tabPanel("Moraes et al. (2018)",
                  h4("Useful links"),
                  
                  
-                 
-                 actionButton(inputId='ab1', label="Nomeclature of this section", 
-                              icon = icon("th"), 
-                              onclick ="window.open('https://github.com/arsilva87/soilphysics/raw/master/man/figures/NOMENCLATURE%20FOR%20THE%20SECTIONS%20LLWR%20AND%20LLMPR.pdf')"),
-                 
+    
                  actionButton(inputId='ab1', label="Silva et al. (1994)", 
                               icon = icon("th"), 
                               onclick ="window.open('https://acsess.onlinelibrary.wiley.com/doi/abs/10.2136/sssaj1994.03615995005800060028x')"),
