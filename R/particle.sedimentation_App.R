@@ -1,4 +1,4 @@
-server <- function(input, output) {
+server_particle <- function(input, output) {
   
   # my function 
   part.sedimen <- function(d, h, g=9.81, v, Pd, Wd) {
@@ -53,7 +53,7 @@ server <- function(input, output) {
 
 
 # ==============================================
-ui <- fluidPage(
+ui_particle <- fluidPage(
   # App title ----
   titlePanel("Sedimentation time of soil particle (Stokes' law)"),
   sidebarLayout(
@@ -92,5 +92,5 @@ ui <- fluidPage(
 )
 
 particle.sedimentation_App <- function() {
-  shinyApp(ui, server)
+  shinyApp(ui_particle, server_particle)
   }
