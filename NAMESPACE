@@ -51,6 +51,7 @@ export(compressive_properties4)
 export(compressive_properties5)
 export(particle.sedimentation_App)
 export(r_App)
+export(aggreg.stability_App)
 
 # Imports
 import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets)
