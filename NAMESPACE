@@ -53,7 +53,7 @@ export(particle.sedimentation_App)
 export(PredComp)
 
 # Imports
-import(utils, rpanel, tkrplot, shiny, MASS, boot, stats, graphics, grDevices, datasets)
+import(utils, rpanel, tkrplot, shiny, shinydashboard, MASS, boot, stats, graphics, grDevices, datasets)
 importFrom(tcltk, tkProgressBar, setTkProgressBar)
 
 # S3method
