@@ -1,22 +1,45 @@
 
 ui_r <- fluidPage(
-  titlePanel("Pores that drain for a corresponding applied matric suction"),    
-  sidebarLayout(
+  
+  
+  # App title ----
+  titlePanel("Pores that drain for a corresponding applied matric suction"),
+  
+
+         
+
+    
+
     sidebarPanel(
+      
+      
+      # -------
       sliderInput("h", 'Soil matric suction (cm)',
                   min = 1, max = 300,
-                  value = 1, step = 1)      
+                  value = 1, step = 1)
+      
+      
+
+      # -------
+      
     ),
+    
     # Main panel for displaying outputs ----
-    mainPanel(      
+    mainPanel(
+      
       # Output: Table summarizing the values entered ----
-      plotOutput('plot1'),tableOutput("values"))
-  ), 
+      plotOutput('plot1'),tableOutput("values")),
+
+  
+  
   verticalLayout(
     column(12,wellPanel(
-      tags$h4("by Renato P. de Lima")
-    )))  
+      h4("by Renato P. de Lima"),
+    ))) 
 )
+
+
+
 
 
 server_r <- function(input, output) {
@@ -43,6 +66,7 @@ server_r <- function(input, output) {
     axis(3,at=c(4,55,300),labels=c("macropores","mesopores","micropores"))
     axis(1,at=c(30))
     abline(v=c(30,100),col=2)
+    points(x=x,y=y, pch=19, col=2)
   })
   
  output$values <- renderTable({   
