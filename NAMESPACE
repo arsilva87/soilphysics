@@ -57,7 +57,7 @@ export(PredComp)
 export(LLWR_App)
 
 # Imports
-import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets)
+import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets, later)
 importFrom(tcltk, tkProgressBar, setTkProgressBar)
 importFrom(shinydashboard, box)
 
