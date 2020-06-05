@@ -39,8 +39,9 @@ server_aggregate <- function(input, output) {
     prop <- round(proportion * 100, 0)
     colnames(prop) <- as.character(dm.classes)
     aggregation.indices <- data.frame(MWD = DMP, GMD = DMG, 
-                                      Total.Soil.Mass = total.weight)
+                                      Total.Soil.Mass = total.weight, prop)
     return(aggregation.indices)
+    
   }
 
   
@@ -93,13 +94,16 @@ server_aggregate <- function(input, output) {
    d <- data.frame(a=input$g1,b=input$g2,c=input$g3,
                    d=input$g4,e=input$g5,f=input$g6,f=input$g7)
    a <- aggreg(dm.classes = classes, aggre.mass = d)
-   
-   data.frame(MWD=a$MWD,GMD=a$GMD,Soil.Total.Mass=a$Total.Soil.Mass)
+   colnames(a) <- c("MWD (mm)","GMD (mm)",
+                                       "Total mass (g)",as.character(classes) )
+   a
+   # data.frame(MWD=a$MWD,GMD=a$GMD,Soil.Total.Mass=a$Total.Soil.Mass)
    
  })
+ 
+ 
   
 }
-
 
 
 
