@@ -98,7 +98,7 @@ llwr_llmpr <- function (thetaR, thetaS, alpha, n, d, e, f, critical.PR,
                       alpha = alpha, n = n)$h
   hPR <- vanG.matric(theta = thetaPR, thetaR = thetaR, thetaS = thetaS, 
                      alpha = alpha, n = n)$h
-  if (hPR ==  "NaN" || hPR > 15000 || hPR == "NA" || hPR == Inf) (hPR <- 15000)
+    if (hPR ==  "NaN" || hPR == "NA" || hPR == Inf) (hPR <- h.PWP)
   
   SL <- c()
   SL.out <- c()
