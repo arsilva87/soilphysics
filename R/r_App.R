@@ -4,11 +4,6 @@ ui_r <- fluidPage(
   
   # App title ----
   titlePanel("Pores that drain for a corresponding applied matric suction"),
-  
-
-         
-
-    
 
     sidebarPanel(
       
@@ -17,8 +12,6 @@ ui_r <- fluidPage(
       sliderInput("h", 'Soil matric suction (cm)',
                   min = 1, max = 300,
                   value = 1, step = 1)
-      
-      
 
       # -------
       
@@ -30,14 +23,12 @@ ui_r <- fluidPage(
       # Output: Table summarizing the values entered ----
       plotOutput('plot1'),tableOutput("values")),
 
-  
-  
   verticalLayout(
     column(12,wellPanel(
       h4("by Renato P. de Lima"),
-    ))) 
+    )))
+  
 )
-
 
 
 
