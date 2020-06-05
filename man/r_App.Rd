@@ -1,9 +1,9 @@
 \name{r_App}
 \alias{r_App}
 
-\title{A interactive web page for equation of capillary}
+\title{A interactive web page for equation of capillarity}
 
-\description{A interactive web page for equation of capillary}
+\description{A interactive web page for equation of capillarity}
 
 \usage{
 r_App()
