@@ -2632,7 +2632,7 @@ tabPanel("Prediction of compaction",
                              # Depth 0.05
                                
                              column(2,"'",
-                                    actionButton("a1","0.05",width='100%',class = "btn-primary")),
+                                    actionButton("a1","0.10",width='100%',class = "btn-primary")),
                              
                                     
                                     
@@ -2666,7 +2666,7 @@ tabPanel("Prediction of compaction",
                              # Depth 0.15 
                             
                              column(2,"'",
-                                    actionButton("a2","0.15",width='100%',class = "btn-primary")),
+                                    actionButton("a2","0.20",width='100%',class = "btn-primary")),
                              
                              column(2,style='padding:0px;',
                                     numericInput("N2", tags$p("", style = "font-size: 85%;"),
