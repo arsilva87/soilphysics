@@ -39,6 +39,8 @@ llwr_llmpr <- function(thetaR, thetaS, alpha, n, d, e, f = NULL, critical.PR, PD
                        alpha=alpha, n=n)$h
    hPR <-  vanG.matric(theta=thetaPR, thetaR=thetaR, thetaS=thetaS, 
                        alpha=alpha, n=n)$h
+         
+   if (hPR ==  "NaN" || hPR == "NA" || hPR == Inf) (hPR <- h.PWP)
   # ---
 
 
