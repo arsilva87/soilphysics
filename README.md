@@ -281,6 +281,8 @@ Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://s
 
 LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 
+PredComp 1.0:  <https://appsoilphysics.shinyapps.io/PredComp/>
+
 
  
 # Citation and references
