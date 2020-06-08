@@ -259,9 +259,6 @@ head(out)
 6        B3 1.267369 0.6853162         50 28   12    18     22      9     11
 ```
 
-## Miscellanea
-
-Add text for other functions...
 
 # Spin-off
 
@@ -282,12 +279,14 @@ PredComp 1.0:  <https://appsoilphysics.shinyapps.io/PredComp/>
 
  
 # Citation and references
-Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
 
-De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P.; Leao, T.P.; Mosaddeghi, M.R. (2016) soilphysics: an R package for calculating soil water availability to plants by different soil physical indices. *Computers and Eletronics in Agriculture*, 120: 63-71. DOI: <https://doi.org/10.1016/j.compag.2015.11.003>
+De Lima, R.P.; Tormena, C.A.; Figueiredo, G.C; Da Silva, A.R.; Rolim, M.M. (2020) Least limiting water and matric potential ranges of agricultural soils with calculated physical restriction thresholds. *Agricultural Water Management*, 240: 106299. DOI: <https://doi.org/10.1016/j.agwat.2020.106299>
 
 Da Silva, A.R.; De Lima, R.P. (2017) Determination of maximum curvature point with the R package soilphysics. *International Journal of Current Research*, 9: 45241-45245.  
 
+De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P.; Leao, T.P.; Mosaddeghi, M.R. (2016) soilphysics: an R package for calculating soil water availability to plants by different soil physical indices. *Computers and Eletronics in Agriculture*, 120: 63-71. DOI: <https://doi.org/10.1016/j.compag.2015.11.003>
+
+Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil preconsolidation pressure. *Computers and Geosciences*, 84: 54-60. DOI: <https://doi.org/10.1016/j.cageo.2015.08.008>
 
 
 # Contributions and bug reports
