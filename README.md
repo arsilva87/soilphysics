@@ -265,17 +265,13 @@ Add text for other functions...
 
 # Spin-off
 
-A shiny app for simulating soil compaction: <https://renatoagro.shinyapps.io/PredCompAPP/>
-
-A shiny app for the assessment of compaction risk: <https://renatoagro.shinyapps.io/trafficAPP/>
-
 Sedimentation time of soil particle (Stokes' law): <https://renatoagro.shinyapps.io/stokesapp/>
 
 Exploring water retention curve using van Genuchten's model: <https://soilphysics.shinyapps.io/wrcAPP/>
 
 Soil Aggregate-Size Distribution: <https://renatoagro.shinyapps.io/Agre/>
 
-Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
+Usual Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
 
 Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://soilphysics.shinyapps.io/h_cutoff/>
 
