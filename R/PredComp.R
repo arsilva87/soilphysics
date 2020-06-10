@@ -1297,7 +1297,6 @@ server_PredComp <- function(input, output) {
                            layers=layers, 
                            plot.contact.area = FALSE)
     
-    library(fields)
     par(mar=c(7,4,5,1))
     image.plot(x = as.numeric(rownames(stress$stress.matrix)),
                y = as.numeric(colnames(stress$stress.matrix)), 
@@ -1435,7 +1434,6 @@ server_PredComp <- function(input, output) {
                            layers=layers, 
                            plot.contact.area = FALSE)
     
-    library(fields)
     par(mar=c(7,4,5,1))
     image.plot(x = as.numeric(rownames(stress$stress.matrix)),
                y = as.numeric(colnames(stress$stress.matrix)), 
@@ -1631,7 +1629,7 @@ ui_PredComp = fluidPage(
                               onclick ="window.open('https://teses.usp.br/teses/disponiveis/11/11140/tde-09082017-151718/pt-br.php')")
                  
                  
-               ))),
+               )))
              
        
  ),
@@ -1734,7 +1732,7 @@ navbarMenu("Precompression stress",
                                      onclick ="window.open('https://evenor-tech.com/microleis/microlei/manual2/alcor/alcor.htm')")
                         
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -1792,7 +1790,7 @@ navbarMenu("Precompression stress",
                                      onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0167198703001028')")
                         
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -1856,7 +1854,7 @@ navbarMenu("Precompression stress",
                                      icon = icon("th"), 
                                      onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0167198703001028')")
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -1913,7 +1911,7 @@ navbarMenu("Precompression stress",
                                      onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0167198703001028')")
                         
                         
-                      ))),
+                      )))
                     
                     
            ),
@@ -1969,7 +1967,7 @@ navbarMenu("Precompression stress",
                                      onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0167198703001028')")
                         
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -2117,7 +2115,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12601')")
                         
                         
-                      ))),
+                      )))
                     
     
            ),
@@ -2186,7 +2184,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12601')")
                         
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -2328,7 +2326,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12601')")
                         
                         
-                      ))),
+                      )))
                     
                     
                     
@@ -2524,7 +2522,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://teses.usp.br/teses/disponiveis/11/11140/tde-09082017-151718/pt-br.php')")
                         
                         
-                      ))),
+                      )))
                     
                     
            ),
@@ -2890,7 +2888,7 @@ tabPanel("Prediction of compaction",
                           onclick ="window.open('https://teses.usp.br/teses/disponiveis/11/11140/tde-09082017-151718/pt-br.php')")
              
              
-           ))),
+           )))
          
          
 ),
