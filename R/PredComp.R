@@ -2915,7 +2915,7 @@ tabPanel("About", "",
              
              actionButton(inputId='ab1', label="soilphysics", 
                           icon = icon("th"), 
-                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')"),
+                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')")
              
            ))),
          
@@ -2925,7 +2925,7 @@ tabPanel("About", "",
          
          verticalLayout(
            column(12,wellPanel(
-             tags$p("Developed by Renato P. de Lima & Anderson R. da Silva", style = "font-size: 90%;"),
+             tags$p("Developed by Renato P. de Lima & Anderson R. da Silva", style = "font-size: 90%;")
              
            ))),
              
