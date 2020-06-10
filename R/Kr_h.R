@@ -1,9 +1,10 @@
 Kr_h <- 
-function(Ks,alpha, n, h) 
+function(Ks,alpha, n, h, f=0.5) 
 {
-   out <- ((1 - ((alpha * h)^(n - 1))*
-          (1 + (alpha * h)^n)^(1/n - 1))^2) /
-          (1 + (alpha * h)^n)^((n-1)/(2 * n))*Ks
-   return(out)
+    m <- 1 - (1/n)
+    Se <- (1/(1+(alpha*h)^n))^m
+    b <- (1-(1-Se^(n/(n-1)))^m)^2
+    out <- Ks*(Se^f)*b
+    return(out)
 
  }
