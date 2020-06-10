@@ -15,6 +15,7 @@ Kr_h(Ks, alpha, n, h, f=0.5)
   \item{alpha}{ The scale parameter of the van Genuchten's model (hPa^-1). }
   \item{n}{ The shape parameter in van Genuchten's formula. }
   \item{h}{ The water tension (hPa). }
+  \item{f}{ The pore-connectivity parameter. Default 0.5  [Mualem, 1976]. }
 }
 
 \value{ numeric, the value of unsaturated hydraulic conductivity. }
@@ -31,12 +32,12 @@ unsaturated soils 1. \emph{Soil Science Society of America Journal} 44(5):892-89
 
 \examples{
 # EXAMPLE 1
-Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100)
+Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=100, f=0.5)
 
 # EXAMPLE 2
 x <- seq(log10(1), log10(1000),len=100)
 h <- 10^x
-y <- Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h)
+y <- Kr_h(Ks = 1.06*10^2, alpha = 0.048, n = 1.5,h=h, f=0.5)
 plot(x=h,y=y, log="yx", xlab="h (hPa)", yaxt='n',
     ylab="", ylim=c(0.001,100), xlim=c(1,10000))
 mtext(expression(K[r] ~ (cm~d^-1)), 2, line=2)
