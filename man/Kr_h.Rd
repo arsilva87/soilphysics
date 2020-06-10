@@ -7,7 +7,7 @@
 soil water tension (h) based on van Genuchten's water retention curve. }
 
 \usage{
-Kr_h(Ks, alpha, n, h)
+Kr_h(Ks, alpha, n, h, f=0.5)
 }
 
 \arguments{
