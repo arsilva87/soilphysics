@@ -544,8 +544,6 @@ server_PredComp <- function(input, output) {
                            layers=layers, 
                            plot.contact.area = FALSE)
     
-    
-    library(fields)
     par(mar=c(5,10.5,5,2))
     image.plot(x = as.numeric(rownames(stress$stress.matrix)),
                y = as.numeric(colnames(stress$stress.matrix)), 
