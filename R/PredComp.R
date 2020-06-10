@@ -2047,7 +2047,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12601')")
                         
                         
-                      ))),
+                      )))
                     
                     
            ),
@@ -2259,7 +2259,7 @@ navbarMenu("Compressive properties",
                                      onclick ="window.open('https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12601')")
                         
                         
-                      ))),
+                      )))
                     
                     
            ),
