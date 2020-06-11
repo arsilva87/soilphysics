@@ -766,7 +766,14 @@ ui_LLWR_LLMPR <- fluidPage(
               
               
               
-            ))),
+              actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                           icon = icon("th"), 
+                           onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+              
+              
+              
+              
+            )))
           
           
           
@@ -886,9 +893,15 @@ ui_LLWR_LLMPR <- fluidPage(
                             icon = icon("th"), 
                             onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377419308686')"),
                
+               actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                            icon = icon("th"), 
+                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
                
                
-             ))),
+               
+               
+               
+             )))
            
            
            
@@ -964,9 +977,16 @@ ui_LLWR_LLMPR <- fluidPage(
                             icon = icon("th"), 
                             onclick ="window.open('https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/sssaj2019.01.0023')"),
                
+               
+               actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                            icon = icon("th"), 
+                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+               
+               
+               
 
                
-             ))),
+             )))
            
            
            
@@ -1044,12 +1064,81 @@ navbarMenu("SPR",
                    
                    
                    
-                 ))),
+                 )))
   ),
-                    
-                    
-                    
-                    
+  
+  
+  
+  
+  
+  tabPanel("Bennie & Krynauw (1985)",
+           
+           
+           verticalLayout(
+             column(12,wellPanel(
+               
+               helpText(tags$p("SOIL PENETRATION RESISTANCE SECTION: in this section, the user is able to calculate the limiting soil 
+                                  penetration resistance for a given root elongation rate to be assigned as limiting soil penetration resistance threshold of the LLWR and LLMPR. This methodology is 
+                                  described in de Lima et al. (2020). Optionally, it is possible to assign your own threshold values. 
+                                  See LLWR and LLMPR section.",
+                               
+                               style = "font-size: 100%;text-align:justify"))
+               
+             ))),
+           
+           
+           
+           titlePanel("Critical SPR for a given root elongation rate"),
+           
+           column(3,wellPanel(
+             h4("Inputs"),
+             
+             
+             sliderInput("root.rateBennie", "Relative root length (%)",
+                         min = 20, max = 90,
+                         step = 1, value=30,tick=FALSE)
+             
+             
+           )),
+           
+           
+           
+           column(5,wellPanel(
+             h4("Critical SPR for a given root elongation rate"),
+             tabsetPanel(type = "tabs",
+                         tabPanel("Root elongation rate", plotOutput("plotBennie")))        
+             
+           )
+           ),
+           
+           
+           
+           verticalLayout(
+             column(12,wellPanel(
+               h4("Useful links"),
+               
+               
+               
+               actionButton(inputId='ab1', label="Bennie & Krynauw (1985)", 
+                            icon = icon("th"), 
+                            onclick ="window.open('https://www.tandfonline.com/doi/pdf/10.1080/02571862.1985.10634148?needAccess=true')"),
+               
+               
+               actionButton(inputId='ab1', label="Bengough (1997)", 
+                            icon = icon("th"), 
+                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0022519396903677')"),
+               
+               
+               actionButton(inputId='ab1', label="Bengough et al. (2011)", 
+                            icon = icon("th"), 
+                            onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')"),
+               
+               
+             )))
+  ),
+  
+  
+        
            
 tabPanel("Veen & Boone (1991)",
          
@@ -1118,7 +1207,7 @@ tabPanel("Veen & Boone (1991)",
                           onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')"),
              
              
-           ))),
+           )))
          ),
 
 
@@ -1162,7 +1251,7 @@ tabPanel("Moraes et al. (2018)",
          
          
          column(5,wellPanel(
-           h4("SPR restriction thresholds"),
+           h4("Critical SPR for a given root elongation rate"),
            tabsetPanel(type = "tabs",
                        tabPanel("Root elongation rate", plotOutput("plotMoraes")))        
            
@@ -1192,9 +1281,13 @@ tabPanel("Moraes et al. (2018)",
                           icon = icon("th"), 
                           onclick ="window.open('https://link.springer.com/article/10.1007/s11104-018-3656-z')"),
              
+             actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                          icon = icon("th"), 
+                          onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
              
              
-           ))),
+             
+           )))
           )
 
 
@@ -1217,7 +1310,7 @@ tabPanel("Moraes et al. (2018)",
                
                sliderInput("thetaR2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
                            min = 0.01, max = 0.3,
-                           step = 0.01, value=0.11, tick=FALSE),
+                           step = 0.005, value=0.11, tick=FALSE),
                
                
                sliderInput("alpha2", HTML(paste0("&alpha; (hPa",tags$sup("-1"),")")),
@@ -1270,7 +1363,7 @@ tabPanel("Moraes et al. (2018)",
                            value = 4, step = 0.1,tick=FALSE),
                
                sliderInput("pwp", 'PWP (hPa)',
-                           min = 10000, max = 20000,
+                           min = 5000, max = 20000,
                            value = 15000, step = 100,tick=FALSE),
               
                
@@ -1281,7 +1374,7 @@ tabPanel("Moraes et al. (2018)",
                helpText(tags$p("Assign your own restriction thresholds, or calculate them 
                                 in the previous sections. Further in de Lima et al. (2020). 
                                 LEGEND: AFP: air-filled porosity; FC: field capacity; PWP: permanent wilting point; SPR: soil penetration resistance",
-                               style = "font-size: 88%;text-align:justify"))
+                               style = "font-size: 84%;text-align:justify"))
                
              )),
              
@@ -1304,8 +1397,8 @@ tabPanel("Moraes et al. (2018)",
                column(12,wellPanel(
                  h4("Useful links"),
                  
+                
                  
-    
                  actionButton(inputId='ab1', label="Silva et al. (1994)", 
                               icon = icon("th"), 
                               onclick ="window.open('https://acsess.onlinelibrary.wiley.com/doi/abs/10.2136/sssaj1994.03615995005800060028x')"),
@@ -1321,8 +1414,15 @@ tabPanel("Moraes et al. (2018)",
                               onclick ="window.open('https://arsilva87.github.io/soilphysics/')"),
                  
                  
+                 actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                              icon = icon("th"), 
+                              onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
                  
-               ))),
+                 
+                 
+                 
+                 
+               )))
              
         ),
     
@@ -1342,6 +1442,12 @@ tabPanel("Moraes et al. (2018)",
       actionButton(inputId='ab1', label="soilphysics", 
                    icon = icon("th"), 
                    onclick ="window.open('https://arsilva87.github.io/soilphysics/')"),
+      
+      actionButton(inputId='ab1', label="de Lima et al. (2020)", 
+                   icon = icon("th"), 
+                   onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+      
+      
       
     ))),
   
@@ -1366,6 +1472,7 @@ tabPanel("Moraes et al. (2018)",
   
   ))
 )
+
 
 LLWR_LLMPR_App <- function() {
   shinyApp(ui_LLWR_LLMPR , server_LLWR_LLMPR)
