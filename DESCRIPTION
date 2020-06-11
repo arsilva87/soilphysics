@@ -2,7 +2,7 @@ Package: soilphysics
 Type: Package
 Title: Soil Physical Analysis
 Version: 4.0
-Date: 2020-05-17
+Date: 2020-06-11
 Author: Anderson Rodrigo da Silva, Renato Paiva de Lima
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 Imports: utils, stats, graphics, boot, grDevices, datasets, rpanel, MASS, tkrplot, shiny, shinydashboard, fields
