@@ -1456,7 +1456,7 @@ tabPanel("Moraes et al. (2018)",
   
   verticalLayout(
     column(12,wellPanel(
-      tags$p("Developed by Renato P. de Lima; Cassio A. Tormena; Getulio C. Figueiredo; Anderson R. da Silva; & Mario M. Rolim", style = "font-size: 90%;"),
+      tags$p("Developed by Renato P. de Lima; Cassio A. Tormena; Getulio C. Figueiredo; Anderson R. da Silva; & Mario M. Rolim", style = "font-size: 90%;")
       
     ))),
   
