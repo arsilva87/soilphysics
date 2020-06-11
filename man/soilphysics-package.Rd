@@ -14,7 +14,7 @@ Basic and model-based soil physical analyses.
 Package: \tab soilphysics\cr
 Type: \tab Package\cr
 Version: \tab 4.0\cr
-Date: \tab 2020-03-17\cr
+Date: \tab 2020-06-11\cr
 License: \tab GPL (>= 2)\cr
 }
 Functions for modelling the load bearing capacity and the penetration resistance, and for predicting the 
@@ -24,7 +24,7 @@ estimation of these models. Methods to obtain the preconsolidation stress are av
 of Casagrande (1936) and so on. It is possible to quantify soil water availability for plants through the Least Limiting Water Range 
 approach as well as the Integral Water Capacity. Moreover, it is possible to determine the water suction 
 at the point of hydraulic cut-off. Also, users can deal with the high-energy-moisture-characteristics 
-(HEMC) methodology proposed by Pierson & Mulla (1989), which is used to analyze the aggregate stability. 
+(HEMC) methodology proposed by Pierson and Mulla (1989), which is used to analyze the aggregate stability. 
 There is a function to determine the soil critical moisture and the maximum bulk density for one or more 
 samples, based on the Proctor (1933) compaction test. Other utilities like a function to calculate the 
 soil liquid limit, the void ratio and to determine the maximum curvature point are available.
