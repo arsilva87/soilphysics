@@ -768,7 +768,7 @@ ui_LLWR_LLMPR <- fluidPage(
               
               actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                            icon = icon("th"), 
-                           onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                           onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
               
               
               
@@ -895,7 +895,7 @@ ui_LLWR_LLMPR <- fluidPage(
                
                actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                             icon = icon("th"), 
-                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
                
                
                
@@ -980,7 +980,7 @@ ui_LLWR_LLMPR <- fluidPage(
                
                actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                             icon = icon("th"), 
-                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                            onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
                
                
                
@@ -1060,7 +1060,7 @@ navbarMenu("SPR",
                    
                    actionButton(inputId='ab1', label="Bengough et al. (2011)", 
                                 icon = icon("th"), 
-                                onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')"),
+                                onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')")
                    
                    
                    
@@ -1131,7 +1131,7 @@ navbarMenu("SPR",
                
                actionButton(inputId='ab1', label="Bengough et al. (2011)", 
                             icon = icon("th"), 
-                            onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')"),
+                            onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')")
                
                
              )))
@@ -1204,7 +1204,7 @@ tabPanel("Veen & Boone (1991)",
              
              actionButton(inputId='ab1', label="Bengough et al. (2011)", 
                           icon = icon("th"), 
-                          onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')"),
+                          onclick ="window.open('https://www.ncbi.nlm.nih.gov/pubmed/21118824')")
              
              
            )))
@@ -1283,7 +1283,7 @@ tabPanel("Moraes et al. (2018)",
              
              actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                           icon = icon("th"), 
-                          onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                          onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
              
              
              
@@ -1416,7 +1416,7 @@ tabPanel("Moraes et al. (2018)",
                  
                  actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                               icon = icon("th"), 
-                              onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                              onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
                  
                  
                  
@@ -1445,7 +1445,7 @@ tabPanel("Moraes et al. (2018)",
       
       actionButton(inputId='ab1', label="de Lima et al. (2020)", 
                    icon = icon("th"), 
-                   onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')"),
+                   onclick ="window.open('https://www.sciencedirect.com/science/article/pii/S0378377420306247?dgcid=author')")
       
       
       
@@ -1463,7 +1463,7 @@ tabPanel("Moraes et al. (2018)",
   
   verticalLayout(
     column(12,wellPanel(
-      tags$p("Suggestions and bug reports: renato_agro_@hotmail.com", style = "font-size: 90%;"),
+      tags$p("Suggestions and bug reports: renato_agro_@hotmail.com", style = "font-size: 90%;")
       
       
       
