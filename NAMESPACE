@@ -57,9 +57,10 @@ export(PredComp)
 export(LLWR_App)
 
 # Imports
-import(utils, rpanel, tkrplot, shiny, shinydashboard, fields, MASS, boot, stats, graphics, grDevices, datasets, later)
+import(utils, rpanel, tkrplot, shiny, MASS, boot, stats, graphics, grDevices, datasets, later)
 importFrom(tcltk, tkProgressBar, setTkProgressBar)
 importFrom(shinydashboard, box)
+importFrom(fields, image.plot)
 
 # S3method
 S3method(print, criticalmoisture)
