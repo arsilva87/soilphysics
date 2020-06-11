@@ -300,7 +300,7 @@ ui_LLWR <- fluidPage(
  
  verticalLayout(
    column(12,wellPanel(
-     h4("by Renato P. de Lima"),
+     h4("by Renato P. de Lima")
      
      
    )))
