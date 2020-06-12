@@ -13,7 +13,7 @@ LLWR_LLMPR_App()
   \item{}{Available on the interactive web page}
 }
 
-\value{}
+\value{The LLWR and LLMPR}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 
