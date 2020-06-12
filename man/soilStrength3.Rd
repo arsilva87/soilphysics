@@ -16,7 +16,7 @@ soilStrength3(bulk.density, water.content,
 \arguments{
   \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
   \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{\%}}
-  \item{matric.suction}{ the soil texture group. See exemples}
+  \item{texture}{ the soil texture group. See exemples}
 
 }
 
