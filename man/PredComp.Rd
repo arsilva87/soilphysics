@@ -13,7 +13,7 @@ PredComp()
   \item{}{Available on the interactive web page}
 }
 
-\value{}
+\value{Stress and compaction effects}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 
