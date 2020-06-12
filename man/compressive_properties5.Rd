@@ -51,18 +51,24 @@ compressive_properties5(water.content=water.content, soil="ClayLoam")
 
 water.content <- seq(from=5,to=20,len=20)
 out <- compressive_properties5(water.content=water.content, soil="SandyLoam") 
-plot(x=water.content ,y=out$N, ylab="N", xlab="Bulk density") # plot for N
-plot(x=water.content ,y=out$lambda, ylab="lambda", xlab="Bulk density") # plot for compression index, lambda
-plot(x=water.content ,y=out$kappa, ylab="kappa", xlab="Bulk density") # plot for recompression index, kappa
+plot(x=water.content ,y=out$N, 
+     ylab="N", xlab="Bulk density") # plot for N
+plot(x=water.content ,y=out$lambda, 
+    ylab="lambda", xlab="Bulk density") # plot for lambda
+plot(x=water.content ,y=out$kappa, 
+    ylab="kappa", xlab="Bulk density") # plot for kappa
 
 
 # EXAMPLE 3 - ClayLoam 
 
 water.content <- seq(from=10,to=25,len=20)
 out <- compressive_properties5(water.content=water.content, soil="ClayLoam") 
-plot(x=water.content ,y=out$N, ylab="N", xlab="Bulk density") # plot for N
-plot(x=water.content ,y=out$lambda, ylab="lambda", xlab="Bulk density") # plot for compression index, lambda
-plot(x=water.content ,y=out$kappa, ylab="kappa", xlab="Bulk density") # plot for recompression index, kappa
+plot(x=water.content ,y=out$N, 
+     ylab="N", xlab="Bulk density") # plot for N
+plot(x=water.content ,y=out$lambda, 
+     ylab="lambda", xlab="Bulk density") # plot for lambda
+plot(x=water.content ,y=out$kappa, 
+     ylab="kappa", xlab="Bulk density") # plot for rkappa
 
 # End (not run)
 }
