@@ -8,7 +8,8 @@ It calculates the precompression stress using the pedo-transfer function from Sa
 }
 
 \usage{ 
-soilStrength3(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFine","Medium","Coarse"))
+soilStrength3(bulk.density, water.content, 
+              texture=c("VeryFine","Fine","MediumFine","Medium","Coarse"))
 
 }
 
