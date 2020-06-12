@@ -49,8 +49,8 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 BD <- seq(from=1.2,to=1.8, by=0.01) # range of bulk density from 1.2 to 1.8
 out <- compressive_properties2(particle.density=2.65, bulk.density=BD)
 
-plot(x=BD,y=out$N, ylab="N", xlab="Bulk density") # plot for N
-plot(x=BD,y=out$CI, ylab="Compression index (CI)", xlab="Bulk density") # plot for CI (compression index)
+plot(x=BD,y=out$N, ylab="N", xlab="Bulk density") # for N
+plot(x=BD,y=out$CI, ylab="Compression index (CI)", xlab="Bulk density") # for compression index
 
 # End (not run)
 }
