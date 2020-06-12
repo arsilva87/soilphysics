@@ -13,7 +13,7 @@ LLWR_App()
   \item{}{Available on the interactive web page}
 }
 
-\value{}
+\value{LLWR}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 
