@@ -13,7 +13,7 @@ r_App()
   \item{}{Available on the interactive web page}
 }
 
-\value{}
+\value{Pores that drain for a corresponding applied matric suction}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 
