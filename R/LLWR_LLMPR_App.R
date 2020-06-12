@@ -465,25 +465,6 @@ output$plotVeen <- renderPlot({
 })
 
 
-
-
-
-output$values2 <- renderTable({
-  
-  c.PR <- PR.critical(root.elongation.rate=input$root.rate/100,
-                      x=input$rate.factor) 
-  
-  AIR.cri <- AIR.critical(mim.gas.difusion=input$mim.gas.difusion, 
-                          thetaS=input$TP)
-  
-  
-  out <- data.frame("Critical SPR"=c.PR, "Critical AFP" = AIR.cri)
-  out
-  
-})
-
-
-
 # ------------------------------------------------------------------------------
 
 
