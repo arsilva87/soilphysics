@@ -8,7 +8,8 @@ It calculates the soil strength through precompression stress using the pedo-tra
 }
 
 \usage{ 
-soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8)
+soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,
+              OM=1.5,C=30,phi=36,texture="Clay>35", pF=1.8)
 }
 
 \arguments{
