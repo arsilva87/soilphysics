@@ -27,7 +27,7 @@ Pedo-transfer function developed for a sandy loam soil texture. See de Lima et a
 }
 
 \references{
-de Lima, R. P., Rolim, M. M., da C. Dantas, D., da Silva, A. R., Mendonça, E. A., 2020.
+de Lima, R. P., Rolim, M. M., da C. Dantas, D., da Silva, A. R., Mendonca, E. A., 2020.
 Compressive properties and least limiting water range of plough layer and plough pan in sugarcane fields. 
 \emph{Soil Use and Management}, x:xx-xx.
 
