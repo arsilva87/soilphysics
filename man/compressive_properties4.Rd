@@ -54,19 +54,20 @@ matric.suction <- seq(from=10,to=10000,len=100)
 out <- compressive_properties4(matric.suction=matric.suction, soil="PloughLayer")
 plot(x=matric.suction,y=out$N, ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
 plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
-plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
+plot(x=matric.suction,y=out$k, ylab="kappa", xlab="Matric suction (hPa)", log="x") # plot for kappa
 
 
 # EXAMPLE 3 for "PloughPan"
 
 matric.suction <- seq(from=10,to=10000,len=100)
-out <- compressive_properties4(matric.suction=matric.suction, soil="PloughPan")
-plot(x=matric.suction,y=out$N, ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
-plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
-plot(x=matric.suction,y=out$k, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for kappa
-
-
-
+out <- compressive_properties4(matric.suction=matric.suction, 
+                               soil="PloughPan")
+plot(x=matric.suction,y=out$N, 
+     ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
+plot(x=matric.suction,y=out$lambda, 
+     ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
+plot(x=matric.suction,y=out$k, ylab="kappa", 
+     xlab="Matric suction (hPa)", log="x") # plot for kappa
 
 # End (not run)
 }
