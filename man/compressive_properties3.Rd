@@ -12,7 +12,7 @@ compressive_properties3(bulk.density, matric.suction, soil=c("SandyLoam","SandyC
 }
 
 \arguments{
-  \item{bulkd.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}} 
+  \item{bulk.density}{ a numeric vector containing the values of bulk density, \eqn{Mg m^{-3}}} 
   \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa} 
   \item{soil}{ the soil texture group 'SandyLoam' or 'SandyClayLoam'. See exemples}
 }
