@@ -6,7 +6,7 @@
 \description{ A closed-form analytical expressions for calculating the relative unsaturated hydraulic conductivity as a function of 
 soil water content based on van Genuchten's water retention curve. }
 \usage{
-Kr_theta(theta, thetaS, thetaS, alpha, n, Ks, f=0.5)
+Kr_theta(theta, thetaS, thetaR, alpha, n, Ks, f=0.5)
 }
 \arguments{
   \item{theta}{ The volumetric water content (m^3/m^3). }
