@@ -1,5 +1,6 @@
 
-soilStrength3 <- function(bulk.density, water.content, texture=c("VeryFine","Fine","MediumFine","Medium","Coarse")) { 
+soilStrength3 <- function(bulk.density, water.content, 
+                          texture=c("VeryFine","Fine","MediumFine","Medium","Coarse")) { 
 
  w <- water.content
  BD <- bulk.density
