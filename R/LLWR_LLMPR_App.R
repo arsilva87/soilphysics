@@ -12,10 +12,10 @@ AIR.critical <- function (mim.gas.difusion, thetaS)  (mim.gas.difusion*(thetaS)^
 
 PR.Moraes <- function (root.elongation.rate,x) {
   
-  f <- c()
-  if (x=="Soil without biopores (-0.4325)") {f <- -0.4325} 
-  if (x=="Soil with biopores (-0.3000)") {f <- -0.3000}
-  out <- log(root.elongation.rate)/f
+  ff <- c()
+  if (x=="Soil without biopores (-0.4325)") {ff <- -0.4325} 
+  if (x=="Soil with biopores (-0.3000)") {ff <- -0.3000}
+  out <- log(root.elongation.rate)/ff
   return(out)
 }
 
@@ -98,7 +98,9 @@ llwr_llmpr <- function (thetaR, thetaS, alpha, n, d, e, f, critical.PR,
                       alpha = alpha, n = n)$h
   hPR <- vanG.matric(theta = thetaPR, thetaR = thetaR, thetaS = thetaS, 
                      alpha = alpha, n = n)$h
-    if (hPR ==  "NaN" || hPR == "NA" || hPR == Inf) (hPR <- h.PWP)
+  
+
+  if (hPR ==  "NaN" || hPR == "NA" || hPR == Inf) (hPR <- h.PWP)
   
   SL <- c()
   SL.out <- c()
@@ -305,8 +307,8 @@ output$plotTaylor <- renderPlot({
     b <- -0.084
     a <- 0.0007
     Q <- seq(3,48,len=50)
-    f <- function (x) c + b*x + a*x^2
-    y <- f(x=Q)
+    fTaylorPeanuts <- function (x) c + b*x + a*x^2
+    y <- fTaylorPeanuts(x=Q)
     ymax <- 2.694000
     plot(x=Q/10,y=(y/ymax )*100)
     
@@ -338,8 +340,8 @@ output$plotTaylor <- renderPlot({
     b <- -0.294
     a <- 0.008
     Q <- seq(1.2,20,len=50)
-    f <- function (x) c + b*x + a*x^2
-    y <- f(x=Q)
+    fTaylorCotton <- function (x) c + b*x + a*x^2
+    y <- fTaylorCotton(x=Q)
     ymax <- 3.5230
     plot(x=Q/10,y=(y/ymax )*100)
     
@@ -370,6 +372,41 @@ output$plotTaylor <- renderPlot({
 
 
 
+output$plotBennie <- renderPlot({
+  
+  RL <- function (x) 58.34*x^(-0.788)
+  RL.inv <- function(x)(x/58.34)^(1/-0.788)
+  
+  c.PR <- RL.inv(x=input$root.rateBennie)
+  
+  par(cex = 0.9)
+  plot(y = 1, x = 1, ylim = c(0, 100), xlim=c(0,4),
+       ylab = "", xlab = "", 
+       type = "l")
+  mtext("SPR (MPa)",1,line=2.5)
+  mtext("Relative root length (%)",2,line=2.5)
+  
+  
+  x1 <- seq(0.5,4,len=100)
+  y1 <- RL(x1)
+  points(x=x1,y=y1, type="l", lwd=2)
+  Qcri <- c.PR
+  
+  segments(x0=Qcri,x1=Qcri,y0=-10,y1=input$root.rateBennie)
+  segments(x0=-10,x1=Qcri,y0=input$root.rateBennie,y1=input$root.rateBennie)
+  points(x=Qcri,y=input$root.rateBennie, col=2, pch=15)
+  
+  legend("topright",legend=c(expression(SPR[critical]),round(Qcri,2)))
+  
+  
+})
+
+
+
+
+
+
+
 
 
 output$plotMoraes <- renderPlot({
@@ -391,8 +428,8 @@ output$plotMoraes <- renderPlot({
   if (input$fMoraes=="Soil with biopores (-0.3000)") {fator <- -0.3000}
   
   
-  f <- function (x,Q) exp(x*Q)
-  y <- f(x=fator,Q=seq(0.1,15,len=100))
+  fmoraes <- function (x,Q) exp(x*Q)
+  y <- fmoraes(x=fator,Q=seq(0.1,15,len=100))
   points(x=seq(0.1,15,len=100),y=y*100, type="l", lwd=2)
   Qcri <- (log(input$root.rateMoraes/100))/fator
   
@@ -465,6 +502,10 @@ output$plotVeen <- renderPlot({
 })
 
 
+
+
+
+
 # ------------------------------------------------------------------------------
 
 
@@ -519,10 +560,10 @@ output$plot5 <- renderPlot({
   points(x = rep(0.5, 2), 
          y = c(LLWR$LLRW_LLMPR[1,1], LLWR$LLRW_LLMPR[1,2]), col = 2, 
          pch = 15)
-  f <- 0.15
+  f_lim <- 0.15
   labels = c(expression(theta[AFP]), expression(theta[FC]), 
              expression(theta[PWP]), expression(theta[SPR]))
-  text(labels, x = c(0.5 + f, 0.5 - f, 0.5 - f, 0.5 + f), 
+  text(labels, x = c(0.5 + f_lim, 0.5 - f_lim, 0.5 - f_lim, 0.5 + f_lim), 
        y = c(LLWR$CRITICAL_LIMITS[1,1], LLWR$CRITICAL_LIMITS[2,1], 
              LLWR$CRITICAL_LIMITS[3,1], LLWR$CRITICAL_LIMITS[4,1]), cex = 1.2)
   
@@ -653,6 +694,7 @@ output$values4 <- renderTable({
 
   
 }
+
 
 
 
