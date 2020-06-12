@@ -13,7 +13,7 @@ particle.sedimentation_App()
   \item{}{Available on the interactive web page}
 }
 
-\value{}
+\value{Time of particle sedimentation}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 
