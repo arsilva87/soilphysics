@@ -1,4 +1,4 @@
- compressive_properties3 <- function(bulk.density, matric.suction, soil="SandyLoam") { 
+ compressive_properties3 <- function(bulk.density, matric.suction, soil=c("SandyLoam","SandyClayLoam")) { 
 
     x <- bulk.density
     y <- log10(matric.suction)
