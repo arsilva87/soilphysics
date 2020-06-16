@@ -1,0 +1,7 @@
+# Exports
+export(PredComp)
+
+# Imports
+import(shiny, later)
+importFrom(shinydashboard, box)
+importFrom(fields, image.plot)
