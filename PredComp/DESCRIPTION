@@ -1,10 +1,22 @@
 Package: PredComp
 Type: Package
-Title: Predition of soil compaction induced by agricultural field traffic
+Title: Predition of Soil Compaction Induced by Agricultural Field Traffic
 Version: 1.0
-Date: 2020-06-04
-Author: Renato Paiva de Lima, Anderson Rodrigo da Silva
+Date: 2020-06-21
+Description: Predition of soil compaction.
+Authors@R: c(person(given = c("Renato", "Paiva"),
+             family = "de Lima",
+             role = c("aut", "cre"),
+             email = "renato_agro_@hotmail.com",
+             comment = c(ORCID = "0000-0003-0524-439X")),
+	person(given = c("Anderson", "Rodrigo"),
+             family = "da Silva",
+             role = "aut",
+             email = "anderson.agro@hotmail.com",
+             comment = c(ORCID = "0000-0003-2518-542X")))
+Author: Renato Paiva de Lima [aut, cre],
+	Anderson Rodrigo da Silva [aut]
 Maintainer: Renato Paiva de Lima <renato_agro_@hotmail.com>
-Imports: shiny, shinydashboard, fields
-Description: Predition of soil compaction
+Depends: R (>= 3.4.0), shiny, shinydashboard, fields
+URL: https://arsilva87.github.io/soilphysics
 License: GPL (>= 2)

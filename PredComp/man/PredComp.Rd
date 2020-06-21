@@ -1,18 +1,20 @@
 \name{PredComp}
 \alias{PredComp}
 
-\title{A interactive web page for simulation of soil compaction}
+\title{Predition of Soil Compaction Induced by Agricultural Field Traffic}
 
-\description{A interactive web page for for simulation of soil compaction}
+\description{An interactive web page for for simulation of soil compaction}
 
 \usage{
 PredComp()
 }
 
 \arguments{
-  \item{}{Available on the interactive web page}
+Interactive
 }
 
 \value{Stress and compaction effects}
 
-\author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
+\author{
+Renato Paiva de Lima, Anderson Rodrigo da Silva
+}
