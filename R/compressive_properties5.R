@@ -1,6 +1,4 @@
-
-compressive_properties5 <- function(water.content, soil="SandyLoam") {
-
+compressive_properties5 <- function(water.content, soil = c("SandyLoam", "ClayLoam")) {
   w <- water.content
   N <- c()
   CI <- c()
@@ -15,5 +13,4 @@ compressive_properties5 <- function(water.content, soil="SandyLoam") {
 
   out <- data.frame(N=N,lambda=CI, kappa=k)
   return(out)
-
- }
+}

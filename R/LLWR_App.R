@@ -28,10 +28,8 @@ server_LLWR <- function(input, output) {
             IL[j] <- thetaPR[j]
          }
       }
-      LLWR<- (SL - IL)
-      for (j in 1:length(LLWR)) {
-         if (LLWR[j] < 0) {LLWR[j] <- 0}
-      }
+      LLWR <- (SL - IL)
+      LLWR[LLWR < 0] <- 0
       IHO <- data.frame(BD=Bd,AIR=thetaAIR,FC=thetaCC,WP=thetaWP,PR=thetaPR,LS=SL,LI=IL,LLWR=LLWR)
       return(IHO)
    }

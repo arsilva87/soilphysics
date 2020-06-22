@@ -1,6 +1,4 @@
-
- compressive_properties <- function(water.content, soil="Loess") {
-
+compressive_properties <- function(water.content, soil = c("Loess", "Calcareous")) {
   w <- water.content
   N <- c()
   CI <- c()
@@ -12,5 +10,4 @@
 
   out <- data.frame(N=N,CI=CI)
   return(out)
-
  }

@@ -1,6 +1,4 @@
-
- compressive_properties4 <- function(matric.suction, soil="PloughLayer") { 
-
+compressive_properties4 <- function(matric.suction, soil = c("PloughLayer", "PloughPan")) { 
 
     x <- log10(matric.suction)
 
@@ -27,5 +25,4 @@
 
     out <- data.frame(N=N,lambda=CI, k=k)
     return(out)
-
 }

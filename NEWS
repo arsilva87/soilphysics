@@ -5,6 +5,7 @@
 * Code fixes in soilStrength
 * New functions: particle.sedimentation(), aggreg.stability(), r(), 
   psd(), Kr(), llwr_llmpr(), hydraulicCutOff2()
+* Several shiny apps
 * New data: SoilAggregate
 
 ------------------------------------------------

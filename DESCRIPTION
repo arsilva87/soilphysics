@@ -3,8 +3,22 @@ Type: Package
 Title: Soil Physical Analysis
 Version: 4.0
 Date: 2020-06-11
-Author: Anderson Rodrigo da Silva, Renato Paiva de Lima
-Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
-Imports: utils, stats, graphics, boot, grDevices, datasets, rpanel, MASS, tkrplot, shiny, shinydashboard, fields
 Description: Basic and model-based soil physical analyses.
+Authors@R: c(person(given = c("Anderson", "Rodrigo"),
+             family = "da Silva",
+             role = c("aut", "cre"),
+             email = "anderson.agro@hotmail.com",
+             comment = c(ORCID = "0000-0003-2518-542X")),
+      person(given = c("Renato", "Paiva"),
+             family = "de Lima",
+             role = "aut",
+             email = "renato_agro_@hotmail.com",
+             comment = c(ORCID = "0000-0003-0524-439X")))
+Author: Anderson Rodrigo da Silva [aut, cre],
+	Renato Paiva de Lima [aut]
+Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
+URL: https://arsilva87.github.io/soilphysics/
+Imports: utils, stats, graphics, boot, grDevices, datasets, rpanel, MASS, tcltk, tkrplot, shiny, shinydashboard, fields
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 License: GPL (>= 2)

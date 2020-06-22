@@ -57,10 +57,19 @@ export(PredComp)
 export(LLWR_App)
 
 # Imports
-import(rpanel, tkrplot, shiny, MASS, boot, grDevices, datasets, later)
-importFrom(tcltk, tkProgressBar, setTkProgressBar)
-importFrom(shinydashboard, box)
-importFrom(fields, image.plot)
+import("rpanel", "tkrplot", "shiny", "MASS", "boot", "grDevices", "datasets")
+importFrom("tcltk", "tkProgressBar", "setTkProgressBar")
+importFrom("shinydashboard", "box")
+importFrom("fields", "image.plot")
+importFrom("graphics", "abline", "arrows", "axis", "barplot",
+             "contour", "curve", "layout", "legend", "lines", "mtext",
+             "par", "plot", "points", "polygon", "segments", "text")
+importFrom("stats", "as.formula", "coef", "deriv3", "getInitial",
+             "integrate", "lm", "nls", "optimize", "predict", "quantile",
+             "resid", "sd", "sortedXyData", "vcov", "weighted.mean",
+             "weights")
+importFrom("utils", "head", "setTxtProgressBar", "tail",
+             "txtProgressBar", "write.csv")
 
 # S3method
 S3method(print, criticalmoisture)
