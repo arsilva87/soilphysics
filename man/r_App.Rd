@@ -1,9 +1,9 @@
 \name{r_App}
 \alias{r_App}
 
-\title{A interactive web page for equation of capillarity}
+\title{A shiny for equation of capillarity}
 
-\description{A interactive web page for equation of capillarity}
+\description{A shiny for equation of capillarity}
 
 \usage{
 r_App()
@@ -13,7 +13,7 @@ r_App()
   \item{}{Available on the interactive web page}
 }
 
-\value{Pores that drain for a corresponding applied matric suction}
+\value{shiny app}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 

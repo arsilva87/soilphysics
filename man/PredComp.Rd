@@ -1,9 +1,9 @@
 \name{PredComp}
 \alias{PredComp}
 
-\title{A interactive web page for simulation of soil compaction}
+\title{A shiny for simulation of soil compaction}
 
-\description{A interactive web page for for simulation of soil compaction}
+\description{A shiny for for simulation of soil compaction}
 
 \usage{
 PredComp()
@@ -13,7 +13,7 @@ PredComp()
   \item{}{Available on the interactive web page}
 }
 
-\value{Stress and compaction effects}
+\value{shiny app}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 

@@ -11,7 +11,7 @@ Kr_theta(theta, thetaS, thetaR, alpha, n, Ks, f=0.5)
 \arguments{
   \item{theta}{ The volumetric water content (m^3/m^3). }
   \item{thetaS}{ The volumetric water content at the saturation (m^3/m^3). }
-  \item{thetaS}{ The volumetric residual water content (m^3/m^3). }
+  \item{thetaR}{ The volumetric residual water content (m^3/m^3). }
   \item{alpha}{ The scale parameter of the van Genuchten's model (hPa^-1). }
   \item{n}{ The shape parameter in van Genuchten's formula. }
   \item{Ks}{ Saturated hydraulic conductivity (e.g. cm/day). }

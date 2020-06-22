@@ -1,10 +1,10 @@
 \name{compressive_properties5}
 \alias{compressive_properties5}
 
-\title{Estimation of compressive properties by O’Sullivan et al. (1999)}
+\title{Estimation of compressive properties by O'Sullivan et al. (1999)}
 
 \description{
-It calculates the compressive parameteres N, lambda and kappa using the pedo-transfer function from O’Sullivan et al. (1999)
+It calculates the compressive parameteres N, lambda and kappa using the pedo-transfer function from O'Sullivan et al. (1999)
 }
 
 \usage{ 
@@ -12,7 +12,7 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}} 
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{\%}} 
   \item{soil}{the the soil texture group 'SandyLoam' or 'ClayLoam'. See exemples.}
 }
 
@@ -23,7 +23,7 @@ compressive_properties5(water.content, soil=c("SandyLoam","ClayLoam"))
 }
 
 \details{
-See O’Sullivan et al. (1999).
+See O'Sullivan et al. (1999).
 }
 
 \references{

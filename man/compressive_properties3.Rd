@@ -42,33 +42,40 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \examples{
-# EXEMPLE 1
+# EXAMPLE 1
 
 compressive_properties3(bulk.density=1.5, matric.suction=100, soil="SandyLoam")
 compressive_properties3(bulk.density=1.5, matric.suction=100, soil="SandyClayLoam")
 
-
 # EXAMPLE 2 for SandyLoam soil
 
 matric.suction <- seq(from=30,to=1000,len=100)
-out <- compressive_properties3(bulk.density=1.5, matric.suction=matric.suction, soil="SandyLoam")
-plot(x=matric.suction,y=out$N, ylab="N", xlab="Matric suction (hPa)", log="x") # plot for N
-plot(x=matric.suction,y=out$lambda, ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
-plot(x=matric.suction,y=out$k, ylab="kappa", xlab="Matric suction (hPa)", log="x") # plot for kappa
+out <- compressive_properties3(bulk.density=1.5, 
+	matric.suction=matric.suction, soil="SandyLoam")
+plot(x=matric.suction,y=out$N, ylab="N", 
+	xlab="Matric suction (hPa)", log="x") # plot for N
+# plot for lambda
+plot(x=matric.suction,y=out$lambda, ylab="lambda", 
+	xlab="Matric suction (hPa)", log="x") 
+# plot for kappa
+plot(x=matric.suction,y=out$k, ylab="kappa", 
+	xlab="Matric suction (hPa)", log="x") 
 
 
 # EXAMPLE 3 for SandyClayLoam soil
 
 matric.suction <- seq(from=30,to=1000,len=100)
 out <- compressive_properties3(bulk.density=1.5, 
-                               matric.suction=matric.suction, soil="SandyClayLoam")
+				matric.suction=matric.suction, 
+				soil="SandyClayLoam")
 plot(x=matric.suction,y=out$N, ylab="N", 
      xlab="Matric suction (hPa)", log="x") # plot for N
+# plot for lambda
 plot(x=matric.suction,y=out$lambda, 
-     ylab="lambda", xlab="Matric suction (hPa)", log="x") # plot for lambda
+     ylab="lambda", xlab="Matric suction (hPa)", log="x")
+# plot for kappa
 plot(x=matric.suction,y=out$k, 
-     ylab="kappa", xlab="Matric suction (hPa)", log="x") # plot for kappa
-
+     ylab="kappa", xlab="Matric suction (hPa)", log="x")
 
 # End (not run)
 }

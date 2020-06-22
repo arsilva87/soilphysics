@@ -31,7 +31,7 @@ soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,
 
 \details{
 The function returns '0' for soil properties values beyond the range for which the function was built. The default for this function is the values given in the application example by Horn and Fleige (2003).
-In the 'texture' argument, the user must pass the textural classification 'Sand','SandLoam', 'Silt', 'Clay<35' or 'Clay>35'. See exemples.
+In the 'texture' argument, the user must pass the textural classification 'Sand','SandLoam', 'Silt', 'Clay<35' or 'Clay>35'. See examples.
 }
 
 \references{
@@ -41,7 +41,7 @@ A method to predict the mechanical strength of agricultural soils.
  
 Horn, R., Fleige, H., 2003. 
 A method for assessing the impact of load on mechanical stability and on physical properties of soils. 
-\emph{Soil and Tillage Research}, 73:89–99.
+\emph{Soil and Tillage Research}, 73:89-99.
 
 
 }
@@ -57,8 +57,6 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
   
   
 \examples{
-# EXAMPLE 1
-
 soilStrength4(BD=1.55,AC=10,AWC=15,PWP=26,Ks=0.29,OM=1.5,
               C=30,phi=36,texture="Clay>35", pF=1.8) # Exemple from Horn and Fleige (2003), Table 7
 
