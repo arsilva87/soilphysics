@@ -4,7 +4,7 @@ library(rhandsontable)
 source("https://raw.githubusercontent.com/arsilva87/soilphysics/master/R/findWRC.R")
 
 # ---------------------------------------------------------------------
-ui <- fluidPage(
+ui_findWRC <- fluidPage(
    titlePanel("Automatically find the best fit WRC using maximum likelihood"),
    fluidRow(
       column(5, wellPanel(
@@ -30,7 +30,7 @@ ui <- fluidPage(
 )
 
 # ---------------------------------------------------------------------
-server <- function(session, input, output) {
+server_findWRC <- function(session, input, output) {
   dataIn <- reactive( req(input$file) )
   output$tab <- renderRHandsontable({
     DF <- read.csv(dataIn()$datapath) 
@@ -57,4 +57,6 @@ server <- function(session, input, output) {
 }
 
 # Run the app
-shinyApp(ui = ui, server = server)
+findWRC_App <- function() {
+  shinyApp(ui_findWRC , server_findWRC)
+}
