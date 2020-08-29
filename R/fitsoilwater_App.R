@@ -719,7 +719,7 @@ server_fitsoilwater <- function(input, output, session) {
         
       if (input$blueGG2==FALSE) {
       hexp <- seq(from=min(sort(outdfGG2()[,input$xcolGG2])),to=max(sort(outdfGG2()[,input$xcolGG2])), len=100)
-      wGG2 <- GG(x=hexp, k0=k0GG,k1=k1GG,n=nGG, x0=input$x0GG)
+      wGG2 <- GG(x=hexp, k0=k0GG,k1=k1GG,n=nGG, x0=input$x0GG2)
       points(x=hexp, y=wGG2, type="l", col="blue")
       legend("topright",legend="Fitted model", lwd=1, col="blue")
       }
