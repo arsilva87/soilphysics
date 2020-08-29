@@ -276,6 +276,8 @@ LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
 
 PredComp 1.0:  <https://appsoilphysics.shinyapps.io/PredComp/>
 
+fisoilwater:  <https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/>
+
 
  
 # Citation and references
