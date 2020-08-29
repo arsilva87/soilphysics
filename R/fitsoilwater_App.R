@@ -1765,7 +1765,7 @@ tabPanel("About", "",
 
 
 fitsoilwater_App <- function() {
-  shinyApp(ui_fitsoilwater,server_fitsoilwater,session)
+  shinyApp(ui_fitsoilwater,server_fitsoilwater)
   }
 
 
