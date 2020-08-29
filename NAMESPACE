@@ -55,6 +55,7 @@ export(aggreg.stability_App)
 export(LLWR_LLMPR_App)
 export(PredComp)
 export(LLWR_App)
+export(fisoilwater_App)
 
 # Imports
 import("rpanel", "tkrplot", "shiny", "MASS", "boot", "grDevices", "datasets")
