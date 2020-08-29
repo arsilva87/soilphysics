@@ -1,4 +1,4 @@
-server_fitsoilwater <- function(input, output) {
+server_fitsoilwater <- function(input, output, session) {
   
   # my functions
   
@@ -1765,7 +1765,7 @@ tabPanel("About", "",
 
 
 fitsoilwater_App <- function() {
-  shinyApp(ui_fitsoilwater , server_fitsoilwater)
+  shinyApp(ui_fitsoilwater,server_fitsoilwater,session)
   }
 
 
