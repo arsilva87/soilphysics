@@ -1733,7 +1733,7 @@ tabPanel("About", "",
              
              tags$p("This R app is an interactive web interface for fitting soil water retention models
              and integrate the set of functions for soil physical data 
-                    analysis from the R package ",tags$em(tags$strong("soilphysics")),"", 
+                    analysis from the R package ",tags$em(tags$strong('soilphysics')),"", 
                     style = "font-size: 115%;text-align:justify"),
              
              
