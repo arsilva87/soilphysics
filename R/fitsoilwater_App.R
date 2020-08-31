@@ -1739,7 +1739,7 @@ tabPanel("About", "",
              
              actionButton(inputId='ab1', label="soilphysics", 
                           icon = icon("th"), 
-                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')"),
+                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')")
              
            ))),
          
