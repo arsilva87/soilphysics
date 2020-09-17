@@ -56,7 +56,6 @@ export(LLWR_LLMPR_App)
 export(PredComp)
 export(LLWR_App)
 export(fitsoilwater_App)
-export(HEMC_App)
 
 # Imports
 import("rpanel", "tkrplot", "shiny", "MASS", "boot", "grDevices", "datasets")
