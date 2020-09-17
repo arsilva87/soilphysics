@@ -556,6 +556,11 @@ tabPanel("About", "",
 )
 
 
+HEMC_App <- function() {
+  shinyApp(ui_HEMC , server_HEMC)
+  }
+
+
 
 
 
