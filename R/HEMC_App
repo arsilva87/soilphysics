@@ -1,4 +1,4 @@
-server_HEMC <- function(input, output,session) {
+server_HEMC <- function(input, output) {
   
   # my functions
   
