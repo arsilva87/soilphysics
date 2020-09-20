@@ -1,5 +1,4 @@
-library(rhandsontable)
-library(shiny)
+
 # -------------------------------------------------------------------
 source("https://raw.githubusercontent.com/arsilva87/soilphysics/master/R/findWRC.R")
 
