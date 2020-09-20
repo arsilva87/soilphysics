@@ -59,8 +59,8 @@ export(fitsoilwater_App)
 export(HEMC_App)
 
 # Imports
-import("rpanel", "tkrplot", "shiny", "MASS", "boot", "grDevices", "datasets")
-importFrom("tcltk", "tkProgressBar", "setTkProgressBar","rhandsontable")
+import("rpanel", "tkrplot", "shiny", "MASS", "boot", "grDevices", "datasets","rhandsontable")
+importFrom("tcltk", "tkProgressBar", "setTkProgressBar")
 importFrom("shinydashboard", "box")
 importFrom("fields", "image.plot")
 importFrom("graphics", "abline", "arrows", "axis", "barplot",
