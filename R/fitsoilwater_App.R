@@ -1095,7 +1095,7 @@ navbarMenu("Choose the soil water retention model",
                                                    step = 0.001, value=0.560,tick=FALSE),
                                        
                                        sliderInput("thetaRBC2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                                   min = 0, max = 0.30,
+                                                   min = 0, max = 0.40,
                                                    step = 0.001, value=0.150,tick=FALSE),
                                        
                                        
@@ -1220,7 +1220,7 @@ tabPanel("van Genuchten (1980)",h4("van Genuchten"),
                                         step = 0.001, value=0.560,tick=FALSE),
                             
                             sliderInput("thetaRVG2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.30,
+                                        min = 0, max = 0.40,
                                         step = 0.001, value=0.150,tick=FALSE),
                             
                             sliderInput("alphaVG2", HTML(paste0("&alpha; (hPa",tags$sup("-1"),")")),
@@ -1356,7 +1356,7 @@ tabPanel("Durner (1994) (Bimodal)",h4("Durner"),
                                         step = 0.001, value=0.60,tick=FALSE),
     
                             sliderInput("thetaRDN2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.30,
+                                        min = 0, max = 0.40,
                                         step = 0.001, value=0.10,tick=FALSE),
                             
                             sliderInput("w1DN2", HTML(paste0("w",tags$sub("1"))),
@@ -1636,7 +1636,7 @@ tabPanel("Dexter et al. (2008) (Bimodal)", h4("Dexter"),
                             
                             
                             sliderInput("thetaRDE2",HTML(paste0("C (g",tags$sup("") ," g",tags$sup("-1"),")")),
-                                        min = 0.01, max = 0.30,
+                                        min = 0.01, max = 0.40,
                                         step = 0.0001, value=0.14,tick=FALSE),
                             
                             
