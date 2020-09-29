@@ -1,0 +1,23 @@
+citHeader("To cite 'ExpSoilWater' in publications use:")
+
+
+citEntry(entry="Article",
+         title = "soilphysics: an R package for calculating soil water availability to plants by different soil physical indices", 
+         author = personList(as.person("R. P. de Lima"), 
+                             as.person("A. R. da Silva"), 
+                             as.person("A. P. da Silva"), 
+                             as.person("T. P. Leao"), 
+                             as.person("M. R. Mosaddeghi")),
+         journal = "Computers and Eletronics in Agriculture",
+         year = "2016",
+         volume = "120",
+         pages = "63-71",       
+         textVersion = 
+           paste("de Lima, R.P.; da Silva, A.R.; da Silva, A.P.; Leao, T.P.; Mosaddeghi, M.R. ",
+                 "(2016) ", 
+                 "soilphysics: an R package for calculating soil water availability to plants by different soil physical indices. ",
+                 "Computers and Eletronics in Agriculture, ",
+                 "120: 63-71.",
+                 sep="")
+)
+
