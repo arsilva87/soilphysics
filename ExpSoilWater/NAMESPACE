@@ -6,15 +6,5 @@ export(fitsoilwater_App)
 export(r_App)
 
 # Imports
-import("shiny", "MASS", "boot", "grDevices", "datasets")
-importFrom("tcltk", "tkProgressBar", "setTkProgressBar")
-importFrom("shinydashboard", "box")
-importFrom("graphics", "abline", "arrows", "axis", "barplot",
-             "contour", "curve", "layout", "legend", "lines", "mtext",
-             "par", "plot", "points", "polygon", "segments", "text")
-importFrom("stats", "as.formula", "coef", "deriv3", "getInitial",
-             "integrate", "lm", "nls", "optimize", "predict", "quantile",
-             "resid", "sd", "sortedXyData", "vcov", "weighted.mean",
-             "weights")
-importFrom("utils", "head", "setTxtProgressBar", "tail",
-             "txtProgressBar", "write.csv")
+import(shiny, later)
+importFrom(shinydashboard, box)
