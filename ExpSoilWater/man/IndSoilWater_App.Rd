@@ -13,6 +13,8 @@
   \item{}{Available on the interactive web page}
 }
 
+\details{Run online from: https://soilphysics.shinyapps.io/wrcAPP/}
+
 \value{shiny app}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }

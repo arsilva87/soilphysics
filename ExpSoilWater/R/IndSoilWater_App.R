@@ -181,7 +181,7 @@ server_IndSoilWater <- function(input, output) {
    mtext(expression(K[theta] ~ (cm~d^-1)), 2, line=2)
    mtext(expression(theta~(m^3~m^-3)), 3, line=2)
    axis(3, at=seq(0,0.8,0.1))
-   axis(3, at=seq(0,0.8,0.05), label=FALSE)
+   axis(3, at=seq(0,0.8,0.05), labels=FALSE)
    ax <- c(0.00001,0.0001,0.001, 0.01, 0.1, 1, 10, 100,1000)
    label <- c(expression(10^{-5}),expression(10^{-4}),
               expression(10^{-3}), 

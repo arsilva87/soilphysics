@@ -1,10 +1,22 @@
 Package: ExpSoilWater
 Type: Package
 Title: Soil Water Explorer
+Description: A set of Shiny apps for exploring soil water.
 Version: 1.0
 Date: 2020-09-29
-Author: Renato Paiva de Lima, Anderson Rodrigo da Silva
+Authors@R: c(person(given = c("Renato", "Paiva"),
+             family = "de Lima",
+             role = c("aut", "cre"),
+             email = "renato_agro_@hotmail.com",
+             comment = c(ORCID = "0000-0003-0524-439X")),
+	person(given = c("Anderson", "Rodrigo"),
+             family = "da Silva",
+             role = "aut",
+             email = "anderson.agro@hotmail.com",
+             comment = c(ORCID = "0000-0003-2518-542X")))
+Author: Renato Paiva de Lima [aut, cre],
+	Anderson Rodrigo da Silva [aut]
 Maintainer: Renato Paiva de Lima <renato_agro_@hotmail.com>
-Imports: shiny, shinydashboard
-Description: Soil Water Explorer
+Depends: R (>= 3.4.0), shiny, shinydashboard
+URL: https://arsilva87.github.io/soilphysics
 License: GPL (>= 2)

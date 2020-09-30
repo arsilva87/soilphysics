@@ -1,7 +1,7 @@
 \name{LLWR_LLMPR_App}
 \alias{LLWR_LLMPR_App}
 
-\title{A shiny for calculation of least limiting water and matric potential ranges of agricultural soils with calculated physical restriction thresholds}
+\title{Least limiting water and matric potential ranges of agricultural soils}
 
 \description{A shiny for calculation of least limiting water and matric potential ranges of agricultural soils with calculated physical restriction thresholds}
 
@@ -12,6 +12,8 @@
 \arguments{
   \item{}{Available on the interactive web page}
 }
+
+\details{Run online from: https://soilphysics.shinyapps.io/LLWR_LLMPR/}
 
 \value{shiny app}
 

@@ -1,7 +1,7 @@
 \name{fitsoilwater_App}
 \alias{fitsoilwater_App}
 
-\title{A shiny for fitting soil water retention curves}
+\title{Fitting soil water retention curves}
 
 \description{A shiny for fitting soil water retention curves}
 
@@ -12,6 +12,8 @@
 \arguments{
   \item{}{Available on the interactive web page}
 }
+
+\details{Run online from: https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/}
 
 \value{shiny app}
 

@@ -6,5 +6,11 @@ export(fitsoilwater_App)
 export(r_App)
 
 # Imports
-import(shiny, later)
+import(shiny)
 importFrom(shinydashboard, box)
+importFrom("grDevices", "rgb")
+importFrom("graphics", "abline", "axis", "legend", "mtext", "par",
+             "plot", "points", "polygon", "segments", "text")
+importFrom("stats", "AIC", "nls", "optimize", "predict", "resid",
+             "residuals", "weighted.mean", "weights")
+importFrom("utils", "read.csv", "write.csv")

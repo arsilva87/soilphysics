@@ -1,30 +1,24 @@
 
 server_LLWR <- function(input, output) {
-  
-   llwr <- function(Bd, air, critical.PR, h.FC, h.WP,p.density,a,b,c,d,e,f) {
-      thetaAIR <- c()
-      thetaCC <- c()
-      thetaWP <- c()
-      thetaPR <- c()
+    LLWR = NULL
+    llwr <- function(Bd, air, critical.PR, h.FC, h.WP,p.density,a,b,c,d,e,f) {
+      thetaAIR <- thetaCC <- thetaWP <- thetaPR <- c()
       for (j in 1:length(Bd)) {
          thetaAIR[j] <- (1 - (Bd[j]/p.density)) - air
          thetaCC[j] <- exp(a+b*Bd[j])*h.FC^(c)
          thetaWP[j] <- exp(a+b*Bd[j])*h.WP^(c)
          thetaPR[j] <- (critical.PR/(d*Bd[j]^f))^(1/e)
       }
-      SL <- c()
-      IL <- c()
+      SL <- IL <- c()
       for (j in 1:length(Bd)) {
          if (thetaAIR[j] < thetaCC[j]) {
             SL[j] <- thetaAIR[j]
-         }
-         else if (thetaAIR[j] > thetaCC[j]) {
+         } else {
             SL[j] <- thetaCC[j]
          }
          if (thetaWP[j] > thetaPR[j]) {
             IL[j] <- thetaWP[j]
-         }
-         else if (thetaWP[j] < thetaPR[j]) {
+         } else {
             IL[j] <- thetaPR[j]
          }
       }
@@ -32,14 +26,13 @@ server_LLWR <- function(input, output) {
       LLWR[LLWR < 0] <- 0
       IHO <- data.frame(BD=Bd,AIR=thetaAIR,FC=thetaCC,WP=thetaWP,PR=thetaPR,LS=SL,LI=IL,LLWR=LLWR)
       return(IHO)
-   }
+    }
    
-   
-
   
- # GRAFICO LLWR
   
- output$plot1 <- renderPlot({
+    # GRAFICO LLWR
+  
+    output$plot1 <- renderPlot({
     
    
     BD <- seq(min(input$BD),max(input$BD), len=500)

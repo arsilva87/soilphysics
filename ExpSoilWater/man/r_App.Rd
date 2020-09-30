@@ -1,7 +1,7 @@
 \name{r_App}
 \alias{r_App}
 
-\title{A shiny for equation of capillarity}
+\title{Capillarity equation}
 
 \description{A shiny for equation of capillarity}
 
@@ -12,6 +12,9 @@
 \arguments{
   \item{}{Available on the interactive web page}
 }
+
+
+\details{Run online from: https://soilphysics.shinyapps.io/capilarAPP/}
 
 \value{shiny app}
 
