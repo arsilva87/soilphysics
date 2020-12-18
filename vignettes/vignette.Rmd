@@ -1,15 +1,15 @@
 ---
 title: "The soilphysics package: an overview"
 author: "A.R. da Silva and R.P. de Lima"
-date: "June 11, 2020"
-output: rmarkdown::html_vignette
+date: "Dec 6, 2020"
+output: html_document
 vignette: >
   %\VignetteIndexEntry{"The soilphysics package: an overview"}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
+```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -21,13 +21,22 @@ In this package you will find a series of functions for soil physics data analys
 
 # Instalation
 
-You can install and load the released version of soilphysics from GitHub with:
+From CRAN:
 
-```{r}
-#install.packages("devtools")
+```{r eval=FALSE}
+install.packages("soilphysics")
+```
 
-#devtools::install_github("arsilva87/soilphysics")
+Or you can install the development version from GitHub:
 
+```{r, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("arsilva87/soilphysics")
+```
+
+Then, load it
+
+```{r warning=FALSE}
 library(soilphysics) 
 ```
 
@@ -147,26 +156,9 @@ out <- aggreg.stability(sample.id = SoilAggregate[ ,1],
 head(out)
 ```
 
-
-# Spin-off
-
-Sedimentation time of soil particle (Stokes' law): <https://renatoagro.shinyapps.io/stokesapp/>
-
-Exploring water retention curve using van Genuchten's model: <https://soilphysics.shinyapps.io/wrcAPP/>
-
-Soil Aggregate-Size Distribution: <https://renatoagro.shinyapps.io/Agre/>
-
-Usual Least Limiting Water Range (LLWR): <https://soilphysics.shinyapps.io/LLWRAPP/>
-
-Water suction at the point of hydraulic cut-off (Dexter et al. 2012): <https://soilphysics.shinyapps.io/h_cutoff/>
-
-LLWR and LLMPR:  <https://soilphysics.shinyapps.io/LLWR_LLMPR/>
-
-PredComp 1.0:  <https://appsoilphysics.shinyapps.io/PredComp/>
-
-
  
 # Citation and references
+De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P. (2021) soilphysics: An R package for simulation of soil compaction induced by agricultural field traffic. *SOIL and TILLAGE RESEARCH*, 206: 104824. DOI: <https://doi.org/10.1016/j.still.2020.104824>
 
 De Lima, R.P.; Tormena, C.A.; Figueiredo, G.C; Da Silva, A.R.; Rolim, M.M. (2020) Least limiting water and matric potential ranges of agricultural soils with calculated physical restriction thresholds. *Agricultural Water Management*, 240: 106299. DOI: <https://doi.org/10.1016/j.agwat.2020.106299>
 

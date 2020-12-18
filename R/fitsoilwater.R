@@ -1,6 +1,8 @@
 fitsoilwater <-
 function (theta, x, xlab = NULL, ylab = NULL, ...) 
 {
+    if (!requireNamespace("rpanel", quietly = TRUE)) 
+        stop("package rpanel is required")
     if (!inherits(c(theta, x), "numeric")) 
         stop("non-numeric arguments!")
     if (length(theta) != length(x)) 
@@ -28,7 +30,7 @@ function (theta, x, xlab = NULL, ylab = NULL, ...)
         fit <- try(with(pan, nls(theta ~ soilwater(x, theta_R, 
             theta_S, alpha, n), data = dat, start = start)))
         if (inherits(fit, "try-error")) {
-            rp.messagebox("No convergence... try other initial values.", 
+            rpanel::rp.messagebox("No convergence... try other initial values.", 
                 title = "Warning!")
         }
         else {
@@ -41,28 +43,28 @@ function (theta, x, xlab = NULL, ylab = NULL, ...)
         }
         return(pan)
     }
-    panel <- rp.control("Interactive fit")
-    rp.slider(panel, variable = theta_R, from = 0, to = max(theta), 
+    panel <- rpanel::rp.control("Interactive fit")
+    rpanel::rp.slider(panel, variable = theta_R, from = 0, to = max(theta), 
         resolution = 0.01, initval = 0.8 * min(theta), 
         title = "theta_R", action = f.panel)
-    rp.doublebutton(panel, variable = theta_R, step = 0.01, title = "", 
+    rpanel::rp.doublebutton(panel, variable = theta_R, step = 0.01, title = "", 
         action = f.panel, showvalue = TRUE, foreground = "blue")
-    rp.slider(panel, variable = theta_S, from = 0, to = max(theta), 
+    rpanel::rp.slider(panel, variable = theta_S, from = 0, to = max(theta), 
         resolution = 0.01, initval = 0.8 * max(theta), 
         title = "theta_S", action = f.panel)
-    rp.doublebutton(panel, variable = theta_S, step = 0.01, title = "", 
+    rpanel::rp.doublebutton(panel, variable = theta_S, step = 0.01, title = "", 
         action = f.panel, showvalue = TRUE, foreground = "blue")
-    rp.slider(panel, variable = alpha, from = 0, to = 2, resolution = 0.01, 
+    rpanel::rp.slider(panel, variable = alpha, from = 0, to = 2, resolution = 0.01, 
         initval = 0.01, title = "alpha", action = f.panel)
-    rp.doublebutton(panel, variable = alpha, step = 0.01, title = "", 
+    rpanel::rp.doublebutton(panel, variable = alpha, step = 0.01, title = "", 
         action = f.panel, showvalue = TRUE, foreground = "blue")
-    rp.slider(panel, variable = n, from = 0, to = 15, resolution = 0.01, 
+    rpanel::rp.slider(panel, variable = n, from = 0, to = 15, resolution = 0.01, 
         initval = 2, title = "n", action = f.panel)
-    rp.doublebutton(panel, variable = n, step = 0.01, title = "", 
+    rpanel::rp.doublebutton(panel, variable = n, step = 0.01, title = "", 
         action = f.panel, showvalue = TRUE, foreground = "blue")
-    rp.button(panel, title = "NLS estimates", action = f.fit,
+    rpanel::rp.button(panel, title = "NLS estimates", action = f.fit,
         foreground = "white", background = "navy")
-    rp.button(panel, title = "__________________ Quit __________________", 
+    rpanel::rp.button(panel, title = "__________________ Quit __________________", 
         action = function(pan) return(pan), quitbutton = TRUE, 
         foreground = "red")
 }

@@ -7,6 +7,8 @@
   psd(), Kr(), llwr_llmpr(), hydraulicCutOff2()
 * Several shiny apps
 * New data: SoilAggregate
+* Fixes on tkrplot and rpanel dependency
+* New citation entry
 
 ------------------------------------------------
                 version 3.1
