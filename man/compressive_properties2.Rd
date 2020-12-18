@@ -1,10 +1,10 @@
 \name{compressive_properties2}
 \alias{compressive_properties2}
 
-\title{ Estimation of compressive properties by Keller & Arvidsson (2007)}
+\title{ Estimation of compressive properties by Keller and Arvidsson (2007)}
 
 \description{
-It calculates the compressive parameters N and lambda using the pedo-transfer function from Keller & Arvidsson (2007)
+It calculates the compressive parameters N and lambda using the pedo-transfer function from Keller and Arvidsson (2007)
 }
 
 \usage{ 
@@ -28,7 +28,7 @@ In Keller and Arvidsson (2007), the recompression index, kappa, was found as 0.0
 \references{
 Keller, T., Arvidsson, J., 2007. 
 Compressive properties of some Swedish and Danish structured agricultural soils measured in uniaxial compression tests. 
-\emph{European Journal of Soil Science }, 58:1373-1381.
+\emph{European Journal of Soil Science }, 58: 1373-1381.
 
 }
 \author{ 

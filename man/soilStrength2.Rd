@@ -12,7 +12,7 @@ soilStrength2(bulk.density,  matric.suction, clay.content)
 }
 
 \arguments{
-  \item{clay.content}{ a numeric vector containing the values of clay content, \eqn{%}}
+  \item{clay.content}{ a numeric vector containing the values of clay content, \eqn{\%}}
   \item{matric.suction}{ a numeric vector containing the values of matric suction, hPa}
   \item{bulk.density}{ a numeric vector containing the values of soil bulk density, \eqn{Mg m^{-3}}}
 }

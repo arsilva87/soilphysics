@@ -12,7 +12,7 @@ compressive_properties(water.content, soil=c("Loess", "Calcareous"))
 }
 
 \arguments{
-  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{%}}
+  \item{water.content}{ a numeric vector containing the values of gravimetric water content, \eqn{\%}}
   \item{soil}{the soil group 'Loess' or 'Calcareous'. See examples}
 }
 
@@ -28,7 +28,7 @@ In Defossez et al. (2003), the recompression index, kappa, was assumed as 0.0058
 \references{
 Defossez, P., Richard, G., Boizard, H., & O'Sullivan, M. F., 2003. 
 Modeling change in soil compaction due to agricultural traffic as function of soil water content. 
-\emph{Geoderma}, 116:89-105.
+\emph{Geoderma}, 116: 89--105.
 
 
 }

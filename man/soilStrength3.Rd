@@ -31,7 +31,7 @@ The function returns 0 for soil properties values beyond the range for which the
 \references{
 Saffih-Hdadi, K.; Defossez, P.; Richard, G.; Cui, Y. J.; Tang, A. M.; Chaplain, V, 2009.
 A method for predicting soil susceptibility to the compaction of surface layers as a function of water content and bulk density 
-\emph{Geoderma}, 115:96-103.
+\emph{Geoderma}, 115: 96-103.
 
 
 }

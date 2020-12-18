@@ -9,7 +9,7 @@ citEntry(entry="Article",
 	volume = "84",
 	pages = "54-60",       
         textVersion = 
-        paste("da Silva, A.R.; de Lima, R.P. ",
+        paste("Da Silva, A.R.; De Lima, R.P. ",
 	       "(2015) ", 
                "soilphysics: an R package to determine soil preconsolidation pressure. ",
                "Computers and Geosciences, ",
@@ -46,10 +46,28 @@ citEntry(entry="Article",
 	volume = "9",
 	pages = "xx-yy",       
         textVersion = 
-        paste("da Silva, A.R.; de Lima, R.P. ",
+        paste("Da Silva, A.R.; De Lima, R.P. ",
 	       "(2017) ", 
                "Determination of maximum curvature point with the R package soilphysics ",
                "International Journal of Current Research, ",
                "9: 45241-45245.",
+               sep="")
+         )
+
+citEntry(entry="Article",
+	title = "soilphysics: An R package for simulation of soil compaction induced by agricultural field traffic",
+      author = personList(as.person("R. P. de Lima"), 
+	as.person("A. R. da Silva"),
+	as.person("A. P. da Silva")),
+	journal = "Soil and Tillage Research",
+  	year = "2021",
+	volume = "206",
+	pages = "104824",       
+        textVersion = 
+        paste("De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P. ",
+	       "(2021) ", 
+               "soilphysics: An R package for simulation of soil compaction induced by agricultural field traffic. ",
+               "Soil and Tillage Research, ",
+               "206: 104824.",
                sep="")
          )

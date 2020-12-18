@@ -41,7 +41,7 @@ pres <- c(1, 12.5, 25, 50, 100, 200, 400, 800, 1600)
 VR <- c(1.43, 1.41, 1.40, 1.39, 1.35, 1.31, 1.25, 1.18, 1.12)
 
 # simulation (may take a few seconds)
-simres <- simSigmaP(VR, pres, nsim = 50)
+simres <- simSigmaP(VR, pres, nsim = 30)
 head(simres)
 
 # plot percentile confidence intervals

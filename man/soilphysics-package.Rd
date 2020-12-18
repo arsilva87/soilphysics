@@ -14,7 +14,7 @@ Basic and model-based soil physical analyses.
 Package: \tab soilphysics\cr
 Type: \tab Package\cr
 Version: \tab 4.0\cr
-Date: \tab 2020-06-11\cr
+Date: \tab 2020-12-06\cr
 License: \tab GPL (>= 2)\cr
 }
 Functions for modelling the load bearing capacity and the penetration resistance, and for predicting the 
@@ -51,5 +51,8 @@ for calculating soil water availability to plants by different soil physical ind
 
 da Silva, A.R.; Lima, R.P. (2017) Determination of maximum curvature point with the R package 
 soilphysics. \emph{International Journal of Current Research}, 9: 45241-45245. 
+
+De Lima, R.P.; Da Silva, A.R.; Da Silva, A.P. (2021) soilphysics: An R package for simulation of soil compaction induced by agricultural field traffic. 
+	\emph{SOIL and TILLAGE RESEARCH}, 206: 104824. 
 
 }

@@ -29,7 +29,7 @@ See O'Sullivan et al. (1999).
 \references{
 O'sullivan, M. F., Henshall, J. K., Dickson, J. W., 1999.
 A simplified method for estimating soil compaction. 
-\emph{Soil and Tillage Research}, 49:325-335.
+\emph{Soil and Tillage Research}, 49: 325-335.
 
 }
 \author{ 

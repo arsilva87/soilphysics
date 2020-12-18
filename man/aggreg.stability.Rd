@@ -29,7 +29,7 @@ test and the percentage of soil aggregate size distribution per class.
 The user must arrange a \code{data.frame} with lines representing the samples and the columns representing the mass 
 of the aggregates retained in each one of the meshes (corresponding to each size class) in the aggregate stability test.
 
-\figure{aggreg_equations.jpg}{options: scale = 0.5}
+\figure{aggregequations.jpg}{options: scale = 0.5}
 }
 
 \references{

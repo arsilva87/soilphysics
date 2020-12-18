@@ -30,7 +30,7 @@ Pedo-transfer function deveploed under no-till condition. See de Lima et al. (20
 \references{
 de Lima, R. P., da Silva, A. P., Giarola, N. F., da Silva, A. R., Rolim, M. M., Keller, T., 2018.
 Impact of initial bulk density and matric suction on compressive properties of two Oxisols under no-till. 
-\emph{Soil and Tillage Research}, 175:168-177.
+\emph{Soil and Tillage Research}, 175: 168-177.
 
 }
 \author{ 
