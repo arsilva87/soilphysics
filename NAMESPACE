@@ -55,6 +55,7 @@ export(aggreg.stability_App)
 export(LLWR_LLMPR_App)
 export(PredComp)
 export(LLWR_App)
+export(fitsoilwater_App)
 
 # Imports
 import("shiny", "MASS", "boot", "grDevices", "datasets")
