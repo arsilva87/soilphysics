@@ -499,7 +499,7 @@ server_fitsoilwater <- function(input, output, session) {
                 thetaS=input$thetaSDN2,
                 thetaR=input$thetaRDN2,
                 w1=input$w1DN2,alpha1=input$alpha1DN2,n1=input$n1DN2,
-                w2=input$w2DN2,alpha2=input$alpha2DN2,n2=input$n2DN2)
+                w2=1-input$w1DN2,alpha2=input$alpha2DN2,n2=input$n2DN2)
       points(x=10^h, y=wDN, type="l", col="red")
     }
     
@@ -590,7 +590,7 @@ server_fitsoilwater <- function(input, output, session) {
     alpha1 <- input$alpha1DN2
     alpha2 <- input$alpha2DN2
     w1 <- input$w1DN2
-    w2 <- input$w2DN2
+    w2 <- 1-input$w1DN2
     n1 <- input$n1DN2
     n2 <- input$n2DN2
     
@@ -1370,11 +1370,6 @@ tabPanel("Durner (1994) (Bimodal)",h4("Durner"),
                             sliderInput("n1DN2", HTML(paste0("n",tags$sub("1"),"")),
                                         min = 1, max = 10,
                                         step = 0.001,value = 3.98,tick=FALSE),
-                            
-                            
-                            sliderInput("w2DN2", HTML(paste0("w",tags$sub("2"))),
-                                        min = 0, max = 1,
-                                        step = 0.001, value=0.23,tick=FALSE),
                             
                             sliderInput("alpha2DN2", HTML(paste0("&alpha;",tags$sub("2")," (hPa",tags$sup("-1"),")")),
                                         min = 0, max = 0.02,
