@@ -6,13 +6,12 @@
 \description{ A closed-form analytical expressions for calculating the relative unsaturated hydraulic conductivity as a function of 
 soil water content based on van Genuchten's water retention curve. }
 \usage{
-Kr_theta(theta, thetaS, thetaR, alpha, n, Ks, f=0.5)
+Kr_theta(theta, thetaS, thetaR, n, Ks, f=0.5)
 }
 \arguments{
   \item{theta}{ The volumetric water content (m^3/m^3). }
   \item{thetaS}{ The volumetric water content at the saturation (m^3/m^3). }
   \item{thetaR}{ The volumetric residual water content (m^3/m^3). }
-  \item{alpha}{ The scale parameter of the van Genuchten's model (hPa^-1). }
   \item{n}{ The shape parameter in van Genuchten's formula. }
   \item{Ks}{ Saturated hydraulic conductivity (e.g. cm/day). }
   \item{f}{ The pore-connectivity parameter. Default 0.5  [Mualem, 1976]. }
@@ -32,14 +31,14 @@ media. \emph{Water Resour. Res.} 43(11):  513-522,
 \examples{
 # EXEMPLE 1
 Kr_theta(theta=0.45,thetaS=0.5,thetaR=0.15, 
-         alpha = 0.02, n = 2, Ks = 1.06*10^2, f=0.5)
+         n = 2, Ks = 1.06*10^2, f=0.5)
 
 # EXEMPLE 2
 thetaS <- 0.50
 thetaR <- 0.15
 theta <- seq(thetaS, thetaR, len=50)
 y <- Kr_theta(theta=theta,thetaS=thetaS,thetaR=thetaR, 
-             alpha = 0.02, n = 2, Ks = 1.06*10^2, f=0.5)
+              n = 2, Ks = 1.06*10^2, f=0.5)
              
 # Just for this example, we are removing the "0" value 
 # for plotting the graph in log scale, sence log10(0) results in "-Inf"
