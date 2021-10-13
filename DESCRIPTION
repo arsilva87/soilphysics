@@ -1,8 +1,8 @@
 Package: soilphysics
 Type: Package
 Title: Soil Physical Analysis
-Version: 4.0
-Date: 2020-12-06
+Version: 4.1
+Date: 2022-01-04
 Description: Basic and model-based soil physical analyses.
 Authors@R: c(person(given = c("Anderson", "Rodrigo"),
              family = "da Silva",
