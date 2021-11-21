@@ -68,9 +68,9 @@ importFrom("graphics", "abline", "arrows", "axis", "barplot",
 importFrom("stats", "as.formula", "coef", "deriv3", "getInitial",
              "integrate", "lm", "nls", "optimize", "predict", "quantile",
              "resid", "sd", "sortedXyData", "vcov", "weighted.mean",
-             "weights")
+             "weights", "AIC", "residuals")
 importFrom("utils", "head", "setTxtProgressBar", "tail",
-             "txtProgressBar", "write.csv")
+             "txtProgressBar", "write.csv", "read.csv")
 
 # S3method
 S3method(print, criticalmoisture)
