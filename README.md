@@ -293,7 +293,7 @@ Da Silva, A.R.; De Lima, R.P. (2015) soilphysics: an R package to determine soil
 
 # Contributions and bug reports
 
-soilphysics is an ongoing project. Then, contributions are very welcome. If you have a question or have found a bug, please open an ![Issue](<https://github.com/arsilva87/soilphysics/issues>) or reach out directly by e-mail: <anderson.silva@ifgoiano.edu.br> or <renato_agro_@hotmail.com>.
+soilphysics is an ongoing project. Then, contributions are very welcome. If you have a question or have found a bug, please open an [Issue](https://github.com/arsilva87/soilphysics/issues) or reach out directly by e-mail: <anderson.silva@ifgoiano.edu.br> or <renato_agro_@hotmail.com>.
 
 # By
 Anderson R. da Silva & Renato P. de Lima
