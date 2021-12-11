@@ -208,7 +208,7 @@ server_findWRC <- function(session, input, output) {
   observeEvent(input$run, {
     xy <- mt()[, c(input$h, input$w)]
     if (input$logh) {
-      xy[,1] <- log10(xy[,1]+1)
+      xy[,1] <- log10(xy[,1])
     }
     r <- findWRC(w = xy[,2], h = xy[,1])
     output$fit <- renderPrint( r[-1] )
