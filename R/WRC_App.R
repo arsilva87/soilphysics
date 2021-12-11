@@ -120,8 +120,11 @@ ui_findWRC <- fluidPage(h3("Find the best-fit Water Retention Curve using maximu
                                        'text/comma-separated-values,text/plain',
                                        '.csv')
                     ),
-                    selectInput('w', 'Water content', ''),
-                    selectInput('h', 'Matric potential', ''),
+                    checkboxInput("semicolon", "Semicolon-separated"),
+                    checkboxInput("dec", "Comma as decimal separator"),
+                    selectInput('w', 'Water content (y)', ''),
+                    selectInput('h', 'Matric potential (x)', ''),
+                    checkboxInput("logh", "Log10( x )"),
                     actionButton("run", "Run", icon = icon("r-project"))
              ),
              mainPanel(
@@ -181,7 +184,12 @@ ui_findWRC <- fluidPage(h3("Find the best-fit Water Retention Curve using maximu
 server_findWRC <- function(session, input, output) {
   dataIn <- reactive( req(input$file) )
   output$tab <- renderRHandsontable({
-    DF <- read.csv(dataIn()$datapath)
+    dec <- ifelse(input$dec, ",", ".")
+    if(input$semicolon) {
+       DF <- read.csv2(dataIn()$datapath, dec = dec)
+    } else {
+       DF <- read.csv(dataIn()$datapath, dec = dec)
+    }
     updateSelectInput(session, inputId = 'w',
                       choices = names(DF), selected = NULL)
     updateSelectInput(session, inputId = 'h',
@@ -199,6 +207,9 @@ server_findWRC <- function(session, input, output) {
   })
   observeEvent(input$run, {
     xy <- mt()[, c(input$h, input$w)]
+    if (input$logh) {
+      xy[,1] <- log10(xy[,1]+1)
+    }
     r <- findWRC(w = xy[,2], h = xy[,1])
     output$fit <- renderPrint( r[-1] )
     output$graph <- renderPlot({
