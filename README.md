@@ -278,6 +278,7 @@ PredComp 1.0:  <https://appsoilphysics.shinyapps.io/PredComp/>
 
 fisoilwater:  <https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/>
 
+Automatically fit the Water Retention Curve online: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gist/arsilva87/59d2a78666cf13ab8fb60bafaf7e65b8/HEAD?urlpath=shiny)
 
  
 # Citation and references
