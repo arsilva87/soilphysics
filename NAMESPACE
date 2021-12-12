@@ -61,7 +61,8 @@ export(WRC_App)
 # Imports
 import("shiny", "rhandsontable", "MASS", "boot", "grDevices", "datasets")
 importFrom("tcltk", "tkProgressBar", "setTkProgressBar")
-importFrom("shinydashboard", "box")
+importFrom("shinydashboard", "box", "dashboardPage", "dashboardHeader", 
+	"dashboardSidebar", "sidebarMenu", "menuItem", "dashboardBody", "tabBox")
 importFrom("fields", "image.plot")
 importFrom("graphics", "abline", "arrows", "axis", "barplot",
              "contour", "curve", "layout", "legend", "lines", "mtext",
@@ -69,9 +70,9 @@ importFrom("graphics", "abline", "arrows", "axis", "barplot",
 importFrom("stats", "as.formula", "coef", "deriv3", "getInitial",
              "integrate", "lm", "nls", "optimize", "predict", "quantile",
              "resid", "sd", "sortedXyData", "vcov", "weighted.mean",
-             "weights", "AIC", "residuals", "dnorm", "optim")
+             "weights", "AIC", "residuals", "dnorm", "optim", "complete.cases")
 importFrom("utils", "head", "setTxtProgressBar", "tail",
-             "txtProgressBar", "write.csv", "read.csv")
+             "txtProgressBar", "write.csv", "read.csv", "read.csv2")
 
 # S3method
 S3method(print, criticalmoisture)
