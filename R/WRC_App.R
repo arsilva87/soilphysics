@@ -121,91 +121,112 @@ findWRC = function(w, h,
   return(out)
 }
 
-# ---------------------------------------------------------------------
-ui_findWRC <- fluidPage(h4("Find the best-fit Water Retention Curve using maximum likelihood"),
-  windowTitle = "soilphysics | WRC",
-  sidebarLayout(
-       sidebarPanel(width = 4,
-                    h4("Import data"),
-                    h6(tags$a(href="https://ce99d4d6-d4c5-48a3-b911-9e83247054ca.filesusr.com/ugd/45a659_170e68a8ee1f474b9493bc67df713eed.csv?dn=MyWRCExample.csv",
-                              "(example)")),
-                    fileInput("file", "(comma-separated values)",
-                              accept=c('text/csv',
-                                       'text/comma-separated-values,text/plain',
-                                       '.csv')
-                    ),
-                    fluidRow(
-                      column(6, checkboxInput("semicolon", "Semicolon-separated")),
-                      column(6, checkboxInput("dec", "Comma as decimal"))
-                    ),
-                    fluidRow(
-                    column(6, selectInput('w', 'Water content (y)', '')),
-                    column(6, selectInput('h', 'Matric potential (x)', ''))
-                    ),
-                    checkboxInput("logh", "Log10( x )"),
-                    fluidRow(
-                      h4("Models to fit:"),
-                      column(6, checkboxInput("modVG", "van Genuchten", value = TRUE)),
-                      column(6, checkboxInput("modBC", "Brooks & Corey", value = TRUE)),
-                      column(6, checkboxInput("modGG", "Groenevelt & Grant", value = TRUE)),
-                      column(6, checkboxInput("modDE", "Dexter", value = TRUE))
-                    ),
-                    actionButton("run", "RUN", width = "40%",
-                                 icon = icon("r-project"),
-                                 style="color: #fff; background-color: #337ab7; border-color: #2e6da4")
-             ),
-             mainPanel(
-               tabsetPanel(tabPanel("Data", icon = icon("table"),
-                                   h5("Input data (editable, left-click)
-                                   (right-click to insert or remove rows)"),
-                                   rHandsontableOutput("tab")
-                          ),
-                          tabPanel("Results", icon = icon("calculator"),
-                                   h5("Statistical comparison of models"),
-                                   verbatimTextOutput("fit")
-                          ),
-                          tabPanel("Best-fit model", icon = icon("chart-line"),
-                                   plotOutput("graph")
-                          ),
-                          tabPanel(icon("info-circle"),
-                                   h6("Model legends: VG: van Genuchten,
-                                      BC: Brooks & Corey,
-                                      GG: Groenevelt & Grant,
-                                      DE: Dexter"),
-                                   h6("Statistics legends:
+#----
+about <- mainPanel(
+         withMathJax(),
+         h6("Model equations:"),
+         h6('- van Genuchten (VG)
+            $$\\theta (m^3 m^{-3}) = \\theta_R + (\\theta_S - \\theta_R)(1 + (\\alpha x)^n)^{1/n -1}$$'),
+         h6('- Brooks & Corey (BC)
+            $$\\theta (m^3 m^{-3}) = \\theta_R + (\\theta_S - \\theta_R)(x_b/x)^{\\lambda}$$'),
+         h6('- Groenevelt & Grant (GG)
+            $$\\theta (m^3 m^{-3}) = k_1 \\exp(-k_0 / x_0^n) - k_1 \\exp(-k_0 / x^n)$$'),
+         h6('- Dexter (DE)
+            $$\\theta (m^3 m^{-3}) = \\theta_R + a_1 \\exp(-x/p_1) + a_2 \\exp(-x/p_2)$$'),
+         h6("Please check the documentation of the functions 'soilwater'
+            of package soilphysics to know more about each equation."),
+                  h6("Statistics legends:
                                       Rsq: (pseudo) coefficient of determination,
                                       MAPE: mean absolute percentual error,
                                       AIC: Akaike information criterion,
                                       npar: number of estimated parameters,
                                       std: standard deviation"),
-                                   h6("The parameters are estimated using the maximum
+                  h6("The parameters are estimated using the maximum
                                       likelihood method, based upon the normal
                                       distribution of model residuals. For optimization
                                       purposes, the values of the residual (theta_R)
                                       and saturation (theta_S) water content are
                                       not estimated. Instead, the minimum and maximum values
                                       are returned in the output 'w_range'"),
-                                   h6("This app can also be run online: ",
-                                      tags$a(href = "https://mybinder.org/v2/gist/arsilva87/59d2a78666cf13ab8fb60bafaf7e65b8/HEAD?urlpath=shiny",
-                                             "click here")),
-                                   h6("The fitsoilwater app offers another alternative to
+                  h6("This app can run online: ",
+                     tags$a(href = "https://mybinder.org/v2/gist/arsilva87/59d2a78666cf13ab8fb60bafaf7e65b8/HEAD?urlpath=shiny",
+                            "click here")),
+                  h6("The fitsoilwater app offers another alternative to
                                       interactively fit water retention curves.",
-                                      tags$a(href = "https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/",
-                                             "https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/")),
-                                   h6("Citation:
+                     tags$a(href = "https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/",
+                            "https://appsoilphysics.shinyapps.io/fitsoilwaterAPP/")),
+                  h6("Citation:
                                       da Silva, A. R., de Lima, R. P. (2022) soilphysics:
                                       Basic and Model-Based Soil Physical Analyses.
                                       R package version 5.0.",
-                                   tags$a(href = "https://cran.r-project.org/package=soilphysics",
-                                          "https://cran.r-project.org/package=soilphysics")),
-                                   h6("Find out more about the soilphysics project: ",
-                                      tags$a(href = "https://arsilva87.github.io/soilphysics/",
-                                             "https://arsilva87.github.io/soilphysics/"))
-                          )
-               )
-             )
-          )
+                     tags$a(href = "https://cran.r-project.org/package=soilphysics",
+                            "https://cran.r-project.org/package=soilphysics")),
+                  h6("Find out more about the soilphysics project: ",
+                     tags$a(href = "https://arsilva87.github.io/soilphysics/",
+                            "https://arsilva87.github.io/soilphysics/"))
 )
+
+
+# ---------------------------------------------------------------------
+ui_findWRC <- dashboardPage(
+  dashboardHeader(title = "WRC App: Maximum Likelihood fit of Water Retention Curve",
+                  titleWidth = 600),
+  dashboardSidebar(
+    h6(tags$a(href = "https://arsilva87.github.io/soilphysics/",
+              "Powered by: soilphysics")),
+    sidebarMenu(
+       menuItem("Import data", icon = icon("folder-open"),
+                h6(tags$a(href="https://ce99d4d6-d4c5-48a3-b911-9e83247054ca.filesusr.com/ugd/45a659_170e68a8ee1f474b9493bc67df713eed.csv?dn=MyWRCExample.csv",
+                          "(example)")),
+                    fileInput("file", "(comma-separated values)",
+                              accept=c('text/csv',
+                                       'text/comma-separated-values,text/plain',
+                                       '.csv')
+                    ),
+                checkboxInput("semicolon", "Semicolon-separated"),
+                checkboxInput("dec", "Comma as decimal")
+       ),
+       menuItem("Select columns", icon = icon("table"),
+                selectInput('w', 'Water content (y)', ''),
+                selectInput('h', 'Matric potential (x)', ''),
+                checkboxInput("logh", "Log10( x )")
+       ),
+       menuItem("Models to fit", icon = icon("check"),
+                checkboxInput("modVG", "van Genuchten", value = TRUE),
+                checkboxInput("modBC", "Brooks & Corey", value = TRUE),
+                checkboxInput("modGG", "Groenevelt & Grant", value = TRUE),
+                checkboxInput("modDE", "Dexter", value = TRUE)
+       ),
+       actionButton("run", "RUN", width = "40%",
+                    icon = icon("r-project"))
+    )
+  ),
+  dashboardBody(
+    tabsetPanel(
+      tabPanel(icon("home"),
+        fluidRow(
+          box(
+            title = "Data", status = "warning", solidHeader = TRUE,
+            collapsible = TRUE, width = 12,
+            h5("Input data (editable, left-click)
+               (right-click to insert or remove rows)"),
+            rHandsontableOutput("tab")
+          ),
+          tabBox(title = "Results", width = 12,
+            tabPanel("Statistics", icon = icon("calculator"),
+              verbatimTextOutput("fit")
+            ),
+            tabPanel("Best-fit", icon = icon("chart-line"),
+              plotOutput("graph", height = 480, width = 650)
+            )
+          )
+        )
+      ),
+      tabPanel(icon("info"), about)
+    )
+  )
+)
+
 
 
 # ---------------------------------------------------------------------
