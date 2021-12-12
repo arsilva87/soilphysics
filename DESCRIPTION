@@ -18,7 +18,7 @@ Author: Anderson Rodrigo da Silva [aut, cre] (<https://orcid.org/0000-0003-2518-
 	Renato Paiva de Lima [aut] (<https://orcid.org/0000-0003-0524-439X>)
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 URL: https://arsilva87.github.io/soilphysics/
-Imports: utils, stats, graphics, boot, grDevices, datasets, MASS, shiny, shinythemes, rhandsontable, shinydashboard, fields
+Imports: utils, stats, graphics, boot, grDevices, datasets, MASS, shiny, rhandsontable, shinydashboard, fields
 Suggests: knitr, rmarkdown, rpanel, tcltk
 VignetteBuilder: knitr
 License: GPL (>= 2)

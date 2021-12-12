@@ -59,7 +59,7 @@ export(fitsoilwater_App)
 export(WRC_App)
 
 # Imports
-import("shiny", "shinythemes", "rhandsontable", "MASS", "boot", "grDevices", "datasets")
+import("shiny", "rhandsontable", "MASS", "boot", "grDevices", "datasets")
 importFrom("tcltk", "tkProgressBar", "setTkProgressBar")
 importFrom("shinydashboard", "box")
 importFrom("fields", "image.plot")
