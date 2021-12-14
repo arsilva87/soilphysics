@@ -265,7 +265,7 @@ server_findWRC <- function(session, input, output) {
     output$fit <- renderPrint( r[-1] )
     output$graph <- renderPlot({
       par(mar = c(4.5, 4.5, 2.5, 1), las = 1, cex = 1.3)
-      plot(xy, cex = 2)
+      plot(xy, cex = 2, log = "x")
       pa <- c(r$par, r$w_range)
       pars <- as.list(pa)
       eq <- r$e
