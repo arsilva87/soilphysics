@@ -94,8 +94,6 @@ server_fitsoilwater <- function(input, output, session) {
     RETOR
   })
   
-  
-  
 # ABA 1 (BC, Brooks-Corey) ------------------------------
   
   
@@ -163,10 +161,29 @@ server_fitsoilwater <- function(input, output, session) {
       colnames(table) <- names
       table[1,] <- data
       
+      if (length(table[1,])==4){
       thetaSBC <- table$thetaS[1]
       thetaRBC <- table$thetaR[1]
       lambdaBC <- table$lambda[1]
       hbBC <- table$hb[1]
+      }
+      
+      if (length(table[1,])==3){
+        thetaSBC <- table$thetaS[1]
+        thetaRBC <- 0
+        lambdaBC <- table$lambda[1]
+        hbBC <- table$hb[1]
+      }
+      
+      
+      if (length(table[1,])==2){
+        thetaSBC <- max(sort(outdfBC2()[,input$ycolBC2])) # medido
+        thetaRBC <- min(sort(outdfBC2()[,input$ycolBC2])) # medido
+        lambdaBC <- table$lambda[1]
+        hbBC <- table$hb[1]
+      }
+      
+      
 
       if (input$blueBC2==FALSE) {
       hexp <- seq(from=log10(min(sort(outdfBC2()[,input$xcolBC2]))),to=log10(max(sort(outdfBC2()[,input$xcolBC2]))), len=100)
@@ -210,15 +227,27 @@ server_fitsoilwater <- function(input, output, session) {
     h <- outdfBC2()[,input$xcolBC2]
     w <- outdfBC2()[,input$ycolBC2]
     
-    lista <- c(thetaR=input$thetaRBC2,thetaS=input$thetaSBC2,lambda=input$lambdaBC2,hb=input$hbBC2)
+    thetaS <- max(sort(w)) # medido
+    thetaR <- min(sort(w)) # medido
+    theta_R <- input$thetaRBC2
+    theta_S <- input$thetaSBC2
+    lambda <- input$lambdaBC2
+    hb <- input$hbBC2
+    
+
+
+    lista <- list()
+    if (input$thetaSRBC==FALSE) {lista <- c(thetaR=theta_R,thetaS=theta_S,lambda=lambda,hb=hb)}
+    if (input$thetaSRBC==TRUE) {lista <- c(lambda=lambda,hb=hb)}
+    if (input$thetaRBC0==TRUE) {lista <- c(thetaS=theta_S,lambda=lambda,hb=hb)}
+    if (input$thetaRBC0==TRUE) {thetaR <- 0}
     
     m <- try(nls(w ~ ifelse(h < hb, thetaS, thetaR + (thetaS-thetaR)*(hb/h)^lambda), start=lista,control=list(maxiter = 1000)))
     if (class(m)=="try-error") {OUT <- OUT}
     OUT <- list(summary(m), m)
     mySUMMARY_BC2$fittingBC2 <- OUT
-
-
     
+  
     if (class(m)=="nls") {
     STAT <- NULL
     res = residuals(m)
@@ -337,6 +366,14 @@ server_fitsoilwater <- function(input, output, session) {
         n <- table$n[1]
       }
       
+      if (length(table[1,])==3){
+        thetaS <- table$thetaS[1]
+        thetaR <- 0
+        alpha <- table$alpha[1]
+        n <- table$n[1]
+      }
+      
+      
       if (length(table[1,])==2){
         thetaS <- max(sort(outdfVG2()[,input$ycolVG2])) # medido
         thetaR <- min(sort(outdfVG2()[,input$ycolVG2])) # medido
@@ -396,6 +433,9 @@ server_fitsoilwater <- function(input, output, session) {
     lista <- list()
     if (input$thetaSR2==FALSE) {lista <- c(thetaR=theta_R,thetaS=theta_S,alpha=alpha, n=n)}
     if (input$thetaSR2==TRUE) {lista <- c(alpha=alpha, n=n)}
+    if (input$thetaRVG0==TRUE) {lista <- c(thetaS=theta_S,alpha=alpha, n=n)}
+    if (input$thetaRVG0==TRUE) {thetaR <- 0}
+    
     
     m <- try(nls(w ~ thetaR + ((thetaS-thetaR)/(1+(alpha*h)^n)^(1 - 1/n)), start=lista))
     if (class(m)=="try-error") {OUT <- OUT}
@@ -975,7 +1015,7 @@ server_fitsoilwater <- function(input, output, session) {
 
 
 
-ui_fitsoilwater <- fluidPage(
+ui <- fluidPage(
   
   
   tags$style(type = 'text/css', 
@@ -995,13 +1035,22 @@ ui_fitsoilwater <- fluidPage(
     
  "fitsoilwater",
  
-
+ 
 navbarMenu("Choose the soil water retention model",
            
            
            
            
            tabPanel("Input file field",h4("INPUT FILE FIELD"),
+                    
+                    verticalLayout(
+                      column(12,wellPanel(
+                        tags$p("Welcome to ",tags$strong("fitsoilwater!")," Use ",tags$strong("fitsoilwater")," to fit water retention curves. 
+                               Before starting to explore the water retention models, 
+                               the user should upload a data file similar to the file example available for download below. 
+                               Please, note that matric potential values should be inputed in hPa/cm. 
+                               Use the ",tags$strong("File separator")," criterion to organize your data in columns. 
+                               Download, check and upload the example file!", style = "font-size: 105%;text-align:justify")))),
                     
                     
                     
@@ -1051,6 +1100,10 @@ navbarMenu("Choose the soil water retention model",
                       
                       
           ),
+          
+          
+
+          
                     
                     
 
@@ -1091,11 +1144,11 @@ navbarMenu("Choose the soil water retention model",
                     column(2,wellPanel(h4(tags$p("Starting parameters",style = "font-size: 85%;text-align:justify")),
                                        
                                        sliderInput("thetaSBC2", HTML(paste0("&theta;",tags$sub("s") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                                   min = 0, max = 0.8000,
+                                                   min = 0, max = 1,
                                                    step = 0.001, value=0.560,tick=FALSE),
                                        
                                        sliderInput("thetaRBC2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                                   min = 0, max = 0.40,
+                                                   min = 0, max = 0.60,
                                                    step = 0.001, value=0.150,tick=FALSE),
                                        
                                        
@@ -1104,13 +1157,27 @@ navbarMenu("Choose the soil water retention model",
                                                    step = 0.001, value=2,tick=FALSE),
                                        
                                        sliderInput("hbBC2", HTML(paste0("h",tags$sub("b"))),
-                                                   min = 1, max = 100,
-                                                   step = 1, value=30,tick=FALSE)
+                                                   min = 1, max = 1000,
+                                                   step = 1, value=30,tick=FALSE),
+                                       
+                                       br(),
+                                       
+                                       checkboxInput("thetaSRBC", "", value = FALSE),
+                                       
+                                       helpText(
+                                         HTML(paste0("Check this box to consider ","&theta;",tags$sub("s")," and ","&theta;",tags$sub("r"),
+                                                     " from the experimental data (the algorithm will take the minimum and maximum values of water content)")),
+                                         style = "font-size: 90%;text-align:justify"),
+                                       
 
-                           
-                           
-                           
-                           
+                                       checkboxInput("thetaRBC0", "", value = FALSE),
+                                       
+                                       helpText(
+                                         HTML(paste0("Check this box to consider ","&theta;",tags$sub("r")," = 0")),
+                                         style = "font-size: 90%;text-align:justify")
+
+
+
                     )),
                     
                     
@@ -1216,11 +1283,11 @@ tabPanel("van Genuchten (1980)",h4("van Genuchten"),
                             
                             
                             sliderInput("thetaSVG2", HTML(paste0("&theta;",tags$sub("s") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.8000,
+                                        min = 0, max = 1,
                                         step = 0.001, value=0.560,tick=FALSE),
                             
                             sliderInput("thetaRVG2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.40,
+                                        min = 0, max = 0.60,
                                         step = 0.001, value=0.150,tick=FALSE),
                             
                             sliderInput("alphaVG2", HTML(paste0("&alpha; (hPa",tags$sup("-1"),")")),
@@ -1236,9 +1303,14 @@ tabPanel("van Genuchten (1980)",h4("van Genuchten"),
                 
                             helpText(
                               HTML(paste0("Check this box to consider ","&theta;",tags$sub("s")," and ","&theta;",tags$sub("r"),
-                                          " from the experimental data (the algorithm will take the minimum and maximum values of water content).",
-                                          " Only the parameters n and ","&alpha;"," will be estimated")),
-                              style = "font-size: 90%;text-align:justify"))
+                                          " from the experimental data (the algorithm will take the minimum and maximum values of water content)")),
+                              style = "font-size: 90%;text-align:justify"),
+                
+                checkboxInput("thetaRVG0", "", value = FALSE),
+                
+                helpText(
+                  HTML(paste0("Check this box to consider ","&theta;",tags$sub("r")," = 0")),
+                  style = "font-size: 90%;text-align:justify"))
                 
                 
  
@@ -1352,11 +1424,11 @@ tabPanel("Durner (1994) (Bimodal)",h4("Durner"),
                             
                             
                             sliderInput("thetaSDN2", HTML(paste0("&theta;",tags$sub("s") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.80,
+                                        min = 0, max = 1,
                                         step = 0.001, value=0.60,tick=FALSE),
     
                             sliderInput("thetaRDN2", HTML(paste0("&theta;",tags$sub("r") ," (m",tags$sup("3") ," m",tags$sup("-3"),")")),
-                                        min = 0, max = 0.40,
+                                        min = 0, max = 0.60,
                                         step = 0.001, value=0.10,tick=FALSE),
                             
                             sliderInput("w1DN2", HTML(paste0("w",tags$sub("1"))),
@@ -1370,6 +1442,7 @@ tabPanel("Durner (1994) (Bimodal)",h4("Durner"),
                             sliderInput("n1DN2", HTML(paste0("n",tags$sub("1"),"")),
                                         min = 1, max = 10,
                                         step = 0.001,value = 3.98,tick=FALSE),
+                            
                             
                             sliderInput("alpha2DN2", HTML(paste0("&alpha;",tags$sub("2")," (hPa",tags$sup("-1"),")")),
                                         min = 0, max = 0.02,
@@ -1728,13 +1801,17 @@ tabPanel("About", "",
              
              tags$p("This R app is an interactive web interface for fitting soil water retention models
              and integrate the set of functions for soil physical data 
-                    analysis from the R package ",tags$em(tags$strong('soilphysics')),"", 
+                    analysis from the R package ",tags$em(tags$strong("soilphysics")),"", 
                     style = "font-size: 115%;text-align:justify"),
              
              
              actionButton(inputId='ab1', label="soilphysics", 
                           icon = icon("th"), 
-                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')")
+                          onclick ="window.open('https://arsilva87.github.io/soilphysics/')"),
+             
+             actionButton(inputId='ab1', label="Video instruction", 
+                          icon = icon("th"), 
+                          onclick ="window.open('https://www.youtube.com/watch?v=18WMb_VWn0E')"),
              
            ))),
          
