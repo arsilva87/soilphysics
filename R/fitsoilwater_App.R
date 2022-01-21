@@ -1015,7 +1015,7 @@ server_fitsoilwater <- function(input, output, session) {
 
 
 
-ui <- fluidPage(
+ui_fitsoilwater <- fluidPage(
   
   
   tags$style(type = 'text/css', 
