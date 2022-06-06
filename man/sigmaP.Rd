@@ -4,11 +4,11 @@
 \title{ Preconsolidation Stress }
 
 \description{
-A function to determine the preconsolidation stress (\eqn{\sigma_P}). It is a parameter obtained from 
-the soil compression curve and has been used as an indicator of soil load-bearing capacity as well as to 
-characterize the impacts suffered by the use of machines. 
-The function \code{sigmaP()} contains implementations of the main methods for determining the pre-consolidation 
-stress, such as the Casagrande method, the method of Pacheco Silva, the regression methods and the method of the 
+A function to determine the preconsolidation stress (\eqn{\sigma_P}). It is a parameter obtained from
+the soil compression curve and has been used as an indicator of soil load-bearing capacity as well as to
+characterize the impacts suffered by the use of machines.
+The function \code{sigmaP()} contains implementations of the main methods for determining the pre-consolidation
+stress, such as the Casagrande method, the method of Pacheco Silva, the regression methods and the method of the
 virgin compression line intercept.
 }
 
@@ -41,7 +41,7 @@ as described by Dias Junior & Pierce (1995). \code{pacheco} is the method of Pac
 
 You may follow the flowchart below to understand the determination of the preconsolidation stress through \code{sigmaP()}.
 
-\figure{sigmaPfluxo.jpg}{options: scale = 0.7}
+\figure{sigmaPfluxo.jpg}
 }
 
 \value{

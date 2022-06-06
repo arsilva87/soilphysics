@@ -9,11 +9,7 @@
 aggreg.stability_App()
 }
 
-\arguments{
-  \item{}{Available on the interactive web page}
-}
-
-\value{shiny app}
+\value{A shiny app}
 
 \author{ Renato Paiva de Lima <renato_agro_@hotmail.com> }
 

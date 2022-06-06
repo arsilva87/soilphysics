@@ -25,10 +25,10 @@ soilDeformation(stress, p.density, iBD, N, CI, k, k2, m, graph = FALSE, ...)
 }
 
 \details{
-The specific volume (v) is given as \eqn{v=PD/BD}, where PD is particle density and BD is the bulk 
+The specific volume (v) is given as \eqn{v=PD/BD}, where PD is particle density and BD is the bulk
 density. Please, check each parameter from O'Sullivan and Robertson (1996) model in the figure below.
 
-\figure{SMP.jpeg}{options: scale = 0.7}
+\figure{SMP.jpeg}
 }
 
 \value{
@@ -37,15 +37,15 @@ A list of
   \item{fBD }{ final bulk density, \eqn{Mg m^{-3}}}
   \item{vi}{ initial specific volume}
   \item{vf }{ final specific volume}
-  \item{I\eqn{\%} }{ variation of soil bulk density (\eqn{\%}) after the applied stress}
+  \item{I }{ variation of soil bulk density (\eqn{\%}) after the applied stress}
 }
 
 \references{
-O'Sullivan, M.F.; Robertson, E.A.G. 1996. Critical state parameters from intact samples of two 
+O'Sullivan, M.F.; Robertson, E.A.G. 1996. Critical state parameters from intact samples of two
 agricultural soils. \emph{Soil and Tillage Research}, 39:161-173.
 
-Keller, T.; Defossez, P.; Weisskopf, P.; Arvidsson, J.; Richard, G. 2007. SoilFlex: a model 
-for prediction of soil stresses and soil compaction due to agricultural field traffic 
+Keller, T.; Defossez, P.; Weisskopf, P.; Arvidsson, J.; Richard, G. 2007. SoilFlex: a model
+for prediction of soil stresses and soil compaction due to agricultural field traffic
 including a synthesis of analytical approaches. \emph{Soil and Tillage Research}, 93:391-411.
 }
 
@@ -62,21 +62,21 @@ Alvaro Pires da Silva <apisilva@usp.br>
 # EXAMPLE 1
 soilDeformation(stress = 300,
                 p.density = 2.67,
-	        iBD = 1.55, 
-                N = 1.9392, 
-                CI = 0.06037, 
-                k = 0.00608, 
+	        iBD = 1.55,
+                N = 1.9392,
+                CI = 0.06037,
+                k = 0.00608,
                 k2 = 0.01916,
                 m = 1.3,graph=TRUE,ylim=c(1.4,1.8))
 
 # EXEMPLE 2 (combining it with soil stress)
-stress <- stressTraffic(inflation.pressure=200, 
-	        recommended.pressure=200, 
-	        tyre.diameter=1.8, 
-	        tyre.width=0.4, 
-	        wheel.load=4000, 
+stress <- stressTraffic(inflation.pressure=200,
+	        recommended.pressure=200,
+	        tyre.diameter=1.8,
+	        tyre.width=0.4,
+	        wheel.load=4000,
 	        conc.factor=c(4,5,5,5,5,5),
-                layers=c(0.05,0.1,0.3,0.5,0.7,1), 
+                layers=c(0.05,0.1,0.3,0.5,0.7,1),
 	        plot.contact.area = FALSE)
 
 stress.mean <- stress$Stress$sigma_mean
@@ -85,15 +85,15 @@ n <- length(layers)
 
 def <- soilDeformation(stress = stress.mean,
                 p.density = rep(2.67, n),
-	        iBD = rep(1.55,n), 
-                N = rep(1.9392,n), 
-                CI = rep(0.06037,n), 
-                k = rep(0.00608,n), 
+	        iBD = rep(1.55,n),
+                N = rep(1.9392,n),
+                CI = rep(0.06037,n),
+                k = rep(0.00608,n),
                 k2 = rep(0.01916,n),
                 m = rep(1.3,n),graph=TRUE,ylim=c(1.4,1.8))
 
 # Graph
-plot(x = 1, y = 1, 
+plot(x = 1, y = 1,
      xlim=c(1.4,1.7),ylim=c(1,0),xaxt = "n",
      ylab = "Soil Depth",xlab ="", type="l", main="")
 axis(3)

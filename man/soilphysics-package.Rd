@@ -14,7 +14,7 @@ Basic and model-based soil physical analyses.
 Package: \tab soilphysics\cr
 Type: \tab Package\cr
 Version: \tab 5.0\cr
-Date: \tab 2022-01-07\cr
+Date: \tab 2022-06-06\cr
 License: \tab GPL (>= 2)\cr
 }
 Functions for modelling the load bearing capacity and the penetration resistance, and for predicting the 

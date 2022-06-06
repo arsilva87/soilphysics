@@ -4,13 +4,12 @@
 \title{ Simulating Preconsolidation Stress }
 
 \description{
-Simulating preconsolidation pressure, compression and swelling indices, based on a 
-	multivariate Gaussian distribution for the parameters of the compression curve.}
+Simulating preconsolidation pressure, compression and swelling indices, based on a multivariate Gaussian distribution for the parameters of the compression curve.}
 
 \usage{
-simSigmaP(voidratio, stress, 
-	what.out = c("sigmaP", "CI", "SI"), 
-	method = c("casagrande", "VCLzero", "reg1", "reg2", "reg3", "reg4", "pacheco"), 
+simSigmaP(voidratio, stress,
+	what.out = c("sigmaP", "CI", "SI"),
+	method = c("casagrande", "VCLzero", "reg1", "reg2", "reg3", "reg4", "pacheco"),
 	n4VCL = 3, nsim = 100)
 }
 
@@ -20,7 +19,7 @@ simSigmaP(voidratio, stress,
   \item{what.out}{ a character indicating which \code{sigmaP()} output should be simulated.
 	It must be on of "sigmaP" (default), "CI" of "SI".}
   \item{method}{ a character vector indicating which methods should be used.}
-  \item{n4VCL}{ the number of points for calculating the slope of the soil Virgin Compression Line (VCL), 
+  \item{n4VCL}{ the number of points for calculating the slope of the soil Virgin Compression Line (VCL),
 	which is obtained by linear regression. Default is 3.}
   \item{nsim}{ the number of simulations. Default is 100. Warning: it may cause time demanding.}
 }
@@ -45,7 +44,7 @@ simres <- simSigmaP(VR, pres, nsim = 30)
 head(simres)
 
 # plot percentile confidence intervals
-ci <- plotCIsigmaP(simres, conf.level = 0.95, 
+ci <- plotCIsigmaP(simres, conf.level = 0.95,
 	shade.col = "blue", ordered = TRUE)
 print(ci)
 
