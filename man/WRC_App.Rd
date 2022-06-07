@@ -9,11 +9,7 @@
 WRC_App()
 }
 
-\arguments{
-  \item{}{Available on the interactive web page}
-}
-
-\value{shiny app}
+\value{A shiny app}
 
 \author{ Anderson Rodrigo da Silva <anderson.agro@hotmail.com> }
 
