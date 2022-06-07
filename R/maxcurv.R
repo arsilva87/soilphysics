@@ -1,24 +1,24 @@
-maxcurv <- 
-function (x.range, fun, 
-	method = c("general", "pd", "LRP", "spline"), 
-	x0ini = NULL, 
-	graph = TRUE, ...) 
+maxcurv <-
+function (x.range, fun,
+	method = c("general", "pd", "LRP", "spline"),
+	x0ini = NULL,
+	graph = TRUE, ...)
 {
     stopifnot(is.atomic(x.range))
-    if (!is.numeric(x.range)) 
+    if (!is.numeric(x.range))
         stop("'x.range' must be a numeric vector!")
-    if (length(x.range) != 2) 
+    if (length(x.range) != 2)
         stop("'x.range' must be a vector of length two!")
-    if (diff(x.range) < 0) 
+    if (diff(x.range) < 0)
         stop("please, reorder 'x.range'.")
-    if (!inherits(fun, "function")) 
+    if (!inherits(fun, "function"))
         stop("'fun' must be a 'function' of x!")
     method <- match.arg(method)
 
     # first derivative
     dfun <- deriv3(fun2form(fun), "x", func = TRUE)
-    if (attr(dfun(x.range[1]), "gradient") == attr(dfun(x.range[2]), 
-        "gradient")) 
+    if (attr(dfun(x.range[1]), "gradient") == attr(dfun(x.range[2]),
+        "gradient"))
         stop("'fun' should not be a linar function of x!")
 
     # simulated points
@@ -26,7 +26,7 @@ function (x.range, fun,
     y <- fun(x)
 
     # ------------------------------------------------------
-    # method: general curvature function (k) 
+    # method: general curvature function (k)
     if (method == "general") {
        # gradient and hessian
        gr <- attr(dfun(x), "gradient")
@@ -61,18 +61,18 @@ function (x.range, fun,
     } else if (method == "LRP") {
     # ---------------------------------------------------
     # method: LRP
-       if (is.null(x0ini)) 
+       if (is.null(x0ini))
           stop("please, inform 'x0ini', a initial value for x0")
        ini <- coef(lm(y ~ x))
-       fit <- try( nls(y ~ flrp(x, a0, a1, x0), 
-             start = list(a0 = ini[1], a1 = ini[2], x0 = x0ini)), 
+       fit <- try( nls(y ~ flrp(x, a0, a1, x0),
+             start = list(a0 = ini[1], a1 = ini[2], x0 = x0ini)),
           silent = TRUE)
-       if (class(fit) == "try-error") {
-          fit <- try( nls(y ~ flrp(x, a0, a1, x0, left = FALSE), 
-                start = list(a0 = ini[1], a1 = ini[2], x0 = x0ini)), 
+       if (inherits(fit, "try-error")) {
+          fit <- try( nls(y ~ flrp(x, a0, a1, x0, left = FALSE),
+                start = list(a0 = ini[1], a1 = ini[2], x0 = x0ini)),
              silent = TRUE)
        }
-       if (class(fit) == "try-error") {
+       if (inherits(fit, "try-error")) {
           stop("LRP could not get convergence!")
        } else {
           mcp <- coef(fit)[3]
@@ -81,14 +81,14 @@ function (x.range, fun,
     } else {
     # ---------------------------------------------------
     # method: piecewise linear spline
-       if (is.null(x0ini)) 
+       if (is.null(x0ini))
           stop("please, inform 'x0ini', a initial value for x0")
        lini <- coef(lm(y[x < x0ini] ~ x[x < x0ini]))
        rini <- coef(lm(y[x > x0ini] ~ x[x > x0ini]))
-       fit <- try( nls(y ~ fs(x, a0, a1, b1, x0), 
-             start = list(a0 = lini[1], a1 = lini[2], 
+       fit <- try( nls(y ~ fs(x, a0, a1, b1, x0),
+             start = list(a0 = lini[1], a1 = lini[2],
                 b1 = rini[2], x0 = x0ini)), silent = TRUE)
-       if (class(fit) == "try-error") {
+       if (inherits(fit, "try-error")) {
           stop("spline could not get convergence!")
        } else {
           mcp <- coef(fit)[4]
@@ -99,24 +99,24 @@ function (x.range, fun,
     # graph
     if (graph) {
         curve(fun, from = x.range[1], to = x.range[2], ...)
-        lines(x = c(mcp, mcp, -9e9), 
+        lines(x = c(mcp, mcp, -9e9),
            y = c(-9e9, fun(mcp), fun(mcp)), lty = 3)
         if (method == "pd") {
            abline(b0, b1, lty = 3)
            lines(x = c(mcp, xjs[which.max(k)]),
-              y = c(fun(mcp), b0 + b1*xjs[which.max(k)]), 
+              y = c(fun(mcp), b0 + b1*xjs[which.max(k)]),
               lty = 3)
        } else if (method == "LRP" || method == "spline") {
           lines(x, predict(fit), col = 4, lty = 2)
        }
        devAskNewPage(ask = TRUE)
        plot(x, k, type = "l", ...)
-       lines(x = c(mcp, mcp, -9e9), 
+       lines(x = c(mcp, mcp, -9e9),
           y = c(-9e9, max(k), max(k)), lty = 3)
     }
 
     # output
-    out <- list(fun = fun, 
+    out <- list(fun = fun,
        x0 = mcp, y0 = fun(mcp),
        method = method)
     class(out) <- "maxcurv"
@@ -125,7 +125,7 @@ function (x.range, fun,
 
 # -------------------------------------------
 # print method
-print.maxcurv <- function (x, ...) 
+print.maxcurv <- function (x, ...)
 {
     cat("\n          Maximum curvature point \n",
         "\nf(x) =", deparse(x$fun)[2],
