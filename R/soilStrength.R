@@ -18,7 +18,7 @@ function(clay.content, matric.suction=NULL, water.content=NULL)
   }
 
   # parameters of the soil retention curve 
-  thetaS <- c(0.42,0.45,0.46,0.50,0.51)
+  thetaS <- c(0.47,0.54,0.57,0.64,0.66)
   thetaR <- c(0.049356,0.08689,0.10696,0.125941,0.139358)
   alpha <- c(0.79,0.72,1.66,2.04,2.27)
   n <- c(1.72,1.56,1.52,1.47,1.38)
